@@ -222,12 +222,12 @@ View(header)</code></pre>
 <p>The first, way to generate a brief summary of a variable is with the command ‘’summary’’ which, indeed, is closely related to the homonym in the STATA preloaded command.</p>
 <pre class="r"><code>income_summary&lt;-summary(base$ing09)
 income_summary</code></pre>
-<pre><code>##      Min.   1st Qu.    Median      Mean   3rd Qu.      Max.      NA&#39;s 
-##   0.00000   0.04455   0.15000   0.26967   0.28000 162.80000        29</code></pre>
+<pre><code>## Length  Class   Mode 
+##      0   NULL   NULL</code></pre>
 <p>Another similar function that you may use to get simple statistics is <em>fivenum</em>. It will give you minimum, lower-hinge, median, upper-hinge and maximum of the imput data.</p>
 <pre class="r"><code>income_fivenum&lt;-fivenum(base$ing09)
 income_fivenum</code></pre>
-<pre><code>## [1]   0.0000   0.0445   0.1500   0.2800 162.8000</code></pre>
+<pre><code>## [1] NA NA NA NA NA</code></pre>
 </div>
 <div id="second-stop-tabulate" class="section level2">
 <h2>Second Stop: Tabulate</h2>

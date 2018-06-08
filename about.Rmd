@@ -1,5 +1,6 @@
 ---
 title: "A brief Introducction to STATA functions into R"
+autor: Alvaro Gutierrez
 ---
 
 
