@@ -5,16 +5,16 @@
     "dirty" : false,
     "encoding" : "UTF-8",
     "folds" : "",
-    "hash" : "486887401",
+    "hash" : "3401720006",
     "id" : "9EAECD50",
-    "lastKnownWriteTime" : 1528433763,
-    "last_content_update" : 1528433763770,
+    "lastKnownWriteTime" : 1528433941,
+    "last_content_update" : 1528433942055,
     "path" : "G:/Mi unidad/R_LEARNING/GitHub/alvarogutyerrez/alvarogutyerrez/about.Rmd",
     "project_path" : "about.Rmd",
     "properties" : {
-        "cursorPosition" : "76,12",
+        "cursorPosition" : "1,55",
         "last_setup_crc32" : "DD64DBDAbb338d19",
-        "scrollLine" : "28"
+        "scrollLine" : "0"
     },
     "relative_order" : 4,
     "source_on_save" : false,
