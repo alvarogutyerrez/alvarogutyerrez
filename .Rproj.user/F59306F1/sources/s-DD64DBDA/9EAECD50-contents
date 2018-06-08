@@ -23,65 +23,65 @@ knitr::opts_chunk$set(echo = TRUE)
 
 
 
-```{r results='hide', message=FALSE, warning=FALSE}
-base <-  read.dta13("eps2009_trabajable.dta")
-```
-With this we can visualize the first three observations of the data set, due to unfortunately R is not as powerfull as STATA to show the data sets.
-``` 
-header <- base[3,]
-View(header)
-``` 
+<!-- ```{r results='hide', message=FALSE, warning=FALSE} -->
+<!-- base <-  read.dta13("eps2009_trabajable.dta") -->
+<!-- ``` -->
+<!-- With this we can visualize the first three observations of the data set, due to unfortunately R is not as powerfull as STATA to show the data sets. -->
+<!-- ```  -->
+<!-- header <- base[3,] -->
+<!-- View(header) -->
+<!-- ```  -->
 
 
-# Descriptive Statistics
-## First Stop: _summarize_ v/s _summary_
+<!-- # Descriptive Statistics -->
+<!-- ## First Stop: _summarize_ v/s _summary_ -->
 
-The first, way to generate a brief summary of a variable is with the command ''summary'' which, indeed, is closely related to the homonym in the STATA preloaded command.
+<!-- The first, way to generate a brief summary of a variable is with the command ''summary'' which, indeed, is closely related to the homonym in the STATA preloaded command. -->
 
-```{r,eval=TRUE} 
-income_summary<-summary(base$ing09)
-income_summary
-```
+<!-- ```{r,eval=TRUE}  -->
+<!-- income_summary<-summary(base$ing09) -->
+<!-- income_summary -->
+<!-- ``` -->
 
-Another similar function that you may use to get simple statistics is _fivenum_. It will give you minimum, lower-hinge, median, upper-hinge and maximum of the imput data.
-```{r,eval=TRUE} 
-income_fivenum<-fivenum(base$ing09)
-income_fivenum
-```
-
-
-
-## Second Stop: Tabulate
+<!-- Another similar function that you may use to get simple statistics is _fivenum_. It will give you minimum, lower-hinge, median, upper-hinge and maximum of the imput data. -->
+<!-- ```{r,eval=TRUE}  -->
+<!-- income_fivenum<-fivenum(base$ing09) -->
+<!-- income_fivenum -->
+<!-- ``` -->
 
 
-Before to continue, we need to add the labels to the variables. Something that in STATA will looks like:
 
-``` 
-label define gender 0 "Female" 1 "Male"
-label variable gender gender
-```
-Into R we will use the function _factor_ to label our data.
-
-```{r,eval=TRUE} 
-
-gender <- factor(base$sexo09,
-                    levels = c(0,1),
-                    labels = c("Female", "Male"))
-```
+<!-- ## Second Stop: Tabulate -->
 
 
-Just to made more clear the last point. Another example.
-``` 
-label define quintil_income 1 "1st quintile" 2 "2nd quintile" 3 "3th quintile" 4 "4th quintile"  5 "5th quintile"
-label variable quintil_income quintil_income
-```
+<!-- Before to continue, we need to add the labels to the variables. Something that in STATA will looks like: -->
 
-```{r,eval=TRUE} 
+<!-- ```  -->
+<!-- label define gender 0 "Female" 1 "Male" -->
+<!-- label variable gender gender -->
+<!-- ``` -->
+<!-- Into R we will use the function _factor_ to label our data. -->
 
-quintil_income <- factor(base$quintil_muestra,
-                 levels = c(1,2,3,4,5),
-                 labels = c("1st quintile", "2nd quintile", "3th quintile" , "4th quintile" ,"5th quintile"))
-```
+<!-- ```{r,eval=TRUE}  -->
+
+<!-- gender <- factor(base$sexo09, -->
+<!--                     levels = c(0,1), -->
+<!--                     labels = c("Female", "Male")) -->
+<!-- ``` -->
+
+
+<!-- Just to made more clear the last point. Another example. -->
+<!-- ```  -->
+<!-- label define quintil_income 1 "1st quintile" 2 "2nd quintile" 3 "3th quintile" 4 "4th quintile"  5 "5th quintile" -->
+<!-- label variable quintil_income quintil_income -->
+<!-- ``` -->
+
+<!-- ```{r,eval=TRUE}  -->
+
+<!-- quintil_income <- factor(base$quintil_muestra, -->
+<!--                  levels = c(1,2,3,4,5), -->
+<!--                  labels = c("1st quintile", "2nd quintile", "3th quintile" , "4th quintile" ,"5th quintile")) -->
+<!-- ``` -->
 
 
 With the data already labeled we will proceed to replicate Tabulate.

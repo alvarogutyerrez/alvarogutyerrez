@@ -1,0 +1,3 @@
+"0","gender <- factor(base$sexo09,"
+"0","                    levels = c(0,1),"
+"0","                    labels = c(""Female"", ""Male""))"

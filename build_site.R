@@ -2,7 +2,7 @@
 #This helps avoid confusion if our working directory is 
 #not our site because of other projects we were 
 #working on at the time. 
-setwd("G:/Mi unidad/R_LEARNING/GitHub/alvaro.gutyerrez")
+setwd("G:/Mi unidad/R_LEARNING/GitHub/alvarogutyerrez")
 
 
 #type on the following two lines on  the Terminal
