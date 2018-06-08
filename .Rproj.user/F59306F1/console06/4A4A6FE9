@@ -46,4 +46,137 @@ concept guides. See 'git help <command>' or 'git help <concept>'[0K
 to read about a specific subcommand or concept.[0K
 [0K[?25h]0; [?25l
 G:\Mi unidad\R_LEARNING\GitHub\alvarogutyerrez\alvarogutyerrez>[0K[?25hg[0Ki[0Kt[0K[68G[?25lG:\Mi unidad\R_LEARNING\GitHub\alvarogutyerrez\alvarogutyerrez>git a[0K[?25hd[0Kd[0K[72G[?25lG:\Mi unidad\R_LEARNING\GitHub\alvarogutyerrez\alvarogutyerrez>git add -[0K[?25hA[0K]0;  - git  add -A[?25l
+[0K[?25hwarning: LF will be replaced by CRLF in .Rproj.user/F59306F1/pcs/files-pane.pper.[0K[?25l
+The file will have its original line endings in your working directory.[0K
+[0K[?25hwarning: LF will be replaced by CRLF in .Rproj.user/F59306F1/pcs/source-pane.pper.[0K[?25l
+The file will have its original line endings in your working directory.[0K
+[0K[?25hwarning: LF will be replaced by CRLF in .Rproj.user/F59306F1/pcs/windowlayoutstate.pper.[0K[?25l
+The file will have its original line endings in your working directory.[0K
+[0K[?25hwarning: LF will be replaced by CRLF in .Rproj.user/F59306F1/pcs/workbench-pane.pper.[0K[?25l
+The file will have its original line endings in your working directory.[0K
+[0K[?25hwarning: LF will be replaced by CRLF in .Rproj.user/F59306F1/rmd-outputs.[0K[?25l
+The file will have its original line endings in your working directory.[0K
+[0K[?25hwarning: LF will be replaced by CRLF in .Rproj.user/F59306F1/sources/prop/2141C7BA.[0K[?25l
+The file will have its original line endings in your working directory.[0K
+[0K[?25hwarning: LF will be replaced by CRLF in .Rproj.user/F59306F1/sources/prop/A18CDF07.[0K[?25l
+The file will have its original line endings in your working directory.[0K
+warning: LF will be replaced by CRLF in .Rproj.user/F59306F1/sources/prop/C6C4C817.[0K
+The file will have its original line endings in your working directory.[0K
+[0K[?25hwarning: LF will be replaced by CRLF in .Rproj.user/F59306F1/sources/prop/DAE6DFD0.[0K[?25l
+The file will have its original line endings in your working directory.[0K
+warning: LF will be replaced by CRLF in .Rproj.user/F59306F1/sources/prop/E26FB4D0.[0K
+The file will have its original line endings in your working directory.[0K
+[0K[?25hwarning: LF will be replaced by CRLF in .Rproj.user/F59306F1/sources/prop/INDEX.[0K[?25l
+The file will have its original line endings in your working directory.[0K
+[0K[?25hwarning: LF will be replaced by CRLF in .Rproj.user/F59306F1/sources/s-DD64DBDA/3ADAB137.[0K[?25l
+The file will have its original line endings in your working directory.[0K
+[0K[?25hwarning: LF will be replaced by CRLF in .Rproj.user/F59306F1/sources/s-DD64DBDA/3ADAB137-contents.[0K[?25l
+The file will have its original line endings in your working directory.[0K
+[0K[?25hwarning: LF will be replaced by CRLF in .Rproj.user/F59306F1/sources/s-DD64DBDA/9EAECD50.[0K[?25l
+The file will have its original line endings in your working directory.[0K
+[0K[?25hwarning: LF will be replaced by CRLF in .Rproj.user/F59306F1/sources/s-DD64DBDA/9EAECD50-contents.[0K[?25l
+The file will have its original line endings in your working directory.[0K
+[0K[?25hwarning: LF will be replaced by CRLF in .Rproj.user/F59306F1/sources/s-DD64DBDA/D119A9AF.[0K[?25l
+The file will have its original line endings in your working directory.[0K
+[0K[?25hwarning: LF will be replaced by CRLF in .Rproj.user/F59306F1/sources/s-DD64DBDA/D39A804C.[0K[?25l
+The file will have its original line endings in your working directory.[0K
+[0K[?25hwarning: LF will be replaced by CRLF in .Rproj.user/F59306F1/sources/s-DD64DBDA/D39A804C-contents.[0K[?25l
+The file will have its original line endings in your working directory.[0K
+[0K[?25hwarning: LF will be replaced by CRLF in .Rproj.user/F59306F1/sources/s-DD64DBDA/FBF25C75.[0K[?25l
+The file will have its original line endings in your working directory.[0K
+[0K[?25hwarning: LF will be replaced by CRLF in .Rproj.user/F59306F1/sources/s-DD64DBDA/FBF25C75-contents.[0K[?25l
+The file will have its original line endings in your working directory.[0K
+[0K[?25hwarning: LF will be replaced by CRLF in .Rproj.user/shared/notebooks/paths.[0K[?25l
+The file will have its original line endings in your working directory.[0K
+[0K[?25hwarning: LF will be replaced by CRLF in _site.yml.[0K[?25l
+The file will have its original line endings in your working directory.[0K
+[0K[?25h]0; [?25l
+G:\Mi unidad\R_LEARNING\GitHub\alvarogutyerrez\alvarogutyerrez>[0K[?25hg[0Ki[0Kt[0K[68G[?25lG:\Mi unidad\R_LEARNING\GitHub\alvarogutyerrez\alvarogutyerrez>git c[0K[?25ho[0Km[0Km[0Ki[0Kt[0K[75G[?25lG:\Mi unidad\R_LEARNING\GitHub\alvarogutyerrez\alvarogutyerrez>git commit -[0K[?25ha[0K[?25lG:\Mi unidad\R_LEARNING\GitHub\alvarogutyerrez\alvarogutyerrez>git commit -[0K[?25hm[0K]0;  - git  commit -m[?25l
+[0K[?25h]0; error: switch `m' requires a value[0K[?25l
+usage: git commit [<options>] [--] <pathspec>...[0K
+[0K
+    -q, --quiet           suppress summary after successful commit[0K
+    -v, --verbose         show diff in commit message template[0K
+[0K
+Commit message options[0K
+    -F, --file <file>     read message from file[0K
+    --author <author>     override author for commit[0K
+    --date <date>         override date for commit[0K
+    -m, --message <message>[0K
+                          commit message[0K
+    -c, --reedit-message <commit>[0K
+                          reuse and edit message from specified commit[0K
+    -C, --reuse-message <commit>[0K
+                          reuse message from specified commit[0K
+    --fixup <commit>      use autosquash formatted message to fixup specified commit[0K
+    --squash <commit>     use autosquash formatted message to squash specified commit[0K
+    --reset-author        the commit is authored by me now (used with -C/-c/--amend)[0K
+    -s, --signoff         add Signed-off-by:[0K
+    -t, --template <file>[0K
+                          use specified template file[0K
+    -e, --edit            force edit of commit[0K
+    --cleanup <default>   how to strip spaces and #comments from message[0K
+    --status              include status in commit message template[0K
+    -S, --gpg-sign[=<key-id>][0K
+                          GPG sign commit[0K
+[0K
+Commit contents options[0K
+    -a, --all             commit all changed files[0K
+    -i, --include         add specified files to index for commit[0K
+    --interactive         interactively add files[0K
+    -p, --patch           interactively add changes[0K
+    -o, --only            commit only specified files[0K
+    -n, --no-verify       bypass pre-commit and commit-msg hooks[0K
+    --dry-run             show what would be committed[0K
+    --short               show status concisely[0K
+    --branch              show branch information[0K
+    --ahead-behind        compute full ahead/behind values[0K
+    --porcelain           machine-readable output[0K
+    --long                show status in long format (default)[0K
+    -z, --null            terminate entries with NUL[0K
+    --amend               amend previous commit[0K
+    --no-post-rewrite     bypass post-rewrite hook[0K
+    -u, --untracked-files[=<mode>][0K
+                          show untracked files, optional modes: all, normal, no. (Default: all)[0K
+[0K
+[0K
+G:\Mi unidad\R_LEARNING\GitHub\alvarogutyerrez\alvarogutyerrez>[0K[?25hg[0Ki[0Kt[0K[?25lG:\Mi unidad\R_LEARNING\GitHub\alvarogutyerrez\alvarogutyerrez>gi[0K[?25h[?25lG:\Mi unidad\R_LEARNING\GitHub\alvarogutyerrez\alvarogutyerrez>g[0K[?25h[?25lG:\Mi unidad\R_LEARNING\GitHub\alvarogutyerrez\alvarogutyerrez>[0K[?25hgit commit -m[0K[78G[?25lG:\Mi unidad\R_LEARNING\GitHub\alvarogutyerrez\alvarogutyerrez>git commit -m "[0K[?25hU[0K¿[0K[?25lG:\Mi unidad\R_LEARNING\GitHub\alvarogutyerrez\alvarogutyerrez>git commit -m "U[0K[?25h[?25lG:\Mi unidad\R_LEARNING\GitHub\alvarogutyerrez\alvarogutyerrez>git commit -m "[0K[?25hu[0Kn[0Ko[0K"[0K]0;  - git  commit -m "uno"[?25l
+[0K[?25h]0; [master 1774e57] uno[0K[?25l
+ 34 files changed, 331 insertions(+)[0K
+ create mode 100644 .Rhistory[0K
+ create mode 100644 .Rproj.user/F59306F1/console06/4A4A6FE9[0K
+ create mode 100644 .Rproj.user/F59306F1/console06/INDEX001[0K
+ create mode 100644 .Rproj.user/F59306F1/pcs/files-pane.pper[0K
+ create mode 100644 .Rproj.user/F59306F1/pcs/source-pane.pper[0K
+ create mode 100644 .Rproj.user/F59306F1/pcs/windowlayoutstate.pper[0K
+ create mode 100644 .Rproj.user/F59306F1/pcs/workbench-pane.pper[0K
+ create mode 100644 .Rproj.user/F59306F1/rmd-outputs[0K
+ create mode 100644 .Rproj.user/F59306F1/saved_source_markers[0K
+ create mode 100644 .Rproj.user/F59306F1/sources/prop/2141C7BA[0K
+ create mode 100644 .Rproj.user/F59306F1/sources/prop/A18CDF07[0K
+ create mode 100644 .Rproj.user/F59306F1/sources/prop/C6C4C817[0K
+ create mode 100644 .Rproj.user/F59306F1/sources/prop/DAE6DFD0[0K
+ create mode 100644 .Rproj.user/F59306F1/sources/prop/E26FB4D0[0K
+ create mode 100644 .Rproj.user/F59306F1/sources/prop/INDEX[0K
+ create mode 100644 .Rproj.user/F59306F1/sources/s-DD64DBDA/3ADAB137[0K
+ create mode 100644 .Rproj.user/F59306F1/sources/s-DD64DBDA/3ADAB137-contents[0K
+ create mode 100644 .Rproj.user/F59306F1/sources/s-DD64DBDA/9EAECD50[0K
+ create mode 100644 .Rproj.user/F59306F1/sources/s-DD64DBDA/9EAECD50-contents[0K
+ create mode 100644 .Rproj.user/F59306F1/sources/s-DD64DBDA/D119A9AF[0K
+ create mode 100644 .Rproj.user/F59306F1/sources/s-DD64DBDA/D119A9AF-contents[0K
+ create mode 100644 .Rproj.user/F59306F1/sources/s-DD64DBDA/D39A804C[0K
+ create mode 100644 .Rproj.user/F59306F1/sources/s-DD64DBDA/D39A804C-contents[0K
+ create mode 100644 .Rproj.user/F59306F1/sources/s-DD64DBDA/FBF25C75[0K
+ create mode 100644 .Rproj.user/F59306F1/sources/s-DD64DBDA/FBF25C75-contents[0K
+ create mode 100644 .Rproj.user/F59306F1/sources/s-DD64DBDA/lock_file[0K
+ create mode 100644 .Rproj.user/shared/notebooks/patch-chunk-names[0K
+ create mode 100644 .Rproj.user/shared/notebooks/paths[0K
+ create mode 100644 .nojekyll[0K
+ create mode 100644 _site.yml[0K
+ create mode 100644 about.Rmd[0K
+ create mode 100644 alvarogutyerrez.Rproj[0K
+ create mode 100644 build_site.R[0K
+ create mode 100644 index.Rmd[0K
+[0K
+G:\Mi unidad\R_LEARNING\GitHub\alvarogutyerrez\alvarogutyerrez>[0K[?25hgit commit -m "uno"[0K[?25lG:\Mi unidad\R_LEARNING\GitHub\alvarogutyerrez\alvarogutyerrez>git commit -m[0K[?25h[?25lG:\Mi unidad\R_LEARNING\GitHub\alvarogutyerrez\alvarogutyerrez>git add -A[0K[?25h]0;  - git  add -A[?25l
 [0K[?25h
