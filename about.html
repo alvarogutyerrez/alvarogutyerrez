@@ -200,7 +200,53 @@ $(document).ready(function () {
 </div>
 
 
-<p>EgaÃ±a te amo</p>
+<div id="introduction" class="section level1">
+<h1>Introduction</h1>
+<p>In the present session we will learn how to develop beautiful and completely personalized descriptive statistics. This could be made, either using already made libraries or ‘’handmade’‘process. The second way (the way that the authors strongly recommend) lies in the use of primitive functional programming to imitate and, at the end, definetly outperform the STATA preloaded commands like’‘summarize’‘or’‘tabulate’‘. It could sounds ambitious (in fact, it is), but the aim of the present chapter is twofold. For the beginners or’‘fast-user’‘, they will get a friendly way to create standard tables as STATA does. While, in the other hand, for more curious or’‘deep-users’’ they will be able to create, same tables, but with the surpluss that they will also get the understanding of the primitive functions that help in the process.</p>
+<div id="loading-libraries-and-dataset" class="section level2">
+<h2>Loading Libraries and Dataset</h2>
+<p>First we will start loading the libraries that we will use hereafter.</p>
+<pre class="r"><code>library(tidyverse)
+library(readstata13)
+library(gmodels)</code></pre>
+<pre class="r"><code>base &lt;-  read.dta13(&quot;eps2009_trabajable.dta&quot;)</code></pre>
+<p>With this we can visualize the first three observations of the data set, due to unfortunately R is not as powerfull as STATA to show the data sets.</p>
+<pre><code>header &lt;- base[3,]
+View(header)</code></pre>
+</div>
+</div>
+<div id="descriptive-statistics" class="section level1">
+<h1>Descriptive Statistics</h1>
+<div id="first-stop-summarize-vs-summary" class="section level2">
+<h2>First Stop: <em>summarize</em> v/s <em>summary</em></h2>
+<p>The first, way to generate a brief summary of a variable is with the command ‘’summary’’ which, indeed, is closely related to the homonym in the STATA preloaded command.</p>
+<pre class="r"><code>income_summary&lt;-summary(base$ing09)
+income_summary</code></pre>
+<pre><code>##      Min.   1st Qu.    Median      Mean   3rd Qu.      Max.      NA&#39;s 
+##   0.00000   0.04455   0.15000   0.26967   0.28000 162.80000        29</code></pre>
+<p>Another similar function that you may use to get simple statistics is <em>fivenum</em>. It will give you minimum, lower-hinge, median, upper-hinge and maximum of the imput data.</p>
+<pre class="r"><code>income_fivenum&lt;-fivenum(base$ing09)
+income_fivenum</code></pre>
+<pre><code>## [1]   0.0000   0.0445   0.1500   0.2800 162.8000</code></pre>
+</div>
+<div id="second-stop-tabulate" class="section level2">
+<h2>Second Stop: Tabulate</h2>
+<p>Before to continue, we need to add the labels to the variables. Something that in STATA will looks like:</p>
+<pre><code>label define gender 0 &quot;Female&quot; 1 &quot;Male&quot;
+label variable gender gender</code></pre>
+<p>Into R we will use the function <em>factor</em> to label our data.</p>
+<pre class="r"><code>gender &lt;- factor(base$sexo09,
+                    levels = c(0,1),
+                    labels = c(&quot;Female&quot;, &quot;Male&quot;))</code></pre>
+<p>Just to made more clear the last point. Another example.</p>
+<pre><code>label define quintil_income 1 &quot;1st quintile&quot; 2 &quot;2nd quintile&quot; 3 &quot;3th quintile&quot; 4 &quot;4th quintile&quot;  5 &quot;5th quintile&quot;
+label variable quintil_income quintil_income</code></pre>
+<pre class="r"><code>quintil_income &lt;- factor(base$quintil_muestra,
+                 levels = c(1,2,3,4,5),
+                 labels = c(&quot;1st quintile&quot;, &quot;2nd quintile&quot;, &quot;3th quintile&quot; , &quot;4th quintile&quot; ,&quot;5th quintile&quot;))</code></pre>
+<p>With the data already labeled we will proceed to replicate Tabulate.</p>
+</div>
+</div>
 
 
 
