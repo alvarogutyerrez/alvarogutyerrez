@@ -646,4 +646,35 @@ G:\Mi unidad\R_LEARNING\GitHub\alvarogutyerrez\alvarogutyerrez>[0K[?25hgit pus
 [0K[?25hEverything up-to-date[0K[?25l
 [0K[?25h]0; [?25l
 G:\Mi unidad\R_LEARNING\GitHub\alvarogutyerrez\alvarogutyerrez>[0K[?25hgit push origin master[0K[?25lG:\Mi unidad\R_LEARNING\GitHub\alvarogutyerrez\alvarogutyerrez>git commit -m "asasassss"[0K[?25h[?25lG:\Mi unidad\R_LEARNING\GitHub\alvarogutyerrez\alvarogutyerrez>git add -A[0K[?25h]0;  - git  add -A[?25l
+[0K[?25hwarning: LF will be replaced by CRLF in .Rproj.user/F59306F1/sources/prop/119A8055.[0K[?25l
+The file will have its original line endings in your working directory.[0K
+warning: LF will be replaced by CRLF in .Rproj.user/F59306F1/sources/prop/6DB65301.[0K
+The file will have its original line endings in your working directory.[0K
+[0K[?25hwarning: LF will be replaced by CRLF in .Rproj.user/F59306F1/sources/prop/B47F3559.[0K[?25l
+The file will have its original line endings in your working directory.[0K
+[0K[?25hwarning: LF will be replaced by CRLF in .Rproj.user/F59306F1/sources/s-B34EFEF8/9B1D58E4.[0K[?25l
+The file will have its original line endings in your working directory.[0K
+[0K[?25hwarning: LF will be replaced by CRLF in .Rproj.user/F59306F1/sources/s-B34EFEF8/9EAECD50.[0K[?25l
+The file will have its original line endings in your working directory.[0K
+[0K[?25hwarning: LF will be replaced by CRLF in .Rproj.user/F59306F1/sources/s-B34EFEF8/9EAECD50-contents.[0K[?25l
+The file will have its original line endings in your working directory.[0K
+[0K[?25hwarning: LF will be replaced by CRLF in .Rproj.user/F59306F1/sources/s-B34EFEF8/BBC45A7E-contents.[0K[?25l
+The file will have its original line endings in your working directory.[0K
+[0K[?25h]0; [?25l
+G:\Mi unidad\R_LEARNING\GitHub\alvarogutyerrez\alvarogutyerrez>[0K[?25hgit add -A[0K[?25lG:\Mi unidad\R_LEARNING\GitHub\alvarogutyerrez\alvarogutyerrez>git push origin master[0K[?25h[?25lG:\Mi unidad\R_LEARNING\GitHub\alvarogutyerrez\alvarogutyerrez>git add -A[0K[?25h[?25lG:\Mi unidad\R_LEARNING\GitHub\alvarogutyerrez\alvarogutyerrez>git commit -m "asasassss"[0K[?25h[88G[87G[86G[?25lG:\Mi unidad\R_LEARNING\GitHub\alvarogutyerrez\alvarogutyerrez>git commit -m "asasassass"[0K[87G[?25h[?25lG:\Mi unidad\R_LEARNING\GitHub\alvarogutyerrez\alvarogutyerrez>git commit -m "asasassaass"[0K[88G[?25h[?25lG:\Mi unidad\R_LEARNING\GitHub\alvarogutyerrez\alvarogutyerrez>git commit -m "asasassaaass"[0K[89G[?25h]0;  - git  commit -m "asasassaaass"[?25l
+[0K[?25h]0; [master e5a8973] asasassaaass[0K[?25l
+ 5 files changed, 336 insertions(+), 5 deletions(-)[0K
+ create mode 100644 .Rproj.user/F59306F1/sources/s-B34EFEF8/BBC45A7E-contents[0K
+[0K
+G:\Mi unidad\R_LEARNING\GitHub\alvarogutyerrez\alvarogutyerrez>[0K[?25hgit commit -m "asasassaaass"[0K[?25lG:\Mi unidad\R_LEARNING\GitHub\alvarogutyerrez\alvarogutyerrez>git add -A[0K[?25h[?25lG:\Mi unidad\R_LEARNING\GitHub\alvarogutyerrez\alvarogutyerrez>git push origin master[0K[?25h[?25lG:\Mi unidad\R_LEARNING\GitHub\alvarogutyerrez\alvarogutyerrez>git add -A[0K[?25h[?25lG:\Mi unidad\R_LEARNING\GitHub\alvarogutyerrez\alvarogutyerrez>git push origin master[0K[?25h]0;  - git  push origin master[?25l
+[0K[?25hCounting objects: 12, done.[0K[?25l
+[0K[?25hDelta compression using up to 4 threads.[0K[?25l
+Compressing objects:  66% (8/12)[0K[1G[?25hCompressing objects: 100% (12/12), done.[0K[?25l
+Writing objects: 100% (12/12), 1.33 KiB | 85.00 KiB/s, done.[0K
+Total 12 (delta 7), reused 0 (delta 0)[0K
+[0K[?25h[?25lremote: Resolving deltas:  85% (6/7)[0K[1G[?25hremote: Resolving deltas: 100% (7/7), completed with 7 local objects.[0K[?25l
+[0K[?25hTo https://github.com/alvarogutyerrez/alvarogutyerrez.git[0K[?25l
+   a3fd858..e5a8973  master -> master[0K
+[0K[?25h]0; [?25l
+G:\Mi unidad\R_LEARNING\GitHub\alvarogutyerrez\alvarogutyerrez>[0K[?25hgit add -A[0K]0;  - git  add -A[?25l
 [0K[?25h
