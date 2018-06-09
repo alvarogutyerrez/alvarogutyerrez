@@ -7,9 +7,9 @@ navbar:
       href: index.html
     - text: "About Me"
       href: about.html
-    - text: "Projects"     
-      href: projects.html
+    - text: "CV"
+      href: CV.html      
 output:
   html_document:
-    theme: flatly
+    theme: journal
     css: style.css
