@@ -1,680 +1,5 @@
-[0m[0KMicrosoft Windows [Versión 10.0.17134.81][0K[?25l
+[0mMicrosoft Windows [Versión 10.0.17134.112][0K[?25l
 (c) 2018 Microsoft Corporation. Todos los derechos reservados.[0K
 [0K
-G:\Mi unidad\R_LEARNING\GitHub\alvarogutyerrez\alvarogutyerrez>[0K[?25hg[0Ki[0Kt[0K[68G[?25lG:\Mi unidad\R_LEARNING\GitHub\alvarogutyerrez\alvarogutyerrez>git a[0K[?25hd[0Kd[0K[72G[?25lG:\Mi unidad\R_LEARNING\GitHub\alvarogutyerrez\alvarogutyerrez>git add -[0K[?25hA[0K[?25l
-[0K[?25h]0;  - git  add -Awarning: LF will be replaced by CRLF in .Rhistory.[0K[?25l
-The file will have its original line endings in your working directory.[0K
-[0K[?25herror: open(".Rproj.user/F59306F1/console06/4A4A6FE9"): Permission denied[0K[?25l
-error: unable to index file .Rproj.user/F59306F1/console06/4A4A6FE9[0K
-fatal: updating files failed[0K
-[0K[?25h]0; [?25l
-G:\Mi unidad\R_LEARNING\GitHub\alvarogutyerrez\alvarogutyerrez>[0K[?25hg[0Ki[0Kt[0K]0;  - git[?25l
-[0K[?25husage: git [--version] [--help] [-C <path>] [-c <name>=<value>][0K[?25l
-           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path][0K
-           [-p | --paginate | --no-pager] [--no-replace-objects] [--bare][0K
-           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>][0K
-           <command> [<args>][0K
-[0K
-These are common Git commands used in various situations:[0K
-[0K
-start a working area (see also: git help tutorial)[0K
-   clone      Clone a repository into a new directory[0K
-   init       Create an empty Git repository or reinitialize an existing one[0K
-[0K
-work on the current change (see also: git help everyday)[0K
-   add        Add file contents to the index[0K
-   mv         Move or rename a file, a directory, or a symlink[0K
-   reset      Reset current HEAD to the specified state[0K
-   rm         Remove files from the working tree and from the index[0K
-[0K
-examine the history and state (see also: git help revisions)[0K
-   bisect     Use binary search to find the commit that introduced a bug[0K
-   grep       Print lines matching a pattern[0K
-   log        Show commit logs[0K
-   show       Show various types of objects[0K
-   status     Show the working tree status[0K
-[0K
-grow, mark and tweak your common history[0K
-   branch     List, create, or delete branches[0K
-   checkout   Switch branches or restore working tree files[0K
-   commit     Record changes to the repository[0K
-   diff       Show changes between commits, commit and working tree, etc[0K
-   merge      Join two or more development histories together[0K
-   rebase     Reapply commits on top of another base tip[0K
-   tag        Create, list, delete or verify a tag object signed with GPG[0K
-[0K
-collaborate (see also: git help workflows)[0K
-   fetch      Download objects and refs from another repository[0K
-   pull       Fetch from and integrate with another repository or a local branch[0K
-   push       Update remote refs along with associated objects[0K
-[0K
-'git help -a' and 'git help -g' list available subcommands and some[0K
-concept guides. See 'git help <command>' or 'git help <concept>'[0K
-to read about a specific subcommand or concept.[0K
-[0K[?25h]0; [?25l
-G:\Mi unidad\R_LEARNING\GitHub\alvarogutyerrez\alvarogutyerrez>[0K[?25hg[0Ki[0Kt[0K[68G[?25lG:\Mi unidad\R_LEARNING\GitHub\alvarogutyerrez\alvarogutyerrez>git a[0K[?25hd[0Kd[0K[72G[?25lG:\Mi unidad\R_LEARNING\GitHub\alvarogutyerrez\alvarogutyerrez>git add -[0K[?25hA[0K[?25l
-[0K[?25h]0;  - git  add -Awarning: LF will be replaced by CRLF in .Rhistory.[0K[?25l
-The file will have its original line endings in your working directory.[0K
-[0K[?25hwarning: LF will be replaced by CRLF in .Rproj.user/F59306F1/pcs/files-pane.pper.[0K[?25l
-The file will have its original line endings in your working directory.[0K
-[0K[?25hwarning: LF will be replaced by CRLF in .Rproj.user/F59306F1/pcs/source-pane.pper.[0K[?25l
-The file will have its original line endings in your working directory.[0K
-[0K[?25hwarning: LF will be replaced by CRLF in .Rproj.user/F59306F1/pcs/windowlayoutstate.pper.[0K[?25l
-The file will have its original line endings in your working directory.[0K
-[0K[?25hwarning: LF will be replaced by CRLF in .Rproj.user/F59306F1/pcs/workbench-pane.pper.[0K[?25l
-The file will have its original line endings in your working directory.[0K
-warning: LF will be replaced by CRLF in .Rproj.user/F59306F1/rmd-outputs.[0K
-The file will have its original line endings in your working directory.[0K
-[0K[?25hwarning: LF will be replaced by CRLF in .Rproj.user/F59306F1/sources/prop/6DB65301.[0K[?25l
-The file will have its original line endings in your working directory.[0K
-warning: LF will be replaced by CRLF in .Rproj.user/F59306F1/sources/prop/B47F3559.[0K
-The file will have its original line endings in your working directory.[0K
-[0K[?25hwarning: LF will be replaced by CRLF in .Rproj.user/F59306F1/sources/prop/C6C4C817.[0K[?25l
-The file will have its original line endings in your working directory.[0K
-[0K[?25hwarning: LF will be replaced by CRLF in .Rproj.user/F59306F1/sources/prop/EB761FEE.[0K[?25l
-The file will have its original line endings in your working directory.[0K
-[0K[?25hwarning: LF will be replaced by CRLF in .Rproj.user/F59306F1/sources/prop/INDEX.[0K[?25l
-The file will have its original line endings in your working directory.[0K
-[0K[?25hwarning: LF will be replaced by CRLF in .Rproj.user/shared/notebooks/paths.[0K[?25l
-The file will have its original line endings in your working directory.[0K
-[0K[?25hwarning: LF will be replaced by CRLF in site_libs/bootstrap-3.3.5/css/bootstrap-theme.css.[0K[?25l
-The file will have its original line endings in your working directory.[0K
-warning: LF will be replaced by CRLF in site_libs/bootstrap-3.3.5/css/bootstrap-theme.min.css.[0K
-The file will have its original line endings in your working directory.[0K
-[0K[?25hwarning: LF will be replaced by CRLF in site_libs/bootstrap-3.3.5/css/bootstrap.css.[0K[?25l
-The file will have its original line endings in your working directory.[0K
-[0K[?25hwarning: LF will be replaced by CRLF in site_libs/bootstrap-3.3.5/css/bootstrap.min.css.[0K[?25l
-The file will have its original line endings in your working directory.[0K
-warning: LF will be replaced by CRLF in site_libs/bootstrap-3.3.5/css/cerulean.min.css.[0K
-The file will have its original line endings in your working directory.[0K
-[0K[?25hwarning: LF will be replaced by CRLF in site_libs/bootstrap-3.3.5/css/cosmo.min.css.[0K[?25l
-The file will have its original line endings in your working directory.[0K
-[0K[?25hwarning: LF will be replaced by CRLF in site_libs/bootstrap-3.3.5/css/flatly.min.css.[0K[?25l
-The file will have its original line endings in your working directory.[0K
-[0K[?25hwarning: LF will be replaced by CRLF in site_libs/bootstrap-3.3.5/css/journal.min.css.[0K[?25l
-The file will have its original line endings in your working directory.[0K
-warning: LF will be replaced by CRLF in site_libs/bootstrap-3.3.5/css/lumen.min.css.[0K
-The file will have its original line endings in your working directory.[0K
-[0K[?25hwarning: LF will be replaced by CRLF in site_libs/bootstrap-3.3.5/css/paper.min.css.[0K[?25l
-The file will have its original line endings in your working directory.[0K
-warning: LF will be replaced by CRLF in site_libs/bootstrap-3.3.5/css/readable.min.css.[0K
-The file will have its original line endings in your working directory.[0K
-[0K[?25hwarning: LF will be replaced by CRLF in site_libs/bootstrap-3.3.5/css/sandstone.min.css.[0K[?25l
-The file will have its original line endings in your working directory.[0K
-[0K[?25hwarning: LF will be replaced by CRLF in site_libs/bootstrap-3.3.5/css/simplex.min.css.[0K[?25l
-The file will have its original line endings in your working directory.[0K
-warning: LF will be replaced by CRLF in site_libs/bootstrap-3.3.5/css/spacelab.min.css.[0K
-The file will have its original line endings in your working directory.[0K
-[0K[?25hwarning: LF will be replaced by CRLF in site_libs/bootstrap-3.3.5/css/united.min.css.[0K[?25l
-The file will have its original line endings in your working directory.[0K
-warning: LF will be replaced by CRLF in site_libs/bootstrap-3.3.5/css/yeti.min.css.[0K[1G[?25h[?25l
-The file will have its original line endings in your working directory.[0K
-[0K[?25hwarning: LF will be replaced by CRLF in site_libs/bootstrap-3.3.5/fonts/glyphicons-halflings-regular.svg.[0K[?25l
-The file will have its original line endings in your working directory.[0K
-[0K[?25hwarning: LF will be replaced by CRLF in site_libs/bootstrap-3.3.5/js/bootstrap.js.[0K[?25l
-The file will have its original line endings in your working directory.[0K
-warning: LF will be replaced by CRLF in site_libs/bootstrap-3.3.5/js/bootstrap.min.js.[0K
-The file will have its original line endings in your working directory.[0K
-[0K[?25hwarning: LF will be replaced by CRLF in site_libs/bootstrap-3.3.5/js/npm.js.[0K[?25l
-The file will have its original line endings in your working directory.[0K
-warning: LF will be replaced by CRLF in site_libs/bootstrap-3.3.5/shim/html5shiv.min.js.[0K
-The file will have its original line endings in your working directory.[0K
-[0K[?25hwarning: LF will be replaced by CRLF in site_libs/bootstrap-3.3.5/shim/respond.min.js.[0K[?25l
-The file will have its original line endings in your working directory.[0K
-warning: LF will be replaced by CRLF in site_libs/highlightjs-9.12.0/default.css.[0K
-The file will have its original line endings in your working directory.[0K
-[0K[?25hwarning: LF will be replaced by CRLF in site_libs/highlightjs-9.12.0/highlight.js.[0K[?25l
-The file will have its original line endings in your working directory.[0K
-warning: LF will be replaced by CRLF in site_libs/highlightjs-9.12.0/textmate.css.[0K
-The file will have its original line endings in your working directory.[0K
-[0K[?25hwarning: LF will be replaced by CRLF in site_libs/jquery-1.11.3/jquery.min.js.[0K[?25l
-The file will have its original line endings in your working directory.[0K
-warning: LF will be replaced by CRLF in site_libs/navigation-1.1/codefolding.js.[0K
-The file will have its original line endings in your working directory.[0K
-[0K[?25hwarning: LF will be replaced by CRLF in site_libs/navigation-1.1/sourceembed.js.[0K[?25l
-The file will have its original line endings in your working directory.[0K
-[0K[?25hwarning: LF will be replaced by CRLF in site_libs/navigation-1.1/tabsets.js.[0K[?25l
-The file will have its original line endings in your working directory.[0K
-[0K[?25hwarning: LF will be replaced by CRLF in .Rproj.user/F59306F1/sources/prop/119A8055.[0K[?25l
-The file will have its original line endings in your working directory.[0K
-[0K[?25hwarning: LF will be replaced by CRLF in .Rproj.user/F59306F1/sources/prop/537FF8ED.[0K[?25l
-The file will have its original line endings in your working directory.[0K
-warning: LF will be replaced by CRLF in .Rproj.user/F59306F1/sources/prop/E60B1C62.[0K
-The file will have its original line endings in your working directory.[0K
-[0K[?25hwarning: LF will be replaced by CRLF in .Rproj.user/F59306F1/sources/s-B34EFEF8/3ADAB137.[0K[?25l
-The file will have its original line endings in your working directory.[0K
-[0K[?25hwarning: LF will be replaced by CRLF in .Rproj.user/F59306F1/sources/s-B34EFEF8/3ADAB137-contents.[0K[?25l
-The file will have its original line endings in your working directory.[0K
-warning: LF will be replaced by CRLF in .Rproj.user/F59306F1/sources/s-B34EFEF8/9B1D58E4.[0K
-The file will have its original line endings in your working directory.[0K
-[0K[?25hwarning: LF will be replaced by CRLF in .Rproj.user/F59306F1/sources/s-B34EFEF8/9B1D58E4-contents.[0K[?25l
-The file will have its original line endings in your working directory.[0K
-[0K[?25hwarning: LF will be replaced by CRLF in .Rproj.user/F59306F1/sources/s-B34EFEF8/9EAECD50.[0K[?25l
-The file will have its original line endings in your working directory.[0K
-[0K[?25hwarning: LF will be replaced by CRLF in .Rproj.user/F59306F1/sources/s-B34EFEF8/9EAECD50-contents.[0K[?25l
-The file will have its original line endings in your working directory.[0K
-warning: LF will be replaced by CRLF in .Rproj.user/F59306F1/sources/s-B34EFEF8/C0E75EBE.[0K
-The file will have its original line endings in your working directory.[0K
-[0K[?25hwarning: LF will be replaced by CRLF in .Rproj.user/F59306F1/sources/s-B34EFEF8/C0E75EBE-contents.[0K[?25l
-The file will have its original line endings in your working directory.[0K
-warning: LF will be replaced by CRLF in .Rproj.user/F59306F1/sources/s-B34EFEF8/E1569021-contents.[0K
-The file will have its original line endings in your working directory.[0K
-warning: LF will be replaced by CRLF in .Rproj.user/F59306F1/sources/s-B34EFEF8/E3860C9A.[0K
-The file will have its original line endings in your working directory.[0K
-[0K[?25hwarning: LF will be replaced by CRLF in .Rproj.user/F59306F1/sources/s-B34EFEF8/E3860C9A-contents.[0K[?25l
-The file will have its original line endings in your working directory.[0K
-[0K[?25h]0; [?25l
-G:\Mi unidad\R_LEARNING\GitHub\alvarogutyerrez\alvarogutyerrez>[0K[?25hg[0Ki[0Kt[0K[68G[?25lG:\Mi unidad\R_LEARNING\GitHub\alvarogutyerrez\alvarogutyerrez>git c[0K[?25ho[0Km[0Km[0Ki[0Kt[0K[75G[?25lG:\Mi unidad\R_LEARNING\GitHub\alvarogutyerrez\alvarogutyerrez>git commit -[0K[?25hm[0K[78G[?25lG:\Mi unidad\R_LEARNING\GitHub\alvarogutyerrez\alvarogutyerrez>git commit -m "[0K[?25ha[0Kd[0Ka[0Kd[0K"[0K]0;  - git  commit -m "adad"[?25l
-[0K[?25h]0; [master de7b84a] adad[0K[?25l
- 48 files changed, 815 insertions(+), 1099 deletions(-)[0K
- create mode 100644 .RData[0K
- rewrite .Rproj.user/F59306F1/console06/4A4A6FE9 (96%)[0K
- rewrite .Rproj.user/F59306F1/console06/INDEX001 (83%)[0K
- create mode 100644 .Rproj.user/F59306F1/sources/prop/119A8055[0K
- create mode 100644 .Rproj.user/F59306F1/sources/prop/537FF8ED[0K
- create mode 100644 .Rproj.user/F59306F1/sources/prop/E60B1C62[0K
- rename .Rproj.user/F59306F1/sources/{s-DD64DBDA => s-B34EFEF8}/3ADAB137 (89%)[0K
- rename .Rproj.user/F59306F1/sources/{s-DD64DBDA => s-B34EFEF8}/3ADAB137-contents (100%)[0K
- rename .Rproj.user/F59306F1/sources/{s-DD64DBDA => s-B34EFEF8}/9B1D58E4 (95%)[0K
- rename .Rproj.user/F59306F1/sources/{s-DD64DBDA => s-B34EFEF8}/9B1D58E4-contents (100%)[0K
- rename .Rproj.user/F59306F1/sources/{s-DD64DBDA => s-B34EFEF8}/9EAECD50 (70%)[0K
- create mode 100644 .Rproj.user/F59306F1/sources/s-B34EFEF8/9EAECD50-contents[0K
- rename .Rproj.user/F59306F1/sources/{s-DD64DBDA => s-B34EFEF8}/C0E75EBE (80%)[0K
- create mode 100644 .Rproj.user/F59306F1/sources/s-B34EFEF8/C0E75EBE-contents[0K
- create mode 100644 .Rproj.user/F59306F1/sources/s-B34EFEF8/E1569021-contents[0K
- create mode 100644 .Rproj.user/F59306F1/sources/s-B34EFEF8/E3860C9A[0K
- create mode 100644 .Rproj.user/F59306F1/sources/s-B34EFEF8/E3860C9A-contents[0K
- rename .Rproj.user/F59306F1/sources/{s-DD64DBDA => s-B34EFEF8}/lock_file (100%)[0K
- delete mode 100644 .Rproj.user/F59306F1/sources/s-DD64DBDA/9EAECD50-contents[0K
- delete mode 100644 .Rproj.user/F59306F1/sources/s-DD64DBDA/C0E75EBE-contents[0K
- delete mode 100644 .Rproj.user/F59306F1/sources/s-DD64DBDA/D119A9AF-contents[0K
- delete mode 100644 .Rproj.user/F59306F1/sources/s-DD64DBDA/D39A804C-contents[0K
- delete mode 100644 .Rproj.user/F59306F1/sources/s-DD64DBDA/FBF25C75-contents[0K
- create mode 100644 .Rproj.user/shared/notebooks/35FE756E-about/1/F59306F13476E08E/chunks.json[0K
- rewrite .Rproj.user/shared/notebooks/35FE756E-about/1/s/chunks.json (100%)[0K
- delete mode 100644 .Rproj.user/shared/notebooks/35FE756E-about/1/s/csetup_chunk/000002.csv[0K
- delete mode 100644 .Rproj.user/shared/notebooks/35FE756E-about/1/s/ctwbs7nsktmpw/000002.csv[0K
- create mode 100644 .Rproj.user/shared/notebooks/441046D-proyects/1/F59306F13476E08E/chunks.json[0K
- create mode 100644 .Rproj.user/shared/notebooks/441046D-proyects/1/F59306F1B34EFEF8/chunks.json[0K
- create mode 100644 .Rproj.user/shared/notebooks/441046D-proyects/1/s/chunks.json[0K
- rewrite about.Rmd (99%)[0K
- create mode 100644 proyects.Rmd[0K
- create mode 100644 proyects.html[0K
- create mode 100644 style.css[0K
-[0K
-G:\Mi unidad\R_LEARNING\GitHub\alvarogutyerrez\alvarogutyerrez>[0K[?25hg[0Ki[0Kt[0K[68G[?25lG:\Mi unidad\R_LEARNING\GitHub\alvarogutyerrez\alvarogutyerrez>git p[0K[?25hu[0Ks[0Kh[0K[73G[?25lG:\Mi unidad\R_LEARNING\GitHub\alvarogutyerrez\alvarogutyerrez>git push c[0K[?25ho[0Ku[0Kr[0Ks[0K[?25lG:\Mi unidad\R_LEARNING\GitHub\alvarogutyerrez\alvarogutyerrez>git push cour[0K[?25h[?25lG:\Mi unidad\R_LEARNING\GitHub\alvarogutyerrez\alvarogutyerrez>git push cou[0K[?25h[?25lG:\Mi unidad\R_LEARNING\GitHub\alvarogutyerrez\alvarogutyerrez>git push co[0K[?25h[?25lG:\Mi unidad\R_LEARNING\GitHub\alvarogutyerrez\alvarogutyerrez>git push c[0K[?25h[?25lG:\Mi unidad\R_LEARNING\GitHub\alvarogutyerrez\alvarogutyerrez>git push[0K[73G[?25h[?25lG:\Mi unidad\R_LEARNING\GitHub\alvarogutyerrez\alvarogutyerrez>git push s[0K[?25ho[0Ku[0Kr[0Kc[0Ke[0K[80G[?25lG:\Mi unidad\R_LEARNING\GitHub\alvarogutyerrez\alvarogutyerrez>git push source m[0K[?25ha[0Ks[0Kt[0Ke[0Kr[0K]0;  - git  push source master[?25l
-[0K[?25h]0; fatal: 'source' does not appear to be a git repository[0K[?25l
-fatal: Could not read from remote repository.[0K
-[0K
-Please make sure you have the correct access rights[0K
-and the repository exists.[0K
-[0K[?25h[?25l
-G:\Mi unidad\R_LEARNING\GitHub\alvarogutyerrez\alvarogutyerrez>[0K[?25hgit push source master[0K[?25lG:\Mi unidad\R_LEARNING\GitHub\alvarogutyerrez\alvarogutyerrez>git commit -m "adad"[0K[?25h[?25lG:\Mi unidad\R_LEARNING\GitHub\alvarogutyerrez\alvarogutyerrez>git add -A[0K[?25h[?25lG:\Mi unidad\R_LEARNING\GitHub\alvarogutyerrez\alvarogutyerrez>git add -[0K[?25h[?25lG:\Mi unidad\R_LEARNING\GitHub\alvarogutyerrez\alvarogutyerrez>git add[0K[72G[?25h[71G[?25lG:\Mi unidad\R_LEARNING\GitHub\alvarogutyerrez\alvarogutyerrez>git ad[0K[?25h[?25lG:\Mi unidad\R_LEARNING\GitHub\alvarogutyerrez\alvarogutyerrez>git a[0K[?25h[?25lG:\Mi unidad\R_LEARNING\GitHub\alvarogutyerrez\alvarogutyerrez>git[0K[68G[?25h[67G[?25lG:\Mi unidad\R_LEARNING\GitHub\alvarogutyerrez\alvarogutyerrez>gi[0K[?25h[?25lG:\Mi unidad\R_LEARNING\GitHub\alvarogutyerrez\alvarogutyerrez>g[0K[?25h[?25lG:\Mi unidad\R_LEARNING\GitHub\alvarogutyerrez\alvarogutyerrez>[0K[?25hg[0Ki[0Kt[0K[68G[?25lG:\Mi unidad\R_LEARNING\GitHub\alvarogutyerrez\alvarogutyerrez>git p[0K[?25hu[0Ks[0Kh[0K[73G[?25lG:\Mi unidad\R_LEARNING\GitHub\alvarogutyerrez\alvarogutyerrez>git push o[0K[?25hr[0Ki[0Kg[0Ki[0Kn[0Ks[0K[?25lG:\Mi unidad\R_LEARNING\GitHub\alvarogutyerrez\alvarogutyerrez>git push origin[0K[?25h[80G[?25lG:\Mi unidad\R_LEARNING\GitHub\alvarogutyerrez\alvarogutyerrez>git push origin m[0K[?25ha[0Ks[0Kt[0Ke[0Kr[0K]0;  - git  push origin master[?25l
-[0K[?25hCounting objects: 49, done.[0K[?25l
-[0K[?25hDelta compression using up to 4 threads.[0K[?25l
-Compressing objects:   9% (4/42)[0K[1G[?25h[?25lCompressing objects:  21% (9/42)[0K[1G[?25h[?25lCompressing objects:  33% (14/42)[0K[1G[?25h[?25lCompressing objects:  38% (16/42)[0K[1G[?25h[?25lCompressing objects:  45% (19/42)[0K[1G[?25h[?25lCompressing objects:  52% (22/42)[0K[1G[?25h[?25lCompressing objects:  59% (25/42)[0K[1G[?25h[?25lCompressing objects:  80% (34/42)[0K[1G[?25hCompressing objects: 100% (42/42), done.[0K[?25l
-Writing objects:   6% (3/49)[0K[1G[?25h[?25lWriting objects:  26% (13/49)[0K[1G[?25h[?25lWriting objects:  73% (36/49)[0K[1G[?25hWriting objects: 100% (49/49), 11.72 KiB | 116.00 KiB/s, done.[0K[?25l
-Total 49 (delta 11), reused 0 (delta 0)[0K
-[0K[?25hremote: Resolving deltas: 100% (11/11), completed with 6 local objects.[0K[?25l
-[0K[?25hTo https://github.com/alvarogutyerrez/alvarogutyerrez.git[0K[?25l
-   4c0c56e..de7b84a  master -> master[0K
-[0K[?25h]0; [?25l
-G:\Mi unidad\R_LEARNING\GitHub\alvarogutyerrez\alvarogutyerrez>[0K[?25hd[0Ki[0Kr[0K[?25l
- El volumen de la unidad G es Google Drive File Stream[0K
- El número de serie del volumen es: 1983-1116[0K
-[0K
- Directorio de G:\Mi unidad\R_LEARNING\GitHub\alvarogutyerrez\alvarogutyerrez[0K
-[0K
-08-06-2018  23:01    <DIR>          .[0K
-08-06-2018  01:00    <DIR>          ..[0K
-08-06-2018  22:41               240 alvarogutyerrez.Rproj[0K
-08-06-2018  00:15    <DIR>          .Rproj.user[0K
-08-06-2018  22:41             1.676 .Rhistory[0K
-08-06-2018  23:01               292 _site.yml[0K
-08-06-2018  01:10               142 index.Rmd[0K
-08-06-2018  00:56               736 build_site.R[0K
-08-06-2018  22:14               224 about.Rmd[0K
-07-06-2018  01:26                 0 .nojekyll[0K
-08-06-2018  22:47    <DIR>          .git[0K
-08-06-2018  00:16                36 README.md[0K
-08-06-2018  23:01    <DIR>          site_libs[0K
-08-06-2018  22:59             5.251 about.html[0K
-08-06-2018  22:59             5.096 index.html[0K
-08-06-2018  22:59             5.029 README.html[0K
-08-06-2018  01:28             2.868 .RData[0K
-08-06-2018  22:16                63 style.css[0K
-08-06-2018  22:58               177 CV.Rmd[0K
-09-04-2018  22:18           105.646 alvaro_cv.pdf[0K
-08-06-2018  23:01             5.118 CV.html[0K
-              16 archivos        132.594 bytes[0K
-               5 dirs  56.678.506.496 bytes libres[0K
-[0K
-G:\Mi unidad\R_LEARNING\GitHub\alvarogutyerrez\alvarogutyerrez>[0K[?25hg[0Ki[0Kt[0K[68G[?25lG:\Mi unidad\R_LEARNING\GitHub\alvarogutyerrez\alvarogutyerrez>git a[0K[?25hd[0Kd[0K[72G[?25lG:\Mi unidad\R_LEARNING\GitHub\alvarogutyerrez\alvarogutyerrez>git add -[0K[?25h[74G[?25lG:\Mi unidad\R_LEARNING\GitHub\alvarogutyerrez\alvarogutyerrez>git add - A[0K[?25h[?25lG:\Mi unidad\R_LEARNING\GitHub\alvarogutyerrez\alvarogutyerrez>git add -[0K[74G[?25h[73G[?25lG:\Mi unidad\R_LEARNING\GitHub\alvarogutyerrez\alvarogutyerrez>git add -A[0K[?25h]0;  - git  add -A[?25l
-[0K[?25hwarning: LF will be replaced by CRLF in .Rproj.user/F59306F1/sources/prop/6DB65301.[0K[?25l
-The file will have its original line endings in your working directory.[0K
-warning: LF will be replaced by CRLF in .Rproj.user/F59306F1/sources/prop/B47F3559.[0K
-The file will have its original line endings in your working directory.[0K
-warning: LF will be replaced by CRLF in .Rproj.user/F59306F1/sources/prop/C6C4C817.[0K
-The file will have its original line endings in your working directory.[0K
-[0K[?25hwarning: LF will be replaced by CRLF in .Rproj.user/F59306F1/sources/prop/EB761FEE.[0K[?25l
-The file will have its original line endings in your working directory.[0K
-[0K[?25hwarning: LF will be replaced by CRLF in .Rproj.user/F59306F1/sources/prop/INDEX.[0K[?25l
-The file will have its original line endings in your working directory.[0K
-[0K[?25hwarning: LF will be replaced by CRLF in .Rproj.user/F59306F1/sources/s-B34EFEF8/3ADAB137.[0K[?25l
-The file will have its original line endings in your working directory.[0K
-[0K[?25hwarning: LF will be replaced by CRLF in .Rproj.user/F59306F1/sources/s-B34EFEF8/9B1D58E4.[0K[?25l
-The file will have its original line endings in your working directory.[0K
-[0K[?25hwarning: LF will be replaced by CRLF in .Rproj.user/F59306F1/sources/s-B34EFEF8/9EAECD50.[0K[?25l
-The file will have its original line endings in your working directory.[0K
-warning: LF will be replaced by CRLF in .Rproj.user/F59306F1/sources/s-B34EFEF8/C0E75EBE.[0K[1G[?25h[?25l
-The file will have its original line endings in your working directory.[0K
-[0K[?25hwarning: LF will be replaced by CRLF in .Rproj.user/F59306F1/sources/s-B34EFEF8/C0E75EBE-contents.[0K[?25l
-The file will have its original line endings in your working directory.[0K
-[0K[?25hwarning: LF will be replaced by CRLF in .Rproj.user/shared/notebooks/paths.[0K[?25l
-The file will have its original line endings in your working directory.[0K
-[0K[?25hwarning: LF will be replaced by CRLF in site_libs/bootstrap-3.3.5/css/bootstrap-theme.css.[0K[?25l
-The file will have its original line endings in your working directory.[0K
-[0K[?25hwarning: LF will be replaced by CRLF in site_libs/bootstrap-3.3.5/css/bootstrap-theme.min.css.[0K[?25l
-The file will have its original line endings in your working directory.[0K
-[0K[?25hwarning: LF will be replaced by CRLF in site_libs/bootstrap-3.3.5/css/bootstrap.css.[0K[?25l
-The file will have its original line endings in your working directory.[0K
-[0K[?25hwarning: LF will be replaced by CRLF in site_libs/bootstrap-3.3.5/css/bootstrap.min.css.[0K[?25l
-The file will have its original line endings in your working directory.[0K
-warning: LF will be replaced by CRLF in site_libs/bootstrap-3.3.5/css/cerulean.min.css.[0K
-The file will have its original line endings in your working directory.[0K
-[0K[?25hwarning: LF will be replaced by CRLF in site_libs/bootstrap-3.3.5/css/cosmo.min.css.[0K[?25l
-The file will have its original line endings in your working directory.[0K
-[0K[?25hwarning: LF will be replaced by CRLF in site_libs/bootstrap-3.3.5/css/flatly.min.css.[0K[?25l
-The file will have its original line endings in your working directory.[0K
-[0K[?25hwarning: LF will be replaced by CRLF in site_libs/bootstrap-3.3.5/css/journal.min.css.[0K[?25l
-The file will have its original line endings in your working directory.[0K
-[0K[?25hwarning: LF will be replaced by CRLF in site_libs/bootstrap-3.3.5/css/lumen.min.css.[0K[?25l
-The file will have its original line endings in your working directory.[0K
-warning: LF will be replaced by CRLF in site_libs/bootstrap-3.3.5/css/paper.min.css.[0K
-The file will have its original line endings in your working directory.[0K
-[0K[?25h[?25lwarning: LF will be replaced by CRLF in site_libs/bootstrap-3.3.5/css/readable.min.css.[0K[1G[?25h[?25l
-The file will have its original line endings in your working directory.[0K
-[0K[?25hwarning: LF will be replaced by CRLF in site_libs/bootstrap-3.3.5/css/sandstone.min.css.[0K[?25l
-The file will have its original line endings in your working directory.[0K
-[0K[?25hwarning: LF will be replaced by CRLF in site_libs/bootstrap-3.3.5/css/simplex.min.css.[0K[?25l
-The file will have its original line endings in your working directory.[0K
-[0K[?25hwarning: LF will be replaced by CRLF in site_libs/bootstrap-3.3.5/css/spacelab.min.css.[0K[?25l
-The file will have its original line endings in your working directory.[0K
-warning: LF will be replaced by CRLF in site_libs/bootstrap-3.3.5/css/united.min.css.[0K[1G[?25h[?25l
-The file will have its original line endings in your working directory.[0K
-[0K[?25hwarning: LF will be replaced by CRLF in site_libs/bootstrap-3.3.5/css/yeti.min.css.[0K[?25l
-The file will have its original line endings in your working directory.[0K
-[0K[?25hwarning: LF will be replaced by CRLF in site_libs/bootstrap-3.3.5/fonts/glyphicons-halflings-regular.svg.[0K[?25l
-The file will have its original line endings in your working directory.[0K
-[0K[?25hwarning: LF will be replaced by CRLF in site_libs/bootstrap-3.3.5/js/bootstrap.js.[0K[?25l
-The file will have its original line endings in your working directory.[0K
-[0K[?25hwarning: LF will be replaced by CRLF in site_libs/bootstrap-3.3.5/js/bootstrap.min.js.[0K[?25l
-The file will have its original line endings in your working directory.[0K
-warning: LF will be replaced by CRLF in site_libs/bootstrap-3.3.5/js/npm.js.[0K
-The file will have its original line endings in your working directory.[0K
-[0K[?25hwarning: LF will be replaced by CRLF in site_libs/bootstrap-3.3.5/shim/html5shiv.min.js.[0K[?25l
-The file will have its original line endings in your working directory.[0K
-[0K[?25hwarning: LF will be replaced by CRLF in site_libs/bootstrap-3.3.5/shim/respond.min.js.[0K[?25l
-The file will have its original line endings in your working directory.[0K
-warning: LF will be replaced by CRLF in site_libs/highlightjs-9.12.0/default.css.[0K
-The file will have its original line endings in your working directory.[0K
-[0K[?25hwarning: LF will be replaced by CRLF in site_libs/highlightjs-9.12.0/highlight.js.[0K[?25l
-The file will have its original line endings in your working directory.[0K
-[0K[?25hwarning: LF will be replaced by CRLF in site_libs/highlightjs-9.12.0/textmate.css.[0K[?25l
-The file will have its original line endings in your working directory.[0K
-[0K[?25hwarning: LF will be replaced by CRLF in site_libs/jquery-1.11.3/jquery.min.js.[0K[?25l
-The file will have its original line endings in your working directory.[0K
-[0K[?25hwarning: LF will be replaced by CRLF in site_libs/navigation-1.1/codefolding.js.[0K[?25l
-The file will have its original line endings in your working directory.[0K
-warning: LF will be replaced by CRLF in site_libs/navigation-1.1/sourceembed.js.[0K
-The file will have its original line endings in your working directory.[0K
-[0K[?25hwarning: LF will be replaced by CRLF in site_libs/navigation-1.1/tabsets.js.[0K[?25l
-The file will have its original line endings in your working directory.[0K
-warning: LF will be replaced by CRLF in .Rproj.user/F59306F1/sources/prop/67DF9841.[0K
-The file will have its original line endings in your working directory.[0K
-[0K[?25hwarning: LF will be replaced by CRLF in .Rproj.user/F59306F1/sources/prop/A1814673.[0K[?25l
-The file will have its original line endings in your working directory.[0K
-warning: LF will be replaced by CRLF in .Rproj.user/F59306F1/sources/s-B34EFEF8/4D3F4514.[0K
-The file will have its original line endings in your working directory.[0K
-[0K[?25hwarning: LF will be replaced by CRLF in .Rproj.user/F59306F1/sources/s-B34EFEF8/4D3F4514-contents.[0K[?25l
-The file will have its original line endings in your working directory.[0K
-[0K[?25h]0; [?25l
-G:\Mi unidad\R_LEARNING\GitHub\alvarogutyerrez\alvarogutyerrez>[0K[?25hgit add -A[0K[?25lG:\Mi unidad\R_LEARNING\GitHub\alvarogutyerrez\alvarogutyerrez>git add -[0K[?25h[?25lG:\Mi unidad\R_LEARNING\GitHub\alvarogutyerrez\alvarogutyerrez>git add[0K[72G[?25h[71G[?25lG:\Mi unidad\R_LEARNING\GitHub\alvarogutyerrez\alvarogutyerrez>git ad[0K[?25h[?25lG:\Mi unidad\R_LEARNING\GitHub\alvarogutyerrez\alvarogutyerrez>git a[0K[?25h[?25lG:\Mi unidad\R_LEARNING\GitHub\alvarogutyerrez\alvarogutyerrez>git[0K[68G[?25h[?25lG:\Mi unidad\R_LEARNING\GitHub\alvarogutyerrez\alvarogutyerrez>git c[0K[?25ho[0Km[0Km[0Ki[0Kt[0K[75G[?25lG:\Mi unidad\R_LEARNING\GitHub\alvarogutyerrez\alvarogutyerrez>git commit .[0K[?25h[?25lG:\Mi unidad\R_LEARNING\GitHub\alvarogutyerrez\alvarogutyerrez>git commit[0K[75G[?25h[?25lG:\Mi unidad\R_LEARNING\GitHub\alvarogutyerrez\alvarogutyerrez>git commit -[0K[?25hm[0K[78G[?25lG:\Mi unidad\R_LEARNING\GitHub\alvarogutyerrez\alvarogutyerrez>git commit -m "[0K[?25ha[0Ks[0Ka[0Ks[0Ka[0Ks[0K"[0K]0;  - git  commit -m "asasas"[?25l
-[0K[?25h[master 5517afd] asasas[0K[?25l
- 25 files changed, 332 insertions(+), 134 deletions(-)[0K
- create mode 100644 .Rproj.user/F59306F1/sources/prop/67DF9841[0K
- create mode 100644 .Rproj.user/F59306F1/sources/prop/A1814673[0K
- create mode 100644 .Rproj.user/F59306F1/sources/s-B34EFEF8/4D3F4514[0K
- create mode 100644 .Rproj.user/F59306F1/sources/s-B34EFEF8/4D3F4514-contents[0K
- delete mode 100644 .Rproj.user/F59306F1/sources/s-B34EFEF8/E3860C9A[0K
- delete mode 100644 .Rproj.user/shared/notebooks/441046D-proyects/1/F59306F1B34EFEF8/chunks.json[0K
- create mode 100644 .Rproj.user/shared/notebooks/78902645-CV/1/F59306F1B34EFEF8/chunks.json[0K
- create mode 100644 .Rproj.user/shared/notebooks/78902645-CV/1/s/chunks.json[0K
- create mode 100644 CV.Rmd[0K
- rename proyects.html => CV.html (79%)[0K
- create mode 100644 alvaro_cv.pdf[0K
- delete mode 100644 proyects.Rmd[0K
-[0K[?25h]0; [?25l
-G:\Mi unidad\R_LEARNING\GitHub\alvarogutyerrez\alvarogutyerrez>[0K[?25hgit commit -m "asasas"[0K[?25lG:\Mi unidad\R_LEARNING\GitHub\alvarogutyerrez\alvarogutyerrez>git add -A[0K[?25h[?25lG:\Mi unidad\R_LEARNING\GitHub\alvarogutyerrez\alvarogutyerrez>dir[0K[?25h[?25lG:\Mi unidad\R_LEARNING\GitHub\alvarogutyerrez\alvarogutyerrez>git push origin master[0K[?25h[?25lG:\Mi unidad\R_LEARNING\GitHub\alvarogutyerrez\alvarogutyerrez>git push source master[0K[?25h[?25lG:\Mi unidad\R_LEARNING\GitHub\alvarogutyerrez\alvarogutyerrez>git push origin master[0K[?25h]0;  - git  push origin master[?25l
-[0K[?25hCounting objects: 33, done.[0K[?25l
-[0K[?25hDelta compression using up to 4 threads.[0K[?25l
-Compressing objects:  48% (14/29)[0K[1G[?25h[?25lCompressing objects:  82% (24/29)[0K[1G[?25hCompressing objects: 100% (29/29), done.[0K[?25l
-[0K[?25h[?25lWriting objects:  93% (31/33)[0K[1G[?25hWriting objects: 100% (33/33), 103.69 KiB | 2.25 MiB/s, done.[0K[?25l
-Total 33 (delta 15), reused 0 (delta 0)[0K
-[0K[?25hremote: Resolving deltas:  53% (8/15)[0K[41G[1Gremote: Resolving deltas: 100% (15/15), completed with 13 local objects.[0K[?25l
-[0K[?25hTo https://github.com/alvarogutyerrez/alvarogutyerrez.git[0K[?25l
-   de7b84a..5517afd  master -> master[0K
-[0K[?25h]0; [?25l
-G:\Mi unidad\R_LEARNING\GitHub\alvarogutyerrez\alvarogutyerrez>[0K[?25hgit push origin master[0K[?25lG:\Mi unidad\R_LEARNING\GitHub\alvarogutyerrez\alvarogutyerrez>git push source master[0K[?25h[?25lG:\Mi unidad\R_LEARNING\GitHub\alvarogutyerrez\alvarogutyerrez>git commit -m "adad"[0K[?25h[?25lG:\Mi unidad\R_LEARNING\GitHub\alvarogutyerrez\alvarogutyerrez>git add -A[0K[?25h]0;  - git  add -A[?25l
-[0K[?25hwarning: LF will be replaced by CRLF in .Rproj.user/F59306F1/sources/prop/67DF9841.[0K[?25l
-The file will have its original line endings in your working directory.[0K
-[0K[?25hwarning: LF will be replaced by CRLF in .Rproj.user/F59306F1/sources/prop/C6C4C817.[0K[?25l
-The file will have its original line endings in your working directory.[0K
-[0K[?25hwarning: LF will be replaced by CRLF in .Rproj.user/F59306F1/sources/prop/EB761FEE.[0K[?25l
-The file will have its original line endings in your working directory.[0K
-[0K[?25hwarning: LF will be replaced by CRLF in .Rproj.user/F59306F1/sources/s-B34EFEF8/3ADAB137.[0K[?25l
-The file will have its original line endings in your working directory.[0K
-[0K[?25hwarning: LF will be replaced by CRLF in .Rproj.user/F59306F1/sources/s-B34EFEF8/4D3F4514.[0K[?25l
-The file will have its original line endings in your working directory.[0K
-[0K[?25hwarning: LF will be replaced by CRLF in .Rproj.user/F59306F1/sources/s-B34EFEF8/4D3F4514-contents.[0K[?25l
-The file will have its original line endings in your working directory.[0K
-[0K[?25hwarning: LF will be replaced by CRLF in .Rproj.user/F59306F1/sources/s-B34EFEF8/C0E75EBE.[0K[?25l
-The file will have its original line endings in your working directory.[0K
-[0K[?25hwarning: LF will be replaced by CRLF in .Rproj.user/F59306F1/sources/s-B34EFEF8/C0E75EBE-contents.[0K[?25l
-The file will have its original line endings in your working directory.[0K
-[0K[?25hwarning: LF will be replaced by CRLF in site_libs/bootstrap-3.3.5/css/bootstrap-theme.css.[0K[?25l
-The file will have its original line endings in your working directory.[0K
-[0K[?25hwarning: LF will be replaced by CRLF in site_libs/bootstrap-3.3.5/css/bootstrap-theme.min.css.[0K[?25l
-The file will have its original line endings in your working directory.[0K
-warning: LF will be replaced by CRLF in site_libs/bootstrap-3.3.5/css/bootstrap.css.[0K
-The file will have its original line endings in your working directory.[0K
-[0K[?25hwarning: LF will be replaced by CRLF in site_libs/bootstrap-3.3.5/css/bootstrap.min.css.[0K[?25l
-The file will have its original line endings in your working directory.[0K
-[0K[?25hwarning: LF will be replaced by CRLF in site_libs/bootstrap-3.3.5/css/cerulean.min.css.[0K[?25l
-The file will have its original line endings in your working directory.[0K
-[0K[?25hwarning: LF will be replaced by CRLF in site_libs/bootstrap-3.3.5/css/cosmo.min.css.[0K[?25l
-The file will have its original line endings in your working directory.[0K
-[0K[?25hwarning: LF will be replaced by CRLF in site_libs/bootstrap-3.3.5/css/flatly.min.css.[0K[?25l
-The file will have its original line endings in your working directory.[0K
-[0K[?25hwarning: LF will be replaced by CRLF in site_libs/bootstrap-3.3.5/css/journal.min.css.[0K[?25l
-The file will have its original line endings in your working directory.[0K
-[0K[?25hwarning: LF will be replaced by CRLF in site_libs/bootstrap-3.3.5/css/lumen.min.css.[0K[?25l
-The file will have its original line endings in your working directory.[0K
-[0K[?25hwarning: LF will be replaced by CRLF in site_libs/bootstrap-3.3.5/css/paper.min.css.[0K[?25l
-The file will have its original line endings in your working directory.[0K
-[0K[?25hwarning: LF will be replaced by CRLF in site_libs/bootstrap-3.3.5/css/readable.min.css.[0K[?25l
-The file will have its original line endings in your working directory.[0K
-warning: LF will be replaced by CRLF in site_libs/bootstrap-3.3.5/css/sandstone.min.css.[0K
-The file will have its original line endings in your working directory.[0K
-[0K[?25hwarning: LF will be replaced by CRLF in site_libs/bootstrap-3.3.5/css/simplex.min.css.[0K[?25l
-The file will have its original line endings in your working directory.[0K
-[0K[?25hwarning: LF will be replaced by CRLF in site_libs/bootstrap-3.3.5/css/spacelab.min.css.[0K[?25l
-The file will have its original line endings in your working directory.[0K
-[0K[?25hwarning: LF will be replaced by CRLF in site_libs/bootstrap-3.3.5/css/united.min.css.[0K[?25l
-The file will have its original line endings in your working directory.[0K
-warning: LF will be replaced by CRLF in site_libs/bootstrap-3.3.5/css/yeti.min.css.[0K[1G[?25h[?25l
-The file will have its original line endings in your working directory.[0K
-[0K[?25hwarning: LF will be replaced by CRLF in site_libs/bootstrap-3.3.5/fonts/glyphicons-halflings-regular.svg.[0K[?25l
-The file will have its original line endings in your working directory.[0K
-[0K[?25hwarning: LF will be replaced by CRLF in site_libs/bootstrap-3.3.5/js/bootstrap.js.[0K[?25l
-The file will have its original line endings in your working directory.[0K
-[0K[?25hwarning: LF will be replaced by CRLF in site_libs/bootstrap-3.3.5/js/bootstrap.min.js.[0K[?25l
-The file will have its original line endings in your working directory.[0K
-warning: LF will be replaced by CRLF in site_libs/bootstrap-3.3.5/js/npm.js.[0K
-The file will have its original line endings in your working directory.[0K
-[0K[?25hwarning: LF will be replaced by CRLF in site_libs/bootstrap-3.3.5/shim/html5shiv.min.js.[0K[?25l
-The file will have its original line endings in your working directory.[0K
-[0K[?25hwarning: LF will be replaced by CRLF in site_libs/bootstrap-3.3.5/shim/respond.min.js.[0K[?25l
-The file will have its original line endings in your working directory.[0K
-[0K[?25hwarning: LF will be replaced by CRLF in site_libs/highlightjs-9.12.0/default.css.[0K[?25l
-The file will have its original line endings in your working directory.[0K
-warning: LF will be replaced by CRLF in site_libs/highlightjs-9.12.0/highlight.js.[0K
-The file will have its original line endings in your working directory.[0K
-[0K[?25hwarning: LF will be replaced by CRLF in site_libs/highlightjs-9.12.0/textmate.css.[0K[?25l
-The file will have its original line endings in your working directory.[0K
-[0K[?25hwarning: LF will be replaced by CRLF in site_libs/jquery-1.11.3/jquery.min.js.[0K[?25l
-The file will have its original line endings in your working directory.[0K
-[0K[?25hwarning: LF will be replaced by CRLF in site_libs/navigation-1.1/codefolding.js.[0K[?25l
-The file will have its original line endings in your working directory.[0K
-warning: LF will be replaced by CRLF in site_libs/navigation-1.1/sourceembed.js.[0K
-The file will have its original line endings in your working directory.[0K
-[0K[?25hwarning: LF will be replaced by CRLF in site_libs/navigation-1.1/tabsets.js.[0K[?25l
-The file will have its original line endings in your working directory.[0K
-[0K[?25h]0; [?25l
-G:\Mi unidad\R_LEARNING\GitHub\alvarogutyerrez\alvarogutyerrez>[0K[?25hgit add -A[0K[?25lG:\Mi unidad\R_LEARNING\GitHub\alvarogutyerrez\alvarogutyerrez>git[0K[?25h add -A[0K[?25lG:\Mi unidad\R_LEARNING\GitHub\alvarogutyerrez\alvarogutyerrez>git[0K[?25h add -A[0K[?25lG:\Mi unidad\R_LEARNING\GitHub\alvarogutyerrez\alvarogutyerrez>git commit -m "adad"[0K[?25h[?25lG:\Mi unidad\R_LEARNING\GitHub\alvarogutyerrez\alvarogutyerrez>git push source master[0K[?25h[?25lG:\Mi unidad\R_LEARNING\GitHub\alvarogutyerrez\alvarogutyerrez>git push origin master[0K[?25h[?25lG:\Mi unidad\R_LEARNING\GitHub\alvarogutyerrez\alvarogutyerrez>dir[0K[?25h[?25lG:\Mi unidad\R_LEARNING\GitHub\alvarogutyerrez\alvarogutyerrez>git add -A[0K[?25h[?25lG:\Mi unidad\R_LEARNING\GitHub\alvarogutyerrez\alvarogutyerrez>git push origin master[0K[?25h[?25lG:\Mi unidad\R_LEARNING\GitHub\alvarogutyerrez\alvarogutyerrez>git add -A[0K[?25h[?25lG:\Mi unidad\R_LEARNING\GitHub\alvarogutyerrez\alvarogutyerrez>git push origin master[0K[?25h[?25lG:\Mi unidad\R_LEARNING\GitHub\alvarogutyerrez\alvarogutyerrez>git commit -m "asasas"[0K[?25h[85G[?25lG:\Mi unidad\R_LEARNING\GitHub\alvarogutyerrez\alvarogutyerrez>git commit -m "asasass"[0K[86G[?25h[?25lG:\Mi unidad\R_LEARNING\GitHub\alvarogutyerrez\alvarogutyerrez>git commit -m "asasasss"[0K[87G[?25h[?25lG:\Mi unidad\R_LEARNING\GitHub\alvarogutyerrez\alvarogutyerrez>git commit -m "asasassss"[0K[88G[?25h]0;  - git  commit -m "asasassss"[?25l
-[0K[?25h[master 0f3ab3a] asasassss[0K[?25l
- 9 files changed, 134 insertions(+), 14 deletions(-)[0K
-[0K[?25h]0; [?25l
-G:\Mi unidad\R_LEARNING\GitHub\alvarogutyerrez\alvarogutyerrez>[0K[?25hgit commit -m "asasassss"[0K[?25lG:\Mi unidad\R_LEARNING\GitHub\alvarogutyerrez\alvarogutyerrez>git add -A[0K[?25h[?25lG:\Mi unidad\R_LEARNING\GitHub\alvarogutyerrez\alvarogutyerrez>git push origin master[0K[?25h]0;  - git  push origin master[?25l
-[0K[?25hCounting objects: 16, done.[0K[?25l
-[0K[?25hDelta compression using up to 4 threads.[0K[?25l
-Compressing objects:  18% (3/16)[0K[1G[?25h[?25lCompressing objects:  43% (7/16)[0K[1G[?25h[?25lCompressing objects:  93% (15/16)[0K[1G[?25hCompressing objects: 100% (16/16), done.[0K[?25l
-Writing objects: 100% (16/16), 2.35 KiB | 100.00 KiB/s, done.[0K
-Total 16 (delta 9), reused 0 (delta 0)[0K
-[0K[?25h[?25lremote: Resolving deltas:   0% (0/9)[0K[1G[?25h[?25lremote: Resolving deltas:  66% (6/9)[0K[1G[?25hremote: Resolving deltas: 100% (9/9), completed with 9 local objects.[0K[?25l
-[0K[?25hTo https://github.com/alvarogutyerrez/alvarogutyerrez.git[0K[?25l
-   5517afd..0f3ab3a  master -> master[0K
-[0K[?25h]0; [?25l
-G:\Mi unidad\R_LEARNING\GitHub\alvarogutyerrez\alvarogutyerrez>[0K[?25hgit push origin master[0K[?25lG:\Mi unidad\R_LEARNING\GitHub\alvarogutyerrez\alvarogutyerrez>git commit -m "asasas"[0K[?25h[?25lG:\Mi unidad\R_LEARNING\GitHub\alvarogutyerrez\alvarogutyerrez>git add -A[0K[?25h]0;  - git  add -A[?25l
-[0K[?25hwarning: LF will be replaced by CRLF in .Rproj.user/F59306F1/sources/prop/67DF9841.[0K[?25l
-The file will have its original line endings in your working directory.[0K
-[0K[?25hwarning: LF will be replaced by CRLF in .Rproj.user/F59306F1/sources/prop/B47F3559.[0K[?25l
-The file will have its original line endings in your working directory.[0K
-[0K[?25hwarning: LF will be replaced by CRLF in .Rproj.user/F59306F1/sources/prop/C6C4C817.[0K[?25l
-The file will have its original line endings in your working directory.[0K
-[0K[?25hwarning: LF will be replaced by CRLF in .Rproj.user/F59306F1/sources/prop/EB761FEE.[0K[?25l
-The file will have its original line endings in your working directory.[0K
-warning: LF will be replaced by CRLF in .Rproj.user/F59306F1/sources/s-B34EFEF8/3ADAB137.[0K
-The file will have its original line endings in your working directory.[0K
-warning: LF will be replaced by CRLF in .Rproj.user/F59306F1/sources/s-B34EFEF8/4D3F4514.[0K[1G[?25h[?25l
-The file will have its original line endings in your working directory.[0K
-[0K[?25hwarning: LF will be replaced by CRLF in .Rproj.user/F59306F1/sources/s-B34EFEF8/4D3F4514-contents.[0K[?25l
-The file will have its original line endings in your working directory.[0K
-[0K[?25hwarning: LF will be replaced by CRLF in .Rproj.user/F59306F1/sources/s-B34EFEF8/9EAECD50.[0K[?25l
-The file will have its original line endings in your working directory.[0K
-[0K[?25hwarning: LF will be replaced by CRLF in .Rproj.user/F59306F1/sources/s-B34EFEF8/9EAECD50-contents.[0K[?25l
-The file will have its original line endings in your working directory.[0K
-[0K[?25hwarning: LF will be replaced by CRLF in .Rproj.user/F59306F1/sources/s-B34EFEF8/C0E75EBE.[0K[?25l
-The file will have its original line endings in your working directory.[0K
-[0K[?25hwarning: LF will be replaced by CRLF in .Rproj.user/F59306F1/sources/s-B34EFEF8/C0E75EBE-contents.[0K[?25l
-The file will have its original line endings in your working directory.[0K
-[0K[?25hwarning: LF will be replaced by CRLF in site_libs/bootstrap-3.3.5/css/bootstrap-theme.css.[0K[?25l
-The file will have its original line endings in your working directory.[0K
-[0K[?25hwarning: LF will be replaced by CRLF in site_libs/bootstrap-3.3.5/css/bootstrap-theme.min.css.[0K[?25l
-The file will have its original line endings in your working directory.[0K
-[0K[?25hwarning: LF will be replaced by CRLF in site_libs/bootstrap-3.3.5/css/bootstrap.css.[0K[?25l
-The file will have its original line endings in your working directory.[0K
-[0K[?25hwarning: LF will be replaced by CRLF in site_libs/bootstrap-3.3.5/css/bootstrap.min.css.[0K[?25l
-The file will have its original line endings in your working directory.[0K
-[0K[?25hwarning: LF will be replaced by CRLF in site_libs/bootstrap-3.3.5/css/cerulean.min.css.[0K[?25l
-The file will have its original line endings in your working directory.[0K
-[0K[?25hwarning: LF will be replaced by CRLF in site_libs/bootstrap-3.3.5/css/cosmo.min.css.[0K[?25l
-The file will have its original line endings in your working directory.[0K
-[0K[?25hwarning: LF will be replaced by CRLF in site_libs/bootstrap-3.3.5/css/flatly.min.css.[0K[?25l
-The file will have its original line endings in your working directory.[0K
-[0K[?25hwarning: LF will be replaced by CRLF in site_libs/bootstrap-3.3.5/css/journal.min.css.[0K[?25l
-The file will have its original line endings in your working directory.[0K
-[0K[?25hwarning: LF will be replaced by CRLF in site_libs/bootstrap-3.3.5/css/lumen.min.css.[0K[?25l
-The file will have its original line endings in your working directory.[0K
-warning: LF will be replaced by CRLF in site_libs/bootstrap-3.3.5/css/paper.min.css.[0K
-The file will have its original line endings in your working directory.[0K
-[0K[?25hwarning: LF will be replaced by CRLF in site_libs/bootstrap-3.3.5/css/readable.min.css.[0K[?25l
-The file will have its original line endings in your working directory.[0K
-[0K[?25hwarning: LF will be replaced by CRLF in site_libs/bootstrap-3.3.5/css/sandstone.min.css.[0K[?25l
-The file will have its original line endings in your working directory.[0K
-warning: LF will be replaced by CRLF in site_libs/bootstrap-3.3.5/css/simplex.min.css.[0K
-The file will have its original line endings in your working directory.[0K
-[0K[?25hwarning: LF will be replaced by CRLF in site_libs/bootstrap-3.3.5/css/spacelab.min.css.[0K[?25l
-The file will have its original line endings in your working directory.[0K
-[0K[?25hwarning: LF will be replaced by CRLF in site_libs/bootstrap-3.3.5/css/united.min.css.[0K[?25l
-The file will have its original line endings in your working directory.[0K
-warning: LF will be replaced by CRLF in site_libs/bootstrap-3.3.5/css/yeti.min.css.[0K
-The file will have its original line endings in your working directory.[0K
-[0K[?25hwarning: LF will be replaced by CRLF in site_libs/bootstrap-3.3.5/fonts/glyphicons-halflings-regular.svg.[0K[?25l
-The file will have its original line endings in your working directory.[0K
-[0K[?25hwarning: LF will be replaced by CRLF in site_libs/bootstrap-3.3.5/js/bootstrap.js.[0K[?25l
-The file will have its original line endings in your working directory.[0K
-warning: LF will be replaced by CRLF in site_libs/bootstrap-3.3.5/js/bootstrap.min.js.[0K
-The file will have its original line endings in your working directory.[0K
-[0K[?25hwarning: LF will be replaced by CRLF in site_libs/bootstrap-3.3.5/js/npm.js.[0K[?25l
-The file will have its original line endings in your working directory.[0K
-[0K[?25hwarning: LF will be replaced by CRLF in site_libs/bootstrap-3.3.5/shim/html5shiv.min.js.[0K[?25l
-The file will have its original line endings in your working directory.[0K
-warning: LF will be replaced by CRLF in site_libs/bootstrap-3.3.5/shim/respond.min.js.[0K
-The file will have its original line endings in your working directory.[0K
-[0K[?25h[?25lwarning: LF will be replaced by CRLF in site_libs/highlightjs-9.12.0/default.css.[0K[1G[?25h[?25l
-The file will have its original line endings in your working directory.[0K
-warning: LF will be replaced by CRLF in site_libs/highlightjs-9.12.0/highlight.js.[0K[1G[?25h[?25l
-The file will have its original line endings in your working directory.[0K
-warning: LF will be replaced by CRLF in site_libs/highlightjs-9.12.0/textmate.css.[0K
-The file will have its original line endings in your working directory.[0K
-[0K[?25hwarning: LF will be replaced by CRLF in site_libs/jquery-1.11.3/jquery.min.js.[0K[?25l
-The file will have its original line endings in your working directory.[0K
-[0K[?25h[?25lwarning: LF will be replaced by CRLF in site_libs/navigation-1.1/codefolding.js.[0K[1G[?25h[?25l
-The file will have its original line endings in your working directory.[0K
-warning: LF will be replaced by CRLF in site_libs/navigation-1.1/sourceembed.js.[0K[1G[?25h[?25l
-The file will have its original line endings in your working directory.[0K
-[0K[?25hwarning: LF will be replaced by CRLF in site_libs/navigation-1.1/tabsets.js.[0K[?25l
-The file will have its original line endings in your working directory.[0K
-[0K[?25h]0; [?25l
-G:\Mi unidad\R_LEARNING\GitHub\alvarogutyerrez\alvarogutyerrez>git add -A[0K[?25h[?25lG:\Mi unidad\R_LEARNING\GitHub\alvarogutyerrez\alvarogutyerrez>dir[0K[?25h[?25lG:\Mi unidad\R_LEARNING\GitHub\alvarogutyerrez\alvarogutyerrez>git push origin master[0K[?25h[?25lG:\Mi unidad\R_LEARNING\GitHub\alvarogutyerrez\alvarogutyerrez>git push source master[0K[?25h[?25lG:\Mi unidad\R_LEARNING\GitHub\alvarogutyerrez\alvarogutyerrez>git push origin master[0K[?25h[?25lG:\Mi unidad\R_LEARNING\GitHub\alvarogutyerrez\alvarogutyerrez>dir[0K[?25h[?25lG:\Mi unidad\R_LEARNING\GitHub\alvarogutyerrez\alvarogutyerrez>git add -A[0K[?25h[?25lG:\Mi unidad\R_LEARNING\GitHub\alvarogutyerrez\alvarogutyerrez>git commit -m "asasas"[0K[?25h[85G[84G[?25lG:\Mi unidad\R_LEARNING\GitHub\alvarogutyerrez\alvarogutyerrez>git commit -m "asasass"[0K[85G[?25h[?25lG:\Mi unidad\R_LEARNING\GitHub\alvarogutyerrez\alvarogutyerrez>git commit -m "asasasss"[0K[86G[?25h]0;  - git  commit -m "asasasss"[?25l
-[0K[?25h]0; [master c0f4917] asasasss[0K[?25l
- 14 files changed, 122 insertions(+), 31 deletions(-)[0K
- create mode 100644 .Rproj.user/shared/notebooks/35FE756E-about/1/F59306F1B34EFEF8/chunks.json[0K
-[0K
-G:\Mi unidad\R_LEARNING\GitHub\alvarogutyerrez\alvarogutyerrez>[0K[?25hgit commit -m "asasasss"[0K[?25lG:\Mi unidad\R_LEARNING\GitHub\alvarogutyerrez\alvarogutyerrez>git add -A[0K[?25h[?25lG:\Mi unidad\R_LEARNING\GitHub\alvarogutyerrez\alvarogutyerrez>git push origin master[0K[?25h[?25lG:\Mi unidad\R_LEARNING\GitHub\alvarogutyerrez\alvarogutyerrez>git commit -m "asasassss"[0K[?25h[?25lG:\Mi unidad\R_LEARNING\GitHub\alvarogutyerrez\alvarogutyerrez>git push origin master[0K[?25h[?25l
-[0K[?25h]0;  - git  push origin masterCounting objects: 25, done.[0K[?25l
-[0K[?25hDelta compression using up to 4 threads.[0K[?25l
-Compressing objects:  27% (6/22)[0K[1G[?25h[?25lCompressing objects:  59% (13/22)[0K[1G[?25h[?25lCompressing objects:  95% (21/22)[0K[1G[?25hCompressing objects: 100% (22/22), done.[0K[?25l
-Writing objects:  80% (20/25)[0K[1G[?25hWriting objects: 100% (25/25), 3.22 KiB | 106.00 KiB/s, done.[0K[?25l
-Total 25 (delta 12), reused 0 (delta 0)[0K
-[0K[?25hremote: Resolving deltas: 100% (12/12), completed with 12 local objects.[0K[?25l
-[0K[?25hTo https://github.com/alvarogutyerrez/alvarogutyerrez.git[0K[?25l
-   0f3ab3a..c0f4917  master -> master[0K
-[0K[?25h]0; [?25l
-G:\Mi unidad\R_LEARNING\GitHub\alvarogutyerrez\alvarogutyerrez>[0K[?25hgit push origin master[0K[?25lG:\Mi unidad\R_LEARNING\GitHub\alvarogutyerrez\alvarogutyerrez>git commit -m "asasassss"[0K[?25h[?25lG:\Mi unidad\R_LEARNING\GitHub\alvarogutyerrez\alvarogutyerrez>git add -A[0K[?25h]0;  - git  add -A[?25l
-[0K[?25hwarning: LF will be replaced by CRLF in .Rproj.user/F59306F1/sources/prop/67DF9841.[0K[?25l
-The file will have its original line endings in your working directory.[0K
-[0K[?25hwarning: LF will be replaced by CRLF in .Rproj.user/F59306F1/sources/prop/C6C4C817.[0K[?25l
-The file will have its original line endings in your working directory.[0K
-[0K[?25hwarning: LF will be replaced by CRLF in .Rproj.user/F59306F1/sources/prop/EB761FEE.[0K[?25l
-The file will have its original line endings in your working directory.[0K
-warning: LF will be replaced by CRLF in .Rproj.user/F59306F1/sources/s-B34EFEF8/3ADAB137.[0K
-The file will have its original line endings in your working directory.[0K
-[0K[?25hwarning: LF will be replaced by CRLF in .Rproj.user/F59306F1/sources/s-B34EFEF8/4D3F4514.[0K[?25l
-The file will have its original line endings in your working directory.[0K
-[0K[?25hwarning: LF will be replaced by CRLF in .Rproj.user/F59306F1/sources/s-B34EFEF8/4D3F4514-contents.[0K[?25l
-The file will have its original line endings in your working directory.[0K
-[0K[?25hwarning: LF will be replaced by CRLF in .Rproj.user/F59306F1/sources/s-B34EFEF8/C0E75EBE.[0K[?25l
-The file will have its original line endings in your working directory.[0K
-[0K[?25hwarning: LF will be replaced by CRLF in .Rproj.user/F59306F1/sources/s-B34EFEF8/C0E75EBE-contents.[0K[?25l
-The file will have its original line endings in your working directory.[0K
-[0K[?25hwarning: LF will be replaced by CRLF in site_libs/bootstrap-3.3.5/css/bootstrap-theme.css.[0K[?25l
-The file will have its original line endings in your working directory.[0K
-[0K[?25hwarning: LF will be replaced by CRLF in site_libs/bootstrap-3.3.5/css/bootstrap-theme.min.css.[0K[?25l
-The file will have its original line endings in your working directory.[0K
-[0K[?25hwarning: LF will be replaced by CRLF in site_libs/bootstrap-3.3.5/css/bootstrap.css.[0K[?25l
-The file will have its original line endings in your working directory.[0K
-[0K[?25hwarning: LF will be replaced by CRLF in site_libs/bootstrap-3.3.5/css/bootstrap.min.css.[0K[?25l
-The file will have its original line endings in your working directory.[0K
-[0K[?25hwarning: LF will be replaced by CRLF in site_libs/bootstrap-3.3.5/css/cerulean.min.css.[0K[?25l
-The file will have its original line endings in your working directory.[0K
-[0K[?25hwarning: LF will be replaced by CRLF in site_libs/bootstrap-3.3.5/css/cosmo.min.css.[0K[?25l
-The file will have its original line endings in your working directory.[0K
-[0K[?25hwarning: LF will be replaced by CRLF in site_libs/bootstrap-3.3.5/css/flatly.min.css.[0K[?25l
-The file will have its original line endings in your working directory.[0K
-[0K[?25hwarning: LF will be replaced by CRLF in site_libs/bootstrap-3.3.5/css/journal.min.css.[0K[?25l
-The file will have its original line endings in your working directory.[0K
-[0K[?25hwarning: LF will be replaced by CRLF in site_libs/bootstrap-3.3.5/css/lumen.min.css.[0K[?25l
-The file will have its original line endings in your working directory.[0K
-[0K[?25hwarning: LF will be replaced by CRLF in site_libs/bootstrap-3.3.5/css/paper.min.css.[0K[?25l
-The file will have its original line endings in your working directory.[0K
-warning: LF will be replaced by CRLF in site_libs/bootstrap-3.3.5/css/readable.min.css.[0K
-The file will have its original line endings in your working directory.[0K
-[0K[?25hwarning: LF will be replaced by CRLF in site_libs/bootstrap-3.3.5/css/sandstone.min.css.[0K[?25l
-The file will have its original line endings in your working directory.[0K
-[0K[?25hwarning: LF will be replaced by CRLF in site_libs/bootstrap-3.3.5/css/simplex.min.css.[0K[?25l
-The file will have its original line endings in your working directory.[0K
-warning: LF will be replaced by CRLF in site_libs/bootstrap-3.3.5/css/spacelab.min.css.[0K
-The file will have its original line endings in your working directory.[0K
-[0K[?25hwarning: LF will be replaced by CRLF in site_libs/bootstrap-3.3.5/css/united.min.css.[0K[?25l
-The file will have its original line endings in your working directory.[0K
-[0K[?25hwarning: LF will be replaced by CRLF in site_libs/bootstrap-3.3.5/css/yeti.min.css.[0K[?25l
-The file will have its original line endings in your working directory.[0K
-[0K[?25hwarning: LF will be replaced by CRLF in site_libs/bootstrap-3.3.5/fonts/glyphicons-halflings-regular.svg.[0K[?25l
-The file will have its original line endings in your working directory.[0K
-[0K[?25hwarning: LF will be replaced by CRLF in site_libs/bootstrap-3.3.5/js/bootstrap.js.[0K[?25l
-The file will have its original line endings in your working directory.[0K
-[0K[?25hwarning: LF will be replaced by CRLF in site_libs/bootstrap-3.3.5/js/bootstrap.min.js.[0K[?25l
-The file will have its original line endings in your working directory.[0K
-warning: LF will be replaced by CRLF in site_libs/bootstrap-3.3.5/js/npm.js.[0K
-The file will have its original line endings in your working directory.[0K
-[0K[?25hwarning: LF will be replaced by CRLF in site_libs/bootstrap-3.3.5/shim/html5shiv.min.js.[0K[?25l
-The file will have its original line endings in your working directory.[0K
-[0K[?25hwarning: LF will be replaced by CRLF in site_libs/bootstrap-3.3.5/shim/respond.min.js.[0K[?25l
-The file will have its original line endings in your working directory.[0K
-warning: LF will be replaced by CRLF in site_libs/highlightjs-9.12.0/default.css.[0K
-The file will have its original line endings in your working directory.[0K
-[0K[?25hwarning: LF will be replaced by CRLF in site_libs/highlightjs-9.12.0/highlight.js.[0K[?25l
-The file will have its original line endings in your working directory.[0K
-[0K[?25hwarning: LF will be replaced by CRLF in site_libs/highlightjs-9.12.0/textmate.css.[0K[?25l
-The file will have its original line endings in your working directory.[0K
-[0K[?25hwarning: LF will be replaced by CRLF in site_libs/jquery-1.11.3/jquery.min.js.[0K[?25l
-The file will have its original line endings in your working directory.[0K
-[0K[?25hwarning: LF will be replaced by CRLF in site_libs/navigation-1.1/codefolding.js.[0K[?25l
-The file will have its original line endings in your working directory.[0K
-warning: LF will be replaced by CRLF in site_libs/navigation-1.1/sourceembed.js.[0K
-The file will have its original line endings in your working directory.[0K
-[0K[?25hwarning: LF will be replaced by CRLF in site_libs/navigation-1.1/tabsets.js.[0K[?25l
-The file will have its original line endings in your working directory.[0K
-[0K[?25h]0; [?25l
-G:\Mi unidad\R_LEARNING\GitHub\alvarogutyerrez\alvarogutyerrez>git add -A[0K[?25h[?25lG:\Mi unidad\R_LEARNING\GitHub\alvarogutyerrez\alvarogutyerrez>git commit -m "asasassss"[0K[?25h]0;  - git  commit -m "asasassss"[?25l
-[0K[?25h[master a3fd858] asasassss[0K[?25l
- 9 files changed, 111 insertions(+), 17 deletions(-)[0K
-[0K[?25h]0; [?25l
-G:\Mi unidad\R_LEARNING\GitHub\alvarogutyerrez\alvarogutyerrez>git commit -m "asasassss"[0K[?25h[?25lG:\Mi unidad\R_LEARNING\GitHub\alvarogutyerrez\alvarogutyerrez>git push origin master[0K[?25h[?25lG:\Mi unidad\R_LEARNING\GitHub\alvarogutyerrez\alvarogutyerrez>git add -A[0K[?25h[?25lG:\Mi unidad\R_LEARNING\GitHub\alvarogutyerrez\alvarogutyerrez>git commit -m "asasasss"[0K[?25h[?25lG:\Mi unidad\R_LEARNING\GitHub\alvarogutyerrez\alvarogutyerrez>git add -A[0K[?25h[?25lG:\Mi unidad\R_LEARNING\GitHub\alvarogutyerrez\alvarogutyerrez>git push origin master[0K[?25h]0;  - git  push origin master[?25l
-[0K[?25hCounting objects: 16, done.[0K[?25l
-[0K[?25hDelta compression using up to 4 threads.[0K[?25l
-Compressing objects:  37% (6/16)[0K[1G[?25h[?25lCompressing objects:  75% (12/16)[0K[1G[?25hCompressing objects: 100% (16/16), done.[0K[?25l
-[0K[?25hWriting objects: 100% (16/16), 1.98 KiB | 51.00 KiB/s, done.[0K[?25l
-Total 16 (delta 10), reused 0 (delta 0)[0K
-[0K[?25hremote: Resolving deltas:  40% (4/10)[0K[41G[1Gremote: Resolving deltas: 100% (10/10), completed with 10 local objects.[0K[?25l
-[0K[?25hTo https://github.com/alvarogutyerrez/alvarogutyerrez.git[0K[?25l
-   c0f4917..a3fd858  master -> master[0K
-[0K[?25h]0; [?25l
-G:\Mi unidad\R_LEARNING\GitHub\alvarogutyerrez\alvarogutyerrez>[0K[?25hgit push origin master[0K]0;  - git  push origin master[?25l
-[0K[?25hEverything up-to-date[0K[?25l
-[0K[?25h]0; [?25l
-G:\Mi unidad\R_LEARNING\GitHub\alvarogutyerrez\alvarogutyerrez>[0K[?25hgit push origin master[0K[?25lG:\Mi unidad\R_LEARNING\GitHub\alvarogutyerrez\alvarogutyerrez>git commit -m "asasassss"[0K[?25h[?25lG:\Mi unidad\R_LEARNING\GitHub\alvarogutyerrez\alvarogutyerrez>git add -A[0K[?25h]0;  - git  add -A[?25l
-[0K[?25hwarning: LF will be replaced by CRLF in .Rproj.user/F59306F1/sources/prop/119A8055.[0K[?25l
-The file will have its original line endings in your working directory.[0K
-warning: LF will be replaced by CRLF in .Rproj.user/F59306F1/sources/prop/6DB65301.[0K
-The file will have its original line endings in your working directory.[0K
-[0K[?25hwarning: LF will be replaced by CRLF in .Rproj.user/F59306F1/sources/prop/B47F3559.[0K[?25l
-The file will have its original line endings in your working directory.[0K
-[0K[?25hwarning: LF will be replaced by CRLF in .Rproj.user/F59306F1/sources/s-B34EFEF8/9B1D58E4.[0K[?25l
-The file will have its original line endings in your working directory.[0K
-[0K[?25hwarning: LF will be replaced by CRLF in .Rproj.user/F59306F1/sources/s-B34EFEF8/9EAECD50.[0K[?25l
-The file will have its original line endings in your working directory.[0K
-[0K[?25hwarning: LF will be replaced by CRLF in .Rproj.user/F59306F1/sources/s-B34EFEF8/9EAECD50-contents.[0K[?25l
-The file will have its original line endings in your working directory.[0K
-[0K[?25hwarning: LF will be replaced by CRLF in .Rproj.user/F59306F1/sources/s-B34EFEF8/BBC45A7E-contents.[0K[?25l
-The file will have its original line endings in your working directory.[0K
-[0K[?25h]0; [?25l
-G:\Mi unidad\R_LEARNING\GitHub\alvarogutyerrez\alvarogutyerrez>[0K[?25hgit add -A[0K[?25lG:\Mi unidad\R_LEARNING\GitHub\alvarogutyerrez\alvarogutyerrez>git push origin master[0K[?25h[?25lG:\Mi unidad\R_LEARNING\GitHub\alvarogutyerrez\alvarogutyerrez>git add -A[0K[?25h[?25lG:\Mi unidad\R_LEARNING\GitHub\alvarogutyerrez\alvarogutyerrez>git commit -m "asasassss"[0K[?25h[88G[87G[86G[?25lG:\Mi unidad\R_LEARNING\GitHub\alvarogutyerrez\alvarogutyerrez>git commit -m "asasassass"[0K[87G[?25h[?25lG:\Mi unidad\R_LEARNING\GitHub\alvarogutyerrez\alvarogutyerrez>git commit -m "asasassaass"[0K[88G[?25h[?25lG:\Mi unidad\R_LEARNING\GitHub\alvarogutyerrez\alvarogutyerrez>git commit -m "asasassaaass"[0K[89G[?25h]0;  - git  commit -m "asasassaaass"[?25l
-[0K[?25h]0; [master e5a8973] asasassaaass[0K[?25l
- 5 files changed, 336 insertions(+), 5 deletions(-)[0K
- create mode 100644 .Rproj.user/F59306F1/sources/s-B34EFEF8/BBC45A7E-contents[0K
-[0K
-G:\Mi unidad\R_LEARNING\GitHub\alvarogutyerrez\alvarogutyerrez>[0K[?25hgit commit -m "asasassaaass"[0K[?25lG:\Mi unidad\R_LEARNING\GitHub\alvarogutyerrez\alvarogutyerrez>git add -A[0K[?25h[?25lG:\Mi unidad\R_LEARNING\GitHub\alvarogutyerrez\alvarogutyerrez>git push origin master[0K[?25h[?25lG:\Mi unidad\R_LEARNING\GitHub\alvarogutyerrez\alvarogutyerrez>git add -A[0K[?25h[?25lG:\Mi unidad\R_LEARNING\GitHub\alvarogutyerrez\alvarogutyerrez>git push origin master[0K[?25h]0;  - git  push origin master[?25l
-[0K[?25hCounting objects: 12, done.[0K[?25l
-[0K[?25hDelta compression using up to 4 threads.[0K[?25l
-Compressing objects:  66% (8/12)[0K[1G[?25hCompressing objects: 100% (12/12), done.[0K[?25l
-Writing objects: 100% (12/12), 1.33 KiB | 85.00 KiB/s, done.[0K
-Total 12 (delta 7), reused 0 (delta 0)[0K
-[0K[?25h[?25lremote: Resolving deltas:  85% (6/7)[0K[1G[?25hremote: Resolving deltas: 100% (7/7), completed with 7 local objects.[0K[?25l
-[0K[?25hTo https://github.com/alvarogutyerrez/alvarogutyerrez.git[0K[?25l
-   a3fd858..e5a8973  master -> master[0K
-[0K[?25h]0; [?25l
-G:\Mi unidad\R_LEARNING\GitHub\alvarogutyerrez\alvarogutyerrez>[0K[?25hgit add -A[0K]0;  - git  add -A[?25l
+C:\Users\Usuario\Documents\alvarogutyerrez>[0K[?25hg[0Ki[0Kt[0K[48G[?25lC:\Users\Usuario\Documents\alvarogutyerrez>git a[0K[?25hd[0Kd[0K[52G[?25lC:\Users\Usuario\Documents\alvarogutyerrez>git add -[0K[?25hA[0K]0;  - git  add -A[?25l
 [0K[?25h
