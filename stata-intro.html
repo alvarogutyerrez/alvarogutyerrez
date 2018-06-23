@@ -11,7 +11,7 @@
 
 
 
-<title></title>
+<title>Introduction to Stata</title>
 
 <script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -22,6 +22,7 @@
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
 <link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
 <script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+<link href="site_libs/font-awesome-4.5.0/css/font-awesome.min.css" rel="stylesheet" />
 
 <style type="text/css">code{white-space: pre;}</style>
 <style type="text/css">
@@ -210,13 +211,57 @@ $(document).ready(function () {
 
 
 
+<h1 class="title toc-ignore">Introduction to Stata</h1>
 
 </div>
 
 
-<div id="alvarogutyerrez" class="section level1">
-<h1>alvarogutyerrez</h1>
-<p>PersonalWebPage</p>
+<div id="session-one-load-brief-summary-stats" class="section level1">
+<h1>Session ONE: Load + Brief Summary Stats</h1>
+<p>Before start, just a few comments about <em>friendly-colaborative-programming</em>. It’s always a good practice, set all your computer path at the beginning of your programming. Specially in the case of STATA programming, because this languagge does not have such a thing as ‘proyects’ like R (one point for R). So, for this reason this will be actually very helpfull (for you, in the case that you changed the computer which you are working on, or for your partners, in the case that you are writting a long colaborative code.)</p>
+<p>So, at the very beggining of your code you will type (the comment style is just my style, you can choose yours)</p>
+<pre><code>//=================================================//
+//      AUTHOR: ALVARO GUTIERREZ VARGAS 
+//      LAST EDIT: 19-03-2018
+//=================================================//
+//  PRELIMINARS
+
+clear all  
+set more off
+
+
+//  PATHS
+
+
+global data &quot;C:whatever_your_Data_is_located&quot;
+global latex &quot;C:Whatever_your_LaTeX_is_located&quot;
+</code></pre>
+<div id="preliminars" class="section level2">
+<h2>PRELIMINARS</h2>
+<p>Here ase usual, we started with with two usual (and helpfull commands). <em>clear all</em> wipes off <strong>everything</strong>, literally. It will delete the dataset (in case you have loaded one), matrix, globals… everything that you have done into the program, so this will allow you to star everything again. In the other hand, <em>set more off</em>, prevents as to have to click on <strong>more</strong> each time that we executed a bunch of lines that STATA cannot display directly. So, the last two lines will be a usefull way to start a code without problems.</p>
+<pre><code>                  mean:   6165.26
+              std. dev:    2949.5
+
+           percentiles:        10%       25%       50%       75%       90%
+                              3895      4195    5006.5      6342     11385
+--more--
+</code></pre>
+</div>
+<div id="paths" class="section level2">
+<h2>PATHS</h2>
+<p>At this part we used the command <strong>global</strong> which need a short explanation. A global variable is usefull way to compress strings like a path, as in this case, or everyting that you can imagin, (list of variables, name of files, names of header in your future beautiful summary stats table, etc…). To use a global you have to call with a <strong>$</strong>, at the beggining. Like this.</p>
+<pre><code>use &quot;$data\demographic_data&quot; , clear 
+</code></pre>
+<p>Here we call the data set with the command <strong>use</strong>, then in the middle of the *&quot; “* we need to tell STATA where the data is located, and there is where the path that we already saved is usefull. We call it with the <em>$</em> and then the name of out data. After the <em>path</em> + <em>DataSetName</em> we put a comma, to <em>enter to the options mode</em> of STATA, and we type <strong>clear</strong> to tell stata, that in the case that another dataset were already loaded, we want to replace it for the one that we just called.</p>
+</div>
+</div>
+<div id="summary-stats" class="section level1">
+<h1>Summary Stats</h1>
+<p>Here we will work with three of most commonly used commands to generate fast summary statistics. We will diferenciate them, comments some limitations and also introduce another usefull topic which is the <strong>local</strong> variables.</p>
+<div id="table-command" class="section level2">
+<h2><em>table</em> command</h2>
+<p>Imagine that we want to get the average income of two different groups, like man and female.</p>
+</div>
 </div>
 
 

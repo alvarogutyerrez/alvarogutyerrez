@@ -1,0 +1,593 @@
+---
+title: "Panel Data into Matlab"
+---
+
+
+
+
+#Generating Dataset
+
+with the following lines, we will create the variables from a *struct*, which is a special objet in matlab that allows you to store differents objets inside. First we load the full *struct* called **datos.dat**. And then we access to the dataframe inside adding a dot, and then de name of the dataframe inside (**data**).
+
+
+```
+clc;
+clear all;
+close all;
+
+datos = importdata('dataset.dat');
+exp =datos.data(:,1);
+wks =datos.data(:,2);
+occ =datos.data(:,3);
+ind= datos.data(:,4);
+south=datos.data(:,5);
+smsa = datos.data(:,6);
+ms = datos.data(:,7);
+fem = datos.data(:,8);
+union = datos.data(:,9);
+ed = datos.data(:,10);
+blk=datos.data(:,11);
+lwage=datos.data(:,12);
+id= datos.data(:,13);
+t=datos.data(:,14);
+exp2=exp.*exp;
+individuos=595;
+T=7;
+
+```
+##Pooled Model
+```
+X_a = [ones(size(exp,1),1) exp exp2 wks ed];
+beta_a = (X_a'*X_a)\(X_a'*lwage);
+resid_a = lwage - X_a*beta_a ;
+[N_a,K_a] = size(X_a);
+s2=resid_a'*resid_a/(N_a-K_a);
+V_a=s2*(X_a'*X_a)^(-1);
+se_a=diag(sqrt(V_a));
+
+
+% La matriz a construit tendrá  dimensión 4165, que corresponde a (N*T)x(N*T)
+J=7:7:(7*595); %tamaños de los clusters
+diagonal=zeros(individuos*T,individuos*T)*99999; 
+resid2_matrix=resid_a*resid_a'; %matriz residuos traspuestos
+
+for i=1:individuos
+diagonal(J(1,i)-6:J(1,i),J(1,i)-6:J(1,i))=resid2_matrix(J(1,i)-6:J(1,i),J(1,i)-6:J(1,i));
+end 
+
+V_a_cluster= (X_a'*X_a)^(-1) * X_a'*diagonal*X_a * (X_a'*X_a)^(-1); 
+se_a_cluster= sqrt(diag(V_a_cluster));
+
+%Agregando correccion por grados de libertad desarrollada por (Chris Hansen
+%2007) (Este es el ocupado por STATA )
+a_n = ((N_a-1)/(N_a-K_a))*((T)/(T-1));
+V_a_cluster_corrected=a_n*V_a_cluster;
+
+se_a_corrected = sqrt(diag(V_a_cluster_corrected));
+
+
+
+%% Compilacion de Resultados hasta aqui:
+
+table_to_drop = table([beta_a] , [se_a],[se_a_cluster] , [se_a_corrected] );
+table_to_drop.Properties.VariableNames = {'Betas' 'SEHomocedastico' 'SECluster' 'SEClusterCorrected'};
+
+array_to_drop = table2array(table_to_drop);
+Resumen_a = array2table(array_to_drop.');
+Resumen_a.Properties.RowNames = table_to_drop.Properties.VariableNames;
+Resumen_a.Properties.VariableNames = {'Constante' 'exp' 'exp2' 'wks' 'ed'};
+%Borrando objetos innecesarios 
+clear array_to_drop
+clear table_to_drop
+
+
+%% (B) Estimador Between
+%Para realizar el estimador Between debemos colapsar los datos a su medias
+%del siguiente modo:
+
+%matrix con los regresores 
+X_b_long = [lwage exp exp2 wks ed t]; 
+%Matrix con la distancia de cada individuo
+J = 1:7:4166;
+%Loop que permite colapsar las medias en el tiempo para cada individuo
+for j= 1:5  %Recorre en columnas (regresores) 
+for i = 1:595; %Recorre por filas (cada individuo)
+X_between(i,j)=sum(X_b_long(J(:,i):J(:,i+1)-1, j))/  7; %Divide por 7 (Total numero periodos por individuo)  
+end 
+end
+%Regresores colapsados 
+X_b = [ones(size(X_between,1),1) X_between(:,2:5)];
+Y_b = X_between(:,1);
+beta_b = (X_b'*X_b)\(X_b'*Y_b);
+resid_b = Y_b - X_b*beta_b ;
+[N_b,K_b] = size(X_b);
+s2=resid_b'*resid_b/(N_b-K_b);
+V_b=s2*(X_b'*X_b)^(-1);
+se_b=diag(sqrt(V_b));
+%Robust
+V_b_Robust=N_b/(N_b-K_b)*(X_b'*X_b)^(-1)*(resid_b'*resid_b)*(X_b'*X_b)^(-1);
+se_b_robust=diag(sqrt(V_b_Robust));
+%% Compilacion de Resultados hasta aqui:
+
+table_to_drop = table([beta_b] , [se_b] ,[se_b_robust] );
+table_to_drop.Properties.VariableNames = {'BetasBetween' 'SEHomocedastico' 'SERobust'};
+array_to_drop = table2array(table_to_drop);
+Resumen_b = array2table(array_to_drop.');
+Resumen_b.Properties.RowNames = table_to_drop.Properties.VariableNames;
+Resumen_b.Properties.VariableNames = {'Constante' 'exp' 'exp2' 'wks' 'ed'};
+%Borrando objetos innecesarios 
+clear array_to_drop
+clear table_to_drop
+
+%% (C) Estimador Within
+%Ahora debemos generar las diferencias de cada individuo con respecto a su
+%media.
+
+aux = ones(4165,5); %Auxiliar de unos para generar medias
+for j = 1:5 %Recorre en columnas (Variables)
+    for i = 1:595 %Recorre para cada invididuo
+Medias_Regresores(J(:,i):J(:,i+1)-1,j) = aux(J(:,i):J(:,i+1)-1,j)*X_between(i,j);
+    end 
+end
+XY_c  = X_b_long(:,1:5)-Medias_Regresores; %Variable en desviaciones
+%Sospechando que la variable esc pudo haber quedado sin poder ser
+%indentificada debido a que las observaciones pueden estar alojadas en el
+%mismo año, revisamos esto con la media de la variable en diferencia:
+
+mean_esc = mean(XY_c(:,5));
+
+%Generando dependiente e independiente
+Y_c = XY_c(:,1);
+X_c = [ XY_c(:,2:4)] ;  %%Dejando fuera ESC
+
+%Comprobamos que esta dejo de estar identificada, ya que nadie cambió de
+%edad durante la generación del panel.
+beta_c = (X_c'*X_c)\(X_c'*Y_c);
+resid_c = Y_c - X_c*beta_c ;
+[N_c,K_c] = size(X_c);
+s2=resid_c'*resid_c/(N_c-K_c);
+V_c=s2*(X_c'*X_c)^(-1);
+se_c=diag(sqrt(V_c));
+%Robust
+V_c_Robust=N_c/(N_c-K_c)*(X_c'*X_c)^(-1)*(resid_c'*resid_c)*(X_c'*X_c)^(-1);
+se_c_robust=diag(sqrt(V_c_Robust));
+
+%% Compilacion de Resultados hasta aqui:
+
+table_to_drop = table([beta_c] , [se_c] , [se_c_robust]  );
+table_to_drop.Properties.VariableNames = {'BetasWhitin' 'SEHomocedastico' 'SERobust'};
+array_to_drop = table2array(table_to_drop);
+Resumen_c = array2table(array_to_drop.');
+Resumen_c.Properties.RowNames = table_to_drop.Properties.VariableNames;
+Resumen_c.Properties.VariableNames = { 'exp' 'exp2' 'wks'};
+%Borrando objetos innecesarios 
+clear array_to_drop
+clear table_to_drop
+
+
+
+%% (D) Estimador Primeras Diferencias
+J = 1:7:4165; %Distancia entre individuos (en años [7] )
+for j = 1:595; % Recorre en filas (para cada individuo)
+for i = J(:,j):(J(:,j)+5);
+Primeras_diferencias(i,:) = X_b_long(i+1,:)-X_b_long(i,:);
+end
+end
+
+%Debemos eliminar una observacion (la primera) para cada individuo por lo
+%que se generara un identificador para cada una de estas ( es decir para
+%cuando se cumpla que todas las filas fueron iguales a cero)
+for i= 1:4164
+observaciones_perdidas(i,:) = sum(Primeras_diferencias(i,:))==0;
+end 
+Primeras_diferencias(observaciones_perdidas,:) = [];
+
+%Recuperando dependiente e independiente 
+X_d = Primeras_diferencias(:,2:4);  % Volvemos a no poder identificar la edad
+Y_d = Primeras_diferencias(:,1);
+
+beta_d = (X_d'*X_d)\(X_d'*Y_d);
+resid_d = Y_d - X_d*beta_d ;
+[N_d,K_d] = size(X_d);
+s2=resid_d'*resid_d/(N_d-K_d);
+V_d=s2*(X_d'*X_d)^(-1);
+se_d=diag(sqrt(V_d));
+%Robust
+V_d_Robust=N_d/(N_d-K_d)*(X_d'*X_d)^(-1)*(resid_d'*resid_d)*(X_d'*X_d)^(-1);
+se_d_robust=diag(sqrt(V_d_Robust));
+
+
+%% Compilacion de Resultados hasta aqui:
+table_to_drop = table([beta_d] , [se_d] , [se_d_robust]  );
+table_to_drop.Properties.VariableNames = {'Betas1rasDiferecias' 'SEHomocedastico' 'SERobust'};
+array_to_drop = table2array(table_to_drop);
+Resumen_d = array2table(array_to_drop.');
+Resumen_d.Properties.RowNames = table_to_drop.Properties.VariableNames;
+Resumen_d.Properties.VariableNames = { 'exp' 'exp2' 'wks'};
+%Borrando objetos innecesarios 
+clear array_to_drop
+clear table_to_drop
+
+
+%% (E) Estimador Efectos Aleatorios
+% Para esta parte seguimos la pagina 734 del Cameron&Trivedi. Recurriendo a
+% la estimación mediante MCGF.
+N_e = 595;
+T_e = 7;
+K_e = 4;
+%Estimamos \sigma_{e}^{2} mediante  
+sigma_error = 1/(N_e*(T_e-1)-K_e)*(resid_c'*resid_c); %Desde el estimador Within 
+sigma_a = 1/(N_e-(K_e+1))*(resid_b'*resid_b) - (1/T_e)*sigma_error; %Desde el estimador Between
+
+% Estimador el ponderador para MCGF, (rho en nuestro caso).
+tenedor = sigma_error^(0.5)/(sigma_error+T_e*sigma_a)^(0.5);
+lamda = 1 - tenedor;
+
+%Modelo transformado
+XY_e = X_b_long(:,1:5)-lamda *Medias_Regresores;
+%Dependiente
+Y_e = XY_e(:,1);
+%Regresores 
+%Trabajo de la constante
+constante_e = (1-lamda)*ones(4165,1) ; %Se debe transforma la constante
+X_e = [ constante_e XY_e(:,2:5)];  % colapsando regresores 
+
+
+beta_e = (X_e'*X_e)\(X_e'*Y_e);
+resid_e = Y_e - X_e*beta_e ;
+[N_e,K_e] = size(X_e);
+s2=resid_e'*resid_e/(N_e-K_e);
+V_e=s2*(X_e'*X_e)^(-1);
+se_e=diag(sqrt(V_e));
+%Robust
+V_e_Robust=N_e/(N_e-K_e)*(X_e'*X_e)^(-1)*(resid_e'*resid_e)*(X_e'*X_e)^(-1);
+se_e_robust=diag(sqrt(V_e_Robust));
+
+%Cluster
+J_e=7:7:(7*595); %tamaños de los clusters
+diagonal_random=zeros(N_e*T_e,N_e*T_e); 
+resid_e_2=resid_e*resid_e'; %matriz residuos traspuestos
+for i=1:individuos
+diagonal_random(J_e(1,i)-6:J_e(1,i),J_e(1,i)-6:J_e(1,i))=resid_e_2(J_e(1,i)-6:J_e(1,i),J_e(1,i)-6:J_e(1,i));
+end 
+
+
+V_e_cluster= (X_e'*X_e)^(-1) * X_e'*diagonal*X_e * (X_e'*X_e)^(-1); 
+se_e_cluster= sqrt(diag(V_e_cluster));
+
+%Agregando correccion por grados de libertad desarrollada por (Chris Hansen
+%2007) (Este es el ocupado por STATA )
+a_n_e = ((N_e-1)/(N_e-K_e))*((T_e)/(T_e-1));
+V_e_cluster_corrected=a_n_e*V_e_cluster;
+se_a_corrected = sqrt(diag(V_a_cluster_corrected));
+
+
+
+%% Compilacion de Resultados hasta aqui:
+table_to_drop = table([beta_e] , [se_e] , [se_e_robust] , [se_a_corrected]  );
+table_to_drop.Properties.VariableNames = {'Betas1rasDiferecias' 'SEHomocedastico'  'SERobust' 'SECluster'};
+array_to_drop = table2array(table_to_drop);
+Resumen_e = array2table(array_to_drop.');
+Resumen_e.Properties.RowNames = table_to_drop.Properties.VariableNames;
+Resumen_e.Properties.VariableNames = {'Constante' 'exp' 'exp2' 'wks' 'ed'};
+%Borrando objetos innecesarios 
+clear array_to_drop
+clear table_to_drop
+
+%% Test de Hausman
+% Insumos del test 
+
+%Se debe considerar que el rango de los vectores de parametros son
+%distintos, debido a que no tienen el mismo numeor de parametros
+%identificables, de este modo se reducira el numero de parametros del
+%estimador de Efectos Aleatorios para igualar al de Efectos Fijos
+
+
+
+%Reestimando el modelo reducido de los parametros aletorios
+X_aleatrorio = X_e(:,2:4);
+beta_Aleatorios = (X_aleatrorio'*X_aleatrorio)\(X_aleatrorio'*Y_e);
+resid_aleatorio = Y_e - X_aleatrorio*beta_Aleatorios ;
+[N_aletorio,K_aleatorio] = size(beta_Aleatorios);
+s2=resid_aleatorio'*resid_aleatorio/(N_aletorio-K_aleatorio);
+V_aleatorio=s2*(X_aleatrorio'*X_aleatrorio)^(-1);
+se_e=diag(sqrt(V_aleatorio));
+
+
+beta_Fijos = beta_c; %Whitin
+%todo esto ya fue declarado, por lo que solo se hará uso de esto.
+
+%Test
+H = (beta_Aleatorios - beta_Fijos)'*(V_aleatorio - V_c)^(-1)*(beta_Aleatorios - beta_Fijos);
+critico = chi2inv(0.95,length(beta_Aleatorios));
+abs(H)>abs(critico);
+if ans==1
+disp('Se rechaza la nula => Efectos Fijos')
+else
+   disp('No se puede rechazar nula => Efectos Aleatorios')
+end 
+
+
+%% F Agregar dos rezados de la dependiente rezagada como regresores.
+
+%Generando Diferencias
+
+%Primer Rezago de la variable Y
+J = 1:7:4165; %Distancia entre individuos (en años [7] )
+for j = 1:595; % Recorre en filas (para cada individuo)
+    
+for i = J(:,j)+1:(J(:,j)+6);
+lwage_1(i,:) = lwage(i-1,:);
+end
+end
+%Segundo REzago d ela variable Y
+J = 1:7:4165; %Distancia entre individuos (en años [7] )
+for j = 1:595; % Recorre en filas (para cada individuo)
+for i = J(:,j)+2:(J(:,j)+6);
+lwage_2(i,:) = lwage(i-2,:);
+
+end
+end
+%generando bloque de regresores y explicada 
+XY_el_retorno_del_jedi =  [lwage lwage_1 lwage_2 exp exp2 wks ed] ;
+%Debemos eliminar una observacion (la primera) para cada individuo por lo
+%que se generara un identificador para cada una de estas ( es decir para
+%cuando se cumpla que todas las filas fueron iguales a cero)
+for i= 1:4164
+observaciones_perdidas_el_imperio_contraataca(i,:) = sum(lwage_2(i,:))==0;
+end 
+XY_el_retorno_del_jedi(observaciones_perdidas_el_imperio_contraataca,:) = [];
+
+%Recuperando dependiente e independiente 
+X_f = XY_el_retorno_del_jedi(:,2:7);  
+Y_f = XY_el_retorno_del_jedi(:,1);
+
+
+
+%% MODELO POOLED 
+
+X_a = X_f ;
+Y_a = Y_f;
+%Estimacion Pooled sin considerar estructura de los datos
+X_a = [ones(size(X_a,1),1) X_a ];
+beta_a = (X_a'*X_a)\(X_a'*Y_a);
+resid_a = Y_a - X_a*beta_a ;
+[N_a,K_a] = size(X_a);
+s2=resid_a'*resid_a/(N_a-K_a);
+V_a=s2*(X_a'*X_a)^(-1);
+se_a=diag(sqrt(V_a));
+%====MUY IMPORTANTE=======%
+T = 5; %Perdimos dos periodos :(
+% O SI NO NO CALZAN LAS MATRIXXXXXSSSS
+%====MUY IMPORTANTE=======%
+% La matriz a construir tendrá  dimensión 4165, que corresponde a (N*T)x(N*T)
+J=5:5:(5*595); %tamaños de los clusters
+diagonal=zeros(individuos*T,individuos*T)*99999; 
+resid2_matrix=resid_a*resid_a'; %matriz residuos traspuestos
+
+for i=1:individuos
+diagonal(J(1,i)-4:J(1,i),J(1,i)-4:J(1,i))=resid2_matrix(J(1,i)-4:J(1,i),J(1,i)-4:J(1,i));
+end 
+V_a_cluster= (X_a'*X_a)^(-1) * X_a'*diagonal*X_a * (X_a'*X_a)^(-1); 
+se_a_cluster= sqrt(diag(V_a_cluster));
+
+%Agregando correccion por grados de libertad desarrollada por (Chris Hansen
+%2007) (Este es el ocupado por STATA )
+a_n = ((N_a-1)/(N_a-K_a))*((T)/(T-1));
+V_a_cluster_corrected=a_n*V_a_cluster;
+
+se_a_corrected = sqrt(diag(V_a_cluster_corrected));
+
+%% Compilacion de Resultados hasta aqui:
+
+table_to_drop = table([beta_a] , [se_a],[se_a_cluster] , [se_a_corrected] );
+table_to_drop.Properties.VariableNames = {'Betas' 'SEHomocedastico' 'SECluster' 'SEClusterCorrected'};
+
+array_to_drop = table2array(table_to_drop);
+Resumen_a = array2table(array_to_drop.');
+Resumen_a.Properties.RowNames = table_to_drop.Properties.VariableNames;
+Resumen_a.Properties.VariableNames = {'Constante' 'rezago1 ' 'rezago2' 'exp' 'exp2' 'wks' 'ed'};
+%Borrando objetos innecesarios 
+clear array_to_drop
+clear table_to_drop
+
+
+%% (B) Estimador Between
+%Para realizar el estimador Between debemos colapsar los datos a su medias
+%del siguiente modo:
+
+%matrix con los regresores 
+X_b_long=XY_el_retorno_del_jedi;
+
+%X_b_long = [lwage exp exp2 wks ed t]; 
+%Matrix con la distancia de cada individuo
+J = 1:5:2976; %Ahora cambia a 5*595+1 = 2976
+%Loop que permite colapsar las medias en el tiempo para cada individuo
+for j= 1:7  %Recorre en columnas (dependiente + regresores) 
+for i = 1:595; %Recorre por filas (cada individuo)
+X_between(i,j)=sum(X_b_long(J(:,i):J(:,i+1)-1, j))/  5; %Divide por 5 (Total numero periodos por individuo)  
+end 
+end
+%Regresores colapsados 
+X_b = [ones(size(X_between,1),1) X_between(:,2:7)];
+Y_b = X_between(:,1);
+beta_b = (X_b'*X_b)\(X_b'*Y_b);
+resid_b = Y_b - X_b*beta_b ;
+[N_b,K_b] = size(X_b);
+s2=resid_b'*resid_b/(N_b-K_b);
+V_b=s2*(X_b'*X_b)^(-1);
+se_b=diag(sqrt(V_b));
+%Robust
+V_b_Robust=N_b/(N_b-K_b)*(X_b'*X_b)^(-1)*(resid_b'*resid_b)*(X_b'*X_b)^(-1);
+se_b_robust=diag(sqrt(V_b_Robust));
+%% Compilacion de Resultados hasta aqui:
+
+table_to_drop = table([beta_b] , [se_b] ,[se_b_robust] );
+table_to_drop.Properties.VariableNames = {'BetasBetween' 'SEHomocedastico' 'SERobust'};
+array_to_drop = table2array(table_to_drop);
+Resumen_b = array2table(array_to_drop.');
+Resumen_b.Properties.RowNames = table_to_drop.Properties.VariableNames;
+Resumen_b.Properties.VariableNames = {'Constante' 'rezago1 ' 'rezago2' 'exp' 'exp2' 'wks' 'ed'}
+%Borrando objetos innecesarios 
+clear array_to_drop
+clear table_to_drop
+
+%% (C) Estimador Within
+%Ahora debemos generar las diferencias de cada individuo con respecto a su
+%media.
+J = 1:5:2976; %Ahora cambia a 5*595+1 = 2976
+aux = ones(2975,7); %Auxiliar de unos para generar medias
+for j = 1:7 %Recorre en columnas (Variables)
+    for i = 1:595 %Recorre para cada invididuo
+Medias_Regresores(J(:,i):J(:,i+1)-1,j) = aux(J(:,i):J(:,i+1)-1,j)*X_between(i,j);
+    end 
+end
+
+
+Medias_Regresores= Medias_Regresores(1:2975,:);
+XY_c  = X_b_long(:,1:7)-Medias_Regresores; %Variable en desviaciones
+%Sospechando que la variable esc pudo haber quedado sin poder ser
+%indentificada debido a que las observaciones pueden estar alojadas en el
+%mismo año, revisamos esto con la media de la variable en diferencia:
+
+
+%Generando dependiente e independiente
+Y_c = XY_c(:,1);
+X_c = [ XY_c(:,2:6)] ;  %%Dejando fuera ESC
+
+%Comprobamos que esta dejo de estar identificada, ya que nadie cambió de
+%edad durante la generación del panel.
+beta_c = (X_c'*X_c)\(X_c'*Y_c);
+resid_c = Y_c - X_c*beta_c ;
+[N_c,K_c] = size(X_c);
+s2=resid_c'*resid_c/(N_c-K_c);
+V_c=s2*(X_c'*X_c)^(-1);
+se_c=diag(sqrt(V_c));
+%Robust
+V_c_Robust=N_c/(N_c-K_c)*(X_c'*X_c)^(-1)*(resid_c'*resid_c)*(X_c'*X_c)^(-1);
+se_c_robust=diag(sqrt(V_c_Robust));
+
+%% Compilacion de Resultados hasta aqui:
+
+table_to_drop = table([beta_c] , [se_c] , [se_c_robust]  );
+table_to_drop.Properties.VariableNames = {'BetasWhitin' 'SEHomocedastico' 'SERobust'};
+array_to_drop = table2array(table_to_drop);
+Resumen_c = array2table(array_to_drop.');
+Resumen_c.Properties.RowNames = table_to_drop.Properties.VariableNames;
+Resumen_c.Properties.VariableNames = {'rezago1 ' 'rezago2' 'exp' 'exp2' 'wks'}
+%Borrando objetos innecesarios 
+clear array_to_drop
+clear table_to_drop
+
+
+%% (D) Estimador Primeras Diferencias
+J = 1:5:2975; %Distancia entre individuos (en años [7] )
+for j = 1:595; % Recorre en filas (para cada individuo)
+for i = J(:,j):(J(:,j)+3);
+Primeras_diferencias_1(i,:) = X_b_long(i+1,:)-X_b_long(i,:);
+end
+end
+
+%Debemos eliminar una observacion (la primera) para cada individuo por lo
+%que se generara un identificador para cada una de estas ( es decir para
+%cuando se cumpla que todas las filas fueron iguales a cero)
+for i= 1:2974
+observaciones_perdidas_eldespertar_de_lafuerza(i,:) = sum(Primeras_diferencias_1(i,:))==0;
+end 
+Primeras_diferencias_1(observaciones_perdidas_eldespertar_de_lafuerza,:) = [];
+
+
+%Recuperando dependiente e independiente 
+X_d = Primeras_diferencias_1(:,2:6);  % Volvemos a no poder identificar la esc
+Y_d = Primeras_diferencias_1(:,1);
+
+beta_d = (X_d'*X_d)\(X_d'*Y_d);
+resid_d = Y_d - X_d*beta_d ;
+[N_d,K_d] = size(X_d);
+s2=resid_d'*resid_d/(N_d-K_d);
+V_d=s2*(X_d'*X_d)^(-1);
+se_d=diag(sqrt(V_d));
+%Robust
+V_d_Robust=N_d/(N_d-K_d)*(X_d'*X_d)^(-1)*(resid_d'*resid_d)*(X_d'*X_d)^(-1);
+se_d_robust=diag(sqrt(V_d_Robust));
+
+
+%% Compilacion de Resultados hasta aqui:
+table_to_drop = table([beta_d] , [se_d] , [se_d_robust]  );
+table_to_drop.Properties.VariableNames = {'Betas1rasDiferecias' 'SEHomocedastico' 'SERobust'};
+array_to_drop = table2array(table_to_drop);
+Resumen_d = array2table(array_to_drop.');
+Resumen_d.Properties.RowNames = table_to_drop.Properties.VariableNames;
+Resumen_d.Properties.VariableNames = {'rezago1 ' 'rezago2'   'exp' 'exp2' 'wks'}
+%Borrando objetos innecesarios 
+clear array_to_drop
+clear table_to_drop
+
+
+%% (E) Estimador Efectos Aleatorios
+% Para esta parte seguimos la pagina 734 del Cameron&Trivedi. Recurriendo a
+% la estimación mediante MCGF.
+N_e = 595;
+T_e = 5;
+K_e = 7;
+%Estimamos \sigma_{e}^{2} mediante  
+sigma_error = 1/(N_e*(T_e-1)-K_e)*(resid_c'*resid_c); %Desde el estimador Within 
+sigma_a = 1/(N_e-(K_e+1))*(resid_b'*resid_b) - (1/T_e)*sigma_error; %Desde el estimador Between
+
+% Estimador el ponderador para MCGF, (rho en nuestro caso).
+tenedor = sigma_error^(0.5)/(sigma_error+T_e*sigma_a)^(0.5);
+lamda = 1 - tenedor;
+
+%Modelo transformado
+XY_e = X_b_long(:,1:7)-lamda *Medias_Regresores;
+%Dependiente
+Y_e = XY_e(:,1);
+%Regresores 
+%Trabajo de la constante
+constante_e = (1-lamda)*ones(2975,1) ; %Se debe transforma la constante
+X_e = [ constante_e XY_e(:,2:7)];  % colapsando regresores 
+
+
+beta_e = (X_e'*X_e)\(X_e'*Y_e);
+resid_e = Y_e - X_e*beta_e ;
+[N_e,K_e] = size(X_e);
+s2=resid_e'*resid_e/(N_e-K_e);
+V_e=s2*(X_e'*X_e)^(-1);
+se_e=diag(sqrt(V_e));
+%Robust
+V_e_Robust=N_e/(N_e-K_e)*(X_e'*X_e)^(-1)*(resid_e'*resid_e)*(X_e'*X_e)^(-1);
+se_e_robust=diag(sqrt(V_e_Robust));
+
+%Cluster
+J_e=5:5:(5*595); %tamaños de los clusters
+diagonal_random=zeros(N_e*T_e,N_e*T_e); 
+resid_e_2=resid_e*resid_e'; %matriz residuos traspuestos
+for i=1:individuos
+diagonal_random(J_e(1,i)-4:J_e(1,i),J_e(1,i)-4:J_e(1,i))=resid_e_2(J_e(1,i)-4:J_e(1,i),J_e(1,i)-4:J_e(1,i));
+end 
+
+
+V_e_cluster= (X_e'*X_e)^(-1) * X_e'*diagonal*X_e * (X_e'*X_e)^(-1); 
+se_e_cluster= sqrt(diag(V_e_cluster));
+
+%Agregando correccion por grados de libertad desarrollada por (Chris Hansen
+%2007) (Este es el ocupado por STATA )
+a_n_e = ((N_e-1)/(N_e-K_e))*((T_e)/(T_e-1));
+V_e_cluster_corrected=a_n_e*V_e_cluster;
+se_a_corrected = sqrt(diag(V_a_cluster_corrected));
+
+
+
+%% Compilacion de Resultados hasta aqui:
+table_to_drop = table([beta_e] , [se_e] , [se_e_robust] , [se_a_corrected]  );
+table_to_drop.Properties.VariableNames = {'Betas1rasDiferecias' 'SEHomocedastico'  'SERobust' 'SECluster'};
+array_to_drop = table2array(table_to_drop);
+Resumen_e = array2table(array_to_drop.');
+Resumen_e.Properties.RowNames = table_to_drop.Properties.VariableNames;
+Resumen_e.Properties.VariableNames = {'Constante' 'rezago1 ' 'rezago2'   'exp' 'exp2' 'wks' 'ed'}
+%Borrando objetos innecesarios 
+clear array_to_drop
+clear table_to_drop
+
+
+```

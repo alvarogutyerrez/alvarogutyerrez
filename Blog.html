@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<meta charset="utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="pandoc" />
+
+
+
+
+<title>Loops with progress bars</title>
+
+<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/journal.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+<link href="site_libs/font-awesome-4.5.0/css/font-awesome.min.css" rel="stylesheet" />
+
+<style type="text/css">code{white-space: pre;}</style>
+<style type="text/css">
+  pre:not([class]) {
+    background-color: white;
+  }
+</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+
+<style type="text/css">
+h1 {
+  font-size: 34px;
+}
+h1.title {
+  font-size: 38px;
+}
+h2 {
+  font-size: 30px;
+}
+h3 {
+  font-size: 24px;
+}
+h4 {
+  font-size: 18px;
+}
+h5 {
+  font-size: 16px;
+}
+h6 {
+  font-size: 12px;
+}
+.table th:not([align]) {
+  text-align: left;
+}
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+
+</head>
+
+<body>
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+code {
+  color: inherit;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+img {
+  max-width:100%;
+  height: auto;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+</style>
+
+
+<style type="text/css">
+/* padding for bootstrap navbar */
+body {
+  padding-top: 61px;
+  padding-bottom: 40px;
+}
+/* offset scroll position for anchor links (for fixed navbar)  */
+.section h1 {
+  padding-top: 66px;
+  margin-top: -66px;
+}
+
+.section h2 {
+  padding-top: 66px;
+  margin-top: -66px;
+}
+.section h3 {
+  padding-top: 66px;
+  margin-top: -66px;
+}
+.section h4 {
+  padding-top: 66px;
+  margin-top: -66px;
+}
+.section h5 {
+  padding-top: 66px;
+  margin-top: -66px;
+}
+.section h6 {
+  padding-top: 66px;
+  margin-top: -66px;
+}
+</style>
+
+<script>
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark it active
+  menuAnchor.parent().addClass('active');
+
+  // if it's got a parent navbar menu mark it active as well
+  menuAnchor.closest('li.dropdown').addClass('active');
+});
+</script>
+
+
+<div class="container-fluid main-container">
+
+<!-- tabsets -->
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+</script>
+
+<!-- code folding -->
+
+
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">Alvaro Gutierrez</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+  <a href="index.html">Home</a>
+</li>
+<li>
+  <a href="about.html">About Me</a>
+</li>
+<li>
+  <a href="CV.html">CV</a>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+  <a href="https://github.com/alvarogutyerrez">
+    <span class="fa fa-github fa-lg"></span>
+     
+  </a>
+</li>
+<li>
+  <a href="https://www.linkedin.com/in/alvaro-gutierrez-627b20138/">
+    <span class="fa fa-linkedin fa-lg"></span>
+     
+  </a>
+</li>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div class="fluid-row" id="header">
+
+
+
+<h1 class="title toc-ignore">Loops with progress bars</h1>
+
+</div>
+
+
+<p>A few Stata commands (like <a href="http://www.stata.com/help.cgi?bootstrap"><code>bootstrap</code></a> or my own <a href="/resources/psestimate">psestimate</a>) have a “progress bar”, which is more like a table of dots. Those are very useful for tracking the advancements made in long loops or programs. In this post I explain how to include progress bars in several different situations.</p>
+<p>The key lies in using <code>_dots</code>, an undocumented Stata command whose only “official” mention (AFAIK) is by <a href="http://www.stata-journal.com/sjpdf.html?articlenum=pr0030">David Harrison (2007)</a>. He outlines two examples in that Stata Tip, which I explain and expand in this post.</p>
+<div id="basic-usage" class="section level1">
+<h1>Basic usage</h1>
+<p>The easiest way to implement this is in a <a href="http://www.stata.com/help.cgi?forvalues">forvalues loop</a>, as Harrison’s first example:</p>
+<pre><code>_dots 0, title(Loop running) reps(75)
+forvalues i = 1/75 {
+  ...
+  _dots `i&#39; 0
+}
+Loop running (75)
+----+--- 1 ---+--- 2 ---+--- 3 ---+--- 4 ---+--- 5
+..................................................    50
+.........................</code></pre>
+<p>The <strong>first call of <code>_dots</code></strong> sets up the graduated header line (<code>----+--- 1 ---+--- 2</code>…). Both the <code>title</code> and <code>reps</code> (repetitions) options are optional. Keep in mind that <code>reps</code> only accepts integers as its argument.</p>
+<p><strong>Further calls of <code>_dots</code></strong> (most probably inside a loop, like above) take two arguments:</p>
+<ul>
+<li>The first argument is the <em>repetition number</em>, which tracks the number of attempts in progress. In the above example, it is automatically updated by the loop.</li>
+<li>The second argument is the <em>return code</em>, which indicates the type of symbol displayed in the current repetition. The usual is to use <code>0</code>, which outputs a dot. Return codes are</li>
+<li><code>-1</code>: outputs a green <code>s</code></li>
+<li><code>0</code>: outputs a black dot, <code>.</code></li>
+<li><code>1</code>: outputs a red <code>x</code></li>
+<li><code>2</code>: outputs a red <code>e</code></li>
+<li><code>3</code>: outputs a red <code>n</code></li>
+<li>Any other value used in the return code outputs a red <code>?</code></li>
+</ul>
+</div>
+<div id="usage-in-non-numerical-loops" class="section level1">
+<h1>Usage in non-numerical loops</h1>
+<p>It is very straightforward to implement this in loops which are non-numerical by <strong>defining a local macro to act as a counter</strong>. For example, in a <a href="http://www.stata.com/help.cgi?foreach">foreach</a> loop with a <a href="http://www.stata.com/help.cgi?varlist">varlist</a>:</p>
+<pre><code>sysuse auto
+_dots 0, reps(10)
+foreach var of varlist price - gear_ratio {
+  ...
+  local i = `i&#39;+1
+  _dots `i&#39; 0
+}</code></pre>
+<div id="counting-repetitions" class="section level3">
+<h3>Counting repetitions</h3>
+<p>The number of repetitions in <code>rep</code> is not calculated by <code>_dots</code>, so I had to manually count the variables and enter the number. The number of variables could be counted automatically with the help of the <a href="http://www.stata.com/manuals13/pmacrolists.pdf"><code>list</code> extended macro function</a> <code>sizeof</code>.</p>
+<p>Expanding the last example, we could write:</p>
+<pre><code>sysuse auto
+unab myvars : price - gear_ratio
+local N : list sizeof myvars
+_dots 0, reps(`N&#39;)
+foreach var of varlist `myvars&#39; {
+  ...
+  local i = `i&#39;+1
+  _dots `i&#39; 0
+}</code></pre>
+<p>Notice that I first expanded the variable list with <a href="http://www.stata.com/manuals13/punab.pdf"><code>unab</code></a>, which permits entering an abbreviated <code>varlist</code> like <code>price - gear_ratio</code> and then have Stata automatically expand the list with all variables in that range.</p>
+</div>
+</div>
+<div id="usage-in-while-loops" class="section level1">
+<h1>Usage in while loops</h1>
+<p>Now we can think of a more sophisticated implementation in a <a href="http://www.stata.com/help.cgi?while"><code>while</code></a> loop. Let’s look at Harrison’s example:</p>
+<pre><code>_dots 0, title(Looping until 70 successes...)
+local rep 1
+local nsuccess 0
+while `nsuccess&#39; &lt; 70 {
+  local fail = uniform() &lt; .2
+  local nsuccess = `nsuccess&#39; + (`fail&#39; == 0)
+  _dots `rep++&#39; `fail&#39;
+}
+Looping until 70 successes...
+----+--- 1 ---+--- 2 ---+--- 3 ---+--- 4 ---+--- 5
+xx...x..x...xx...xx....x................x......... 50
+.x..............x..x.x.x....x.......</code></pre>
+<p>It is useful to realize that <code>nsuccess</code> just controls the loop, but it’s not related to the progress bar. So <code>nsuccess</code> is just set to zero and then will is updated with +1 with 80% probability, that is, if <code>fail</code> <em>doesn’t</em> fail, which means it is equal to zero.</p>
+<p>Now to the progress bar. The first call of <code>_dots</code> is similar to what we’ve seen. The second call (inside the loop) is trickier:</p>
+<pre class="stata"><code>_dots `rep++&#39; `fail&#39;</code></pre>
+<p>The first argument, <code>rep++</code>, is just updating the repetitions counter. The <code>++</code> part is a <a href="http://www.stata.com/manuals13/pmacro.pdf">macro expansion operator</a> which is just a shorthand for updating the local macro (it’s the same as writing <code>local rep = `rep’+1</code>).</p>
+<p>The second argument, <code>fail</code>, is the return code. In this example the local macro <code>fail</code> equals zero if there is a success, so a dot is passed to the progress bar. In case of failure, <code>fail</code> equals 1 and thus the progress bar outputs a red X for that iteration.</p>
+</div>
+
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>

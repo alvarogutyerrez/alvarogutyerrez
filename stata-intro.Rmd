@@ -1,0 +1,69 @@
+---
+title: "Introduction to Stata"
+output: html_document
+---
+
+
+
+#Session ONE: Load + Brief Summary Stats 
+
+
+Before start, just a few comments about *friendly-colaborative-programming*. It's always a good practice, set all your computer path at the beginning of your programming. Specially in the case of STATA programming, because this languagge does not have such a thing as 'proyects' like R (one point for R). So, for this reason this will be actually very helpfull (for you, in the case that you changed the computer which you are working on, or for your partners, in the case that you are writting a long colaborative code.)
+
+So, at the very beggining of your code you will type (the comment style is just my style, you can choose yours)
+
+```
+//=================================================//
+// 		AUTHOR: ALVARO GUTIERREZ VARGAS 
+//		LAST EDIT: 19-03-2018
+//=================================================//
+//  PRELIMINARS
+
+clear all  
+set more off
+
+
+//  PATHS
+
+
+global data "C:whatever_your_Data_is_located"
+global latex "C:Whatever_your_LaTeX_is_located"
+
+```
+## PRELIMINARS
+
+Here ase usual, we started with with two usual (and helpfull commands). *clear all* wipes off **everything**, literally. It will delete the dataset (in case you have loaded one), matrix, globals... everything that you have done into the program, so this will allow you to star everything again. In the other hand, *set more off*, prevents as to have to click on **more** each time that we executed a bunch of lines that STATA cannot display directly. So, the last two lines will be a usefull way to start a code without problems.
+```
+                  mean:   6165.26
+              std. dev:    2949.5
+
+           percentiles:        10%       25%       50%       75%       90%
+                              3895      4195    5006.5      6342     11385
+--more--
+
+```
+## PATHS
+
+At this part we used the command **global** which need a short explanation. A global variable is usefull way to compress strings like a path, as in this case, or everyting that you can imagin, (list of variables, name of files, names of header in your future beautiful summary stats table, etc...). To use a global you have to call with a **$**, at the beggining. Like this.
+
+```
+use "$data\demographic_data" , clear 
+
+```
+Here we call the data set with the command **use**, then in the middle of the *" "* we need to tell STATA where the data is located, and there is where the path that we already saved is usefull. We call it with the *$* and then the name of out data. After the _path_ + _DataSetName_ we put a comma, to *enter to the options mode* of STATA, and we type **clear** to tell stata, that in the case that another dataset were already loaded, we want to replace it for the one that we just called. 
+
+
+#Summary Stats
+
+
+Here we will work with three of most commonly used commands to generate fast summary statistics. We will diferenciate them, comments some limitations and also introduce another usefull topic which is the **local** variables.
+
+## *table* command
+
+Imagine that we want to get the average income of two different groups, like man and female.
+
+
+
+
+
+
