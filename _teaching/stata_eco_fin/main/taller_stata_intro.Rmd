@@ -29,4 +29,15 @@ En esta sesión se explica como realizar estadística descriptiva exploratoria c
 </article>
 
 
+<article>
+<h3><a href="../S03/taller_stata_markdown_S03.html">Sesion #03: Manejo de Bases de Dato: Gen, Egen, Labels y Recode. </a></h3>
+<div class="summary">
+<p>
+En esta sesión se analiza la forma de trabajar con data jerarquizada, haciéndo uso del comando _gen_, _egen_ y _bysort_. También se generan máscaras sobre los valores de las variables y sobre el nombre de las mismas para hacer más rápida la vizualización. Finalmente de trabaja con el comando _recode_ muy util para recodificar variables continuas en discretas, como por ejemplo los tramos de edad. 
+</p>
+<a class="btn btn-outline-primary btn-sm" href="../S03/taller_stata_markdown_S03.html">Ir al artículo</a>
+</div>
+</article>
+
+
 

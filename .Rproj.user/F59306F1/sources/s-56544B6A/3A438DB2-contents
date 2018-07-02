@@ -1,0 +1,445 @@
+---
+title: 'Sesión #3: Manejo de Bases de Dato'
+
+---
+#Enunciado
+
+<iframe src="S03.pdf" width="100%" height="800"></iframe>
+
+
+#Solución Propuesta
+
+<article>
+<h3><a href="../DataSets/eps2009_trabajable.dta">Base de Datos </a></h3>
+<div class="summary">
+<p>
+Acá podrás descargar la base de datos que ocuparemos en este taller href="../DataSets/eps2009_trabajable.dta">Descargar Base de DAtos</a>. 
+</p>
+<a class="btn btn-outline-primary btn-sm" href="../DataSets/eps2009_trabajable.dta">Descargar Base de DAtos</a>
+</div>
+</article>
+
+
+
+##Antes de comenzar:  Organización de los directorios (Una vez mas)
+
+Siguiendo el formato de la sesión anterior, debemos crear tres carpteras. Tal como se ve en la imagen. De esta forma, podremos hacer referencias a cada una de ellas mediante variables globales.
+```{r Folders, echo=FALSE, fig.cap="Folders", out.width = '28%'}
+knitr::include_graphics("S03_FOLDERS.jpg")
+```
+
+## Preambulo y directorios
+
+Lo primero que debemos realizar es lo usual en un preambulo, que es _clear all_ y _set more off_. El primero permite operar con un Stata completamrnte vacío y el segundo permite no tener que clickear en *more* cuando ejecutemos programas muy largos.
+```
+// 		TALLER STATA SESION #3
+// 		AUTOR: ALVARO GUTIERREZ VARGAS 
+//		FECHA ULTIMA MODIFICACION : 28-03-2018
+//===========================================================================//
+//  PRELIMINARES 
+clear all  /*Elimina todo en el stata (base de datos, matrices, locals, etc)*/
+set more off  /*Impide que tengamos que estar clickeando "more" cuando el do es muy largo*/
+```
+
+#Gen, Egen y Bys: 
+
+## Gen
+
+Este comando nos permite generar variables nuevas en nuestra base de datos. También nos permite ocupar operadores lógicos para dicha construcción.
+
+###(I) Jefe de Hogar. 
+
+La variable Jefe de Hogar corresponde a la variable _a5_. Por lo que podemos inspeccionarla con el comando tabulate.
+
+```
+. tabulate a5
+
+
+        a5. ¿qué |
+     relación de |
+parentesco tiene |
+ con respecto al |
+  jefe de hogar? |      Freq.     Percent        Cum.
+-----------------+-----------------------------------
+   jefe de hogar |     14,244       19.24       19.24
+cónyuge o pareja |     11,041       14.91       34.15
+         hijo(a) |     25,804       34.85       69.00
+   otro familiar |     19,976       26.98       95.97
+otro no familiar |      2,982        4.03      100.00
+-----------------+-----------------------------------
+           Total |     74,047      100.00
+
+
+```
+Acá vemos que la variable cuenta con una _label_, lo que significa que visualizamos una __mascara__ del número real que se encuentra almacenado en ella. Si quisieramos acceder a la variable "plana", tendremos que adicionar la opción _nolabel_, al comando tabualte:
+
+
+```
+tabulate a5, nolabel
+
+   a5. ¿qué |
+   relación |
+         de |
+ parentesco |
+  tiene con |
+respecto al |
+    jefe de |
+     hogar? |      Freq.     Percent        Cum.
+------------+-----------------------------------
+          1 |     14,244       19.24       19.24
+          2 |     11,041       14.91       34.15
+          3 |     25,804       34.85       69.00
+          4 |     19,976       26.98       95.97
+          5 |      2,982        4.03      100.00
+------------+-----------------------------------
+      Total |     74,047      100.00
+
+```
+
+Ahora podemos ver que el número que corresponde al jefe de hogar es el 1 en esta variable.  Ahora, sabiendo esto, podremos generar una variable _dummy_ que tome el valor 1 cuando el encuestado sea el jefe de hogar, con los comandos _gen_ y _replace_.
+Primero generaremos una variable llena de ceros llamada _jefe_ y luego reemplzaremos dicha variable con un 1 cuando a5 sea igual a 1 (es decir sea el jefe de hogar.).
+```
+. gen jefe = 0
+
+. replace jefe = 1 if a5 ==1
+(14,244 real changes made)
+
+```
+Notar que la estructura del replace es la siguiente: Primero decirle que variable queremos reemplazar y con qué valor, en este caso: _replace jefe =1_. Luego se le entrega la condición lógica _if a5 ==1_. Notar que luego del __if__ van __DOS signos de igualdad__, lo que es un error común para la gente que inicia en el lenguaje, la que escribe:
+```
+replace jefe = 1 if a5 =1
+invalid syntax
+r(198);
+```
+Obteniendo un error de invalid sintax!
+
+###(II) Variable Genero
+
+Siguiendo el mismo procedimiento descrito:
+
+```
+. gen male = .
+(74,047 missing values generated)
+
+. replace male   = 1 if a8 ==1
+(36,308 real changes made)
+
+. replace male = 0    if a8 ==2
+(37,652 real changes made)
+
+```
+###(III) Variable Ingreso 
+
+Es usual que en las encuestas se codifiquen las respuestas "no sabe" o "no responde" con números como 99 o 999. Estos valores, al no ser extraídos desde la distribución evitentemente ensuciarán los datos dado que fueron generados de forma artificial para demarcar la no respuesta. Por esto, debemos limpiar la base de datos antes de proceder.
+
+Primero observemos la variable _c3_ que ocntiene el ingreso del individuo.
+```
+tabulate  c3 
+
+ c3. en el |
+    trabajo |
+ principal, |
+durante los |
+ últimos 12 |
+     meses, |
+  ¿cuál fue |
+el ingreso  |      Freq.     Percent        Cum.
+------------+-----------------------------------
+          0 |         16        0.12        0.12
+no responde |        297        2.22        2.34
+    no sabe |      4,187       31.36       33.71
+       1200 |          1        0.01       33.71
+       3500 |          1        0.01       33.72
+       5000 |         11        0.08       33.80
+
+[Output completo omitido: en pro de la parsimonia]
+
+    4800000 |          1        0.01       99.98
+    9600000 |          1        0.01       99.99
+   1.00e+07 |          1        0.01       99.99
+   1.50e+07 |          1        0.01      100.00
+------------+-----------------------------------
+      Total |     13,351      100.00
+
+
+```
+
+Acá vemos que existen las categorías "no sabe" y "no responde", de este modo aplicando _nolabel_ podemos ver cuales son los numeros que almacenan estas categorías.
+```
+tabulate  c3 
+
+
+  c3. en el |
+    trabajo |
+ principal, |
+durante los |
+ últimos 12 |
+     meses, |
+  ¿cuál fue |
+el ingreso  |      Freq.     Percent        Cum.
+------------+-----------------------------------
+          0 |         16        0.12        0.12
+          8 |        297        2.22        2.34
+          9 |      4,187       31.36       33.71
+       1200 |          1        0.01       33.71
+       3500 |          1        0.01       33.72
+
+[Output completo omitido: en pro de la parsimonia]
+
+```
+Vemos que 8 es "no sabe" y 9 "No responde", con lo que procedemos a crear una nueva variable de ingreso "limpia" de dichos valores.
+```
+. gen ingreso = c3
+(60,696 missing values generated)
+
+.  replace ingreso = . if c3 ==8 | c3 ==9
+(4,484 real changes made, 4,484 to missing)
+```
+Acá aprovechamos de introducir un nuevo operador lógico _|_, el cual en significa "ó". Con lo que la condición lógica que recién escribimos puede entenderse como: _"reemplaza a __ingreso__ con un punto (missing) si c3 es 8 ó si es  9"_
+
+Otra forma de haber escrito la condición anterior es haber ocupado el comando _inrange_ o _inlist_.
+
+####inlist
+```
+. replace ingreso = . if inlist(c3,8,9)
+(0 real changes made)
+```
+En este caso, _inlist_ permite generar una condición lógica solamente _if_ con una lista de valores (en este caso 7 y 8) sobre una variable (en este caso c3). En simple, lo que recién escribimos, se lee _" reemplaza la variable ingreso con un punto (missing) si c11 posee los valores de la lista 8 ó 9"_ Lo que es equivalente a lo que escribimos recién. Esto se ve comprobado por el output que imprimió Stata, en donde existieron cero cambios reales.
+
+####inrange
+La otra forma con la que esto pudo haber sido computado es con _inrange_
+Este comando, opera de la misma forma que _inlist_, la única diferencia radica en que ahora no operará con valores puntuales, sino que operará con un rango de valores.
+```
+. replace ingreso = . if inrange(c3,8,9)
+(0 real changes made)
+```
+En simple, lo que acabamos de escribir se lee _"reemplaza la variable ingreso con un punto (missing) si c3 posee los valores __ENTRE__ 8 y 9 "_ Lo que en este caso es equivalente, tal cual nos muestra el output de Stata (0 real changes made).
+
+
+### (IV) Dummy Ingreso inferior a $250.000.
+
+siguiendo los procedimientos anteriores fluye que:
+```
+. gen ing_less_min = 0
+
+. replace ing_less_min = 1 if ingreso <250000
+(6,272 real changes made)
+
+```
+
+
+### (V) Mujeres que ganan más de un millón
+
+
+Para genera esta variable se deben complir dos condiciones lógicas simultáneamente, que el ingreso sea superior a un millón y que cumpla cons er mujer. Acá podemos introducir el operador lógico "y", el cual en Stata corresponde a _&_. De esto, es natural que la variable sea creaca como:
+
+```
+. gen ing_female_1mm = 0
+
+. replace ing_female_1mm = ingreso if ingreso >1000000 & male ==0
+(34,287 real changes made, 34,260 to missing)
+```
+
+
+
+##EGEN
+
+### (I)Variable "Hogar"
+
+Acá recurrimos a la función [egen](https://www.stata.com/manuals13/degen.pdf), la cual tiene un roll increíblemente preponderante en la programación en Stata. Esta posee muchas "sub" funciones útiles, en el manejo de bases de datos. Una de ellas es la función _group_ la que nos permite generar un número correlativo ( del 1 al final de la base), en base a alguna variable que deseemos. En este caso, queremos obtener un correlativo de los hogares en la muestra, los cuales está indentificados con la variable "folio".
+```
+egen hogar= group(folio) 
+```
+### (II) Recortando la Base (groseramente)
+Ahora para quedarnos solo con los tres primeros hogares, podemos ocupar el comando _keep_ el cual al combinarlo con _if_ nos permite quedarnos con los hogares del 1 al 3.
+```
+keep if hogar <4 
+```
+
+Si computamos _browse_ (aberviado con _br_) y la lista de variables que deseemos observar en el data set obtendremos:
+
+```
+br  folio	hogar	a4 	male	
+
+```
+```{r browse_inicial, echo=FALSE, fig.cap="browse_inicial", out.width = '68%'}
+knitr::include_graphics("br_hogar_inicial.png")
+```
+
+Desde esta última imagen podemos ver varias cosas:
+
+(1) Solo se quedaron los hogares con folio 179, 717 y 785
+(2) Estos fueron nominados con los números correlativos 1, 2 y 3. Con lo que comprobamos que quedó generada correctamente la variable "hogar"
+(3) En el primer hogar existen 6 personas, en el segundo 3 y en el tercero 6.
+(4) En el primer hogar existen 3 hijos, en el segundo solo uno y en el tercero no existen hijos.
+(5) En el primer hogar existen 2 mujeres, en el segundo solo una y en el tercero 3.
+
+
+### (III) Numero de Personas en el Hogar
+Esto en general es un dolor de cabeza para los que inician en el Stata, o en general cualquier tipo de programación con data jerarquizada. En este caso tenemos una sola jerarquía relevante: _Hogar-Invididuo_. Afortunadamente Stata es bastante directo realizar cálculos a niveles gerárquinos, con su opción __bys:__.
+
+Para poner las cosas en simple. Generemos una variable auxiliar que contenga solamente unos.
+```
+gen aux = 1
+```
+Ahora ocupemos esta variable para realizar el conteo de personas en el hogar. En el fondo necesitamos que Stata vaya contando _por cada hogar_ la cantidad de personas (en este caso, cada persona será un 1 en la variable _aux_). Esta operación se realiza con una sub función de _egen_ llamada _total_, combinada con [bysort](https://www.stata.com/help.cgi?bysort)
+```
+bysort hogar : egen numper = total(aux)
+```
+Esta simple linea, puede ser descompuesta en 3 partes:
+
+(1) _bysort hogar :_  Para cada hogar, realiza la operación que viene luego de los dos puntos
+(2) _egen numper =_ Vamos a generar una nueva variable llamada __numper__, la cual será igual a....
+(3) _total(aux)_ a la sumatoria de la variable aux. Es decir, en nuestro  caso a la sumatoria del número de integrantes del hogar, o en otras palabras al __numero de personas en el hogar__.
+
+### (VI) Número de Hij@s en el Hogar
+
+Dado las explicaciones anteriores, debería resultar natural para el lector crear la variable número de hij@s como:
+```
+gen aux_hijo = 0
+
+replace aux_hijo = 1 if a4 ==3
+(4 real changes made)
+
+bys hogar : egen num_hijo = total(aux_hijo)
+```
+
+En donde lo único que cambia, en relación a la estructura anterior, es que la variable auxiliar sobre la que realizaremos el conteo con __total__ ahora debe complir con que la variable a4  sea igual a 4 (Relación de parentezco con el jefe de hogar, __hijo(a)__)
+
+### (VII) Número de Hijas en el Hogar
+
+Seguiendo la misma lógica y lo aprendido en este taller, vemos que ahora solamente debe cumplir una condición adocional (ser mujer: male ==0).
+```
+gen aux_hija = 0
+
+replace aux_hija = 1 if a4 ==3 & male ==0
+(1 real change made)
+
+bys hogar : egen num_hija = total(aux_hija)
+```
+Con lo que obtendremos:
+```{r browse_final, echo=FALSE, fig.cap="browse_inicial", out.width = '100%'}
+knitr::include_graphics("br_hogar_final.png")
+```
+
+##Labels
+
+Los labels son las etiquetas que nos permiten operar una base de datos de forma más amigable, ya que en vez de solamente ver números, podemos generar etiquetas sobre _valores_ y _variables_ para que la visualización de la data sea más sencilla. Por ejemplo, en el caso del ejemplo si realizamos un _tabulate_ sobre la variable _male_ que creamos en este tutorial obtendremos:
+
+```
+ tabulate male
+
+       male |      Freq.     Percent        Cum.
+------------+-----------------------------------
+          0 |          6       40.00       40.00
+          1 |          9       60.00      100.00
+------------+-----------------------------------
+      Total |         15      100.00
+
+```
+Lo cual no es para nada informativo...
+
+### Label values (male)
+
+Primero pondremos etiquetas sobre los números de la variable male. Esto se realiza en dos pasos:
+
+(1) Se genera la etiqueta con: 
+```
+label define male 1 "Male" 0 "Female"
+```
+Lo que acabamos de realizar es __definir__ la etiqueta llamada _male_ (convenientemente igual al nombre de la variable, esto no es obligación), en donde los 1 tendrán por máscara "Male" y los 0 tendrán "Female" 
+
+(2) Ahora debemos asignarle la mascara que acabamos de crear a la variable male con el comando:
+```
+label values male male
+```
+En donde le ordenamos a Stata que asigne a la variable _male_ la etiqueta _male_ que acabamos de crear.
+
+### Label variables
+
+ 
+También nos podría interesar que la variable completa tuviera una etiqueta, lo que será útil
+a la hora de exportar tablas de regresión lineal o simplemente explorar la base de forma rápida. Podemos asignarle una etiqueta a la __variable__ mediante:
+
+```
+label variable male "Gender [Male =1]"
+```
+Con lo que obtendremos algo __MUCHO__ más informativo.
+
+```
+. tabulate male
+
+     Gender |
+  [Male =1] |      Freq.     Percent        Cum.
+------------+-----------------------------------
+     Female |          6       40.00       40.00
+       Male |          9       60.00      100.00
+------------+-----------------------------------
+      Total |         15      100.00
+```
+
+
+
+## Recode
+Para finalizar, presentaremos un comando que, básicamente, encompaza a todos los que hemos descrito hasta acá... __recode__.
+
+Este nos permite, simultáneamente, generar una nueva variable discreta, a partir otra variable, ya sea continua o discreta, adhiriendo los _labels_ respectivos simultáneamente. En este caso, generaremos una variable llamada _tramoedad_ que contendrá 6 tramos de edad apartir de la variable a9.
+
+Antes de introducir las últimas lineas de esta sesión vale la pena recordar que una forma sencilla de programar _una linea_ muy larga, que será dificil de visualizar en nuestra pantalla es declarar un espacio especial en donde Stata entenderá que todo lo que esté ahí, será una misma linea. Entonces...
+
+Esto...
+```
+# delimit ;
+recode a9 (0/14 = 1 "Menores de 15")
+			    (15/29 = 2 "15 a 29 años")
+		    	(30/45 = 3 "30 a 45")
+		    	(46/55 = 4 "46 a 55")
+		    	(56/65 = 5 "56 a 65")
+		    	(66/max =6 "66 y más")
+,g(tramoedad) 
+;
+# delimit cr 
+```
+
+Será equivalente a...
+
+```
+recode a9 (0/14 = 1 "Menores de 15") (15/29 = 2 "15 a 29 años") (30/45 = 3 "30 a 45") (46/55 = 4 "46 a 55")	(56/65 = 5 "56 a 65")  	(66/max =6 "66 y más"),g(tramoedad) 
+```
+
+Por lo que aprendemos que:
+```
+# delimit ;
+TODO LO QUE ESTÉ DENTRO DE ESTE AMBIENTE SERÁ ENTENDIDO COMO UNA SOLA LINEA!
+;
+# delimit cr 
+```
+
+Volviendo al _recode_. Recodificaremos la variable a9 en sus tramos. La sintaxis es la siguiente:
+
+(1) recode _nombre de la variable_: que queremos recodificar.
+(2) (0/14 = 1 "Menores de 15"): Esto significa que para los valores entre 0 y 14, se asigará un 1 y la etiqueta _"Menores de 15"_
+(3) ,g(tramoedad): Esto le indica a Stata que queremos que genere una nueva variable llamada _tramoedad_ con lo recién declarado.
+
+Con lo que finalmente obtendremos:
+
+
+```
+ tabulate tramoedad
+
+ RECODE of a9 |
+    (a9. ¿qué |
+         edad |
+   tiene...?) |      Freq.     Percent        Cum.
+--------------+-----------------------------------
+Menores de 15 |          1        6.67        6.67
+      30 a 45 |          3       20.00       26.67
+      46 a 55 |          2       13.33       40.00
+      56 a 65 |          3       20.00       60.00
+     66 y más |          6       40.00      100.00
+--------------+-----------------------------------
+        Total |         15      100.00
+```
+
+
+

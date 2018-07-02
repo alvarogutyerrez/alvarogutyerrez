@@ -1,0 +1,396 @@
+---
+title: 'Sesión #2: Estadística Descriptiva'
+
+---
+#Enunciado
+
+<iframe src="S02.pdf" width="100%" height="800"></iframe>
+
+
+#Solución Propuesta
+
+<article>
+<h3><a href="../DataSets/eps2009_trabajable.dta">Base de Datos </a></h3>
+<div class="summary">
+<p>
+Acá podrás descargar la base de datos que ocuparemos en este taller href="../DataSets/eps2009_trabajable.dta">Descargar Base de DAtos</a>. 
+</p>
+<a class="btn btn-outline-primary btn-sm" href="../DataSets/eps2009_trabajable.dta">Descargar Base de DAtos</a>
+</div>
+</article>
+
+
+
+##Antes de comenzar:  Organización de los directorios
+
+Como se indica en el enunciado se deben crear tres carpteras. Tal como se ve en la imagen. De esta forma, podremos hacer referencias a cada una de ellas mediante variables globales.
+```{r Folders, echo=FALSE, fig.cap="Folders", out.width = '28%'}
+knitr::include_graphics("S02_FOLDERS.jpg")
+```
+
+## Preambulo y directorios
+
+Lo primero que debemos realizar es lo usual en un preambulo, que es _clear all_ y _set more off_. El primero permite operar con un Stata completamrnte vacío y el segundo permite no tener que clickear en *more* cuando ejecutemos programas muy largos.
+```
+// 		TALLER STATA SESION #2
+// 		AUTOR: ALVARO GUTIERREZ VARGAS 
+//		FECHA ULTIMA MODIFICACION : 28-03-2018
+//===========================================================================//
+//  PRELIMINARES 
+clear all  /*Elimina todo en el stata (base de datos, matrices, locals, etc)*/
+set more off  /*Impide que tengamos que estar clickeando "more" cuando el do es muy largo*/
+```
+
+Lo segundo, es realizar la definición de las variables globales (su uso será explicado más adelante en conjunto con las variables *locales*) y haciendo uso de estas cargar la base de datos.
+```
+//       Definición de Variables GLOBALES
+
+global data "C:Dropbox\TallerS02\DATA"
+global latex "C:Dropbox\TallerS02\LATEX"
+```
+
+Ahora haciendo uso de las variables globales recién definidas, podremos cargar nuestra base de datos. Lo primero es entender que para que Stata "sepa" que queremos hacer uso de una variable global, debemos anteponer un *$* antes del nombre del global. Con lo que la linea siguiente....
+
+```
+//       LOAD DATA BASE
+use "$data\eps2009_trabajable_stata11" , clear 
+```
+
+Sería equivalente a...
+
+```
+//       LOAD DATA BASE
+
+use "C:Dropbox\TallerS02\DATA\eps2009_trabajable_stata11" , clear 
+
+```
+Con lo que se evidencia la economía en la escritura que hemos ganado con la declaración de la variable global dentro del preambulo.
+Acá un punto importante...de primera vista puede parecer algo poco importante o incluso *inútil*, pero imaginemonos por un segundo que estamos trabajando en un _dofile_ colaboratio entre varias personas. De este modo, todos los integrantes tendrán alojada la base de datos en carpetas diferentes, con lo que cada vez que se envíe el código con el avance correspondiente de alguno de los integrantes del grupo, el resto deberá alterar todas las rutas que involucren directorios en el equipo. Ahora para llevar el ejemplo al extremo, imaginemos que estamos trabajando con 50 bases de datos diferentes(lo que no sería raro en el caso de un panel de datos por países)... entonces cada vez que alguien envié su avance el resto tendrá que *copiar y pegar* 50 veces las rutas... no gracias. Si se declaran correctamente las lineas se puede copiar y pegar solamente una vez la ruta y ya estarán listos para colaborar :stuck_out_tongue: .
+
+
+##Comparacion Table, Tabulate y Summarize.
+
+A primera vista tabulate y table pueden parecer bastante similares, pero la verdad poseen características que los diferencian en forma dramática.
+
+### Table
+Nos permite obtener la media condicional de alguna variable continua (en este caso el ingreso laboral) en base a otra variable categórica (e.g: genero).   
+```
+table sexo09 , c(mean ingreso09 )
+
+--------------------------
+Genero    |
+[Hombre=1]|
+          | mean(ingre~09)
+----------+---------------
+    mujer |       184332.1
+   hombre |       358720.3
+--------------------------
+```
+Tambien nos permite observar hasta 5 estadisticos (media, sd, min, max, N)
+
+```
+table sexo09 , c(mean ingreso09   sd ingreso09 max ingreso09 min ingreso09 N  ingreso09  )
+--------------------------------------------------------------------------------
+Genero    |
+[Hombre=1 |
+]         | mean(ing~09)  sd(ingre~09)  max(ingr~09)  min(ingr~09)  N(ingreso09)
+----------+---------------------------------------------------------------------
+    mujer |     184332.1      791892.2      4.95e+07             0         7,371
+   hombre |     358720.3       2089001      1.63e+08             0         7,063
+--------------------------------------------------------------------------------
+```
+
+
+También nos permite hacer cruces entre categorías, pero acá se vuelve un poco confusa la lectura. En este caso se hizo el cruce entre los cinco estadísticos calculados anteriormente y la variable _dummy_ ctacte que indica si el o la encuestada posee o no cuenta corriente.  Cada valor de arriba hacia abajo corresponde a los estadígrafos calculados por table (pero claramente la tabla no es autoexplicativa!)
+
+```
+table sexo09 ctacte , c(mean ingreso09   sd ingreso09 max ingreso09 min ingreso09 N  ingreso09  )
+
+------------------------------
+Genero    |    Tiene Cuenta   
+[Hombre=1]|  Corriente [Si=1] 
+          |        0         1
+----------+-------------------
+    mujer | 122502.9  460842.2
+          |   236131   1757985
+          | 1.10e+07  4.95e+07
+          |        0         0
+          |    6,024     1,347
+          | 
+   hombre | 237470.9  797199.2
+          | 541578.9   4341532
+          | 2.50e+07  1.63e+08
+          |        0         0
+          |    5,533     1,530
+------------------------------
+
+```
+De este modo es más claro leer las tablas de doble entrada cuando solo se muestra estadístico a la vez. Por ejemplo restringuendo solo a la media condicional por género.
+
+```
+table sexo09 ctacte , c(mean ingreso09    )
+
+------------------------------
+Genero    |    Tiene Cuenta   
+[Hombre=1]|  Corriente [Si=1] 
+          |        0         1
+----------+-------------------
+    mujer | 122502.9  460842.2
+   hombre | 237470.9  797199.2
+------------------------------
+
+```
+Otra característica distintica, es que el número máximo de variables que permite cruzar es tres ("Super Columna"). Acá se calcularon las medias condicionales en tres variables, el género, poseer o no cuenta corriente y el estado de salud del encuestado. 
+
+```
+table salud09 sexo09 ctacte  , c(mean ingreso09   )
+
+----------------------------------------------------
+          | Tiene Cuenta Corriente [Si=1] and Genero
+Estado de |                [Hombre=1]               
+Salud     | -------- 0 -------    -------- 1 -------
+[1-4]     |    mujer    hombre       mujer    hombre
+----------+-----------------------------------------
+        1 | 97914.43  137817.5    208862.7  365654.9
+        2 | 103920.3  195654.9    263706.1  515280.9
+        3 | 138097.5  267536.1    487069.5  658745.8
+        4 | 157965.5    271294      728924   1507959
+----------------------------------------------------
+
+
+```
+
+Finalmente, si queremos acotar la muestra podemos ocupar la opción _if_. La cual nos permite escribir una condición lógica para restringir el cálculo de los estadígramos a una submuestra determinada. Por ejemplo, si quisieramos obtener la misma tabla de antes, pero solo para personas que ganen más de 250.000 pesos.
+
+
+```
+table salud09 sexo09 ctacte if ingreso09 > 250000 , c(mean ingreso09   )
+
+
+----------------------------------------------------
+          | Tiene Cuenta Corriente [Si=1] and Genero
+Estado de |                [Hombre=1]               
+Salud     | -------- 0 -------    -------- 1 -------
+[1-4]     |    mujer    hombre       mujer    hombre
+----------+-----------------------------------------
+        1 | 683471.3  501272.5    698803.9  756593.6
+        2 | 461463.7  504229.1    629318.3  842283.5
+        3 | 452261.8  538314.2      925310  879458.6
+        4 | 465218.2  499916.9     1144500   1997227
+----------------------------------------------------
+```
+
+### Tabulate 
+
+Nos permite obtener tablas de frecuencia condicional
+```
+tabulate salud09 s_vida
+ Estado de |
+     Salud | Seguro de Vida [Si=1]
+     [1-4] |         0          1 |     Total
+-----------+----------------------+----------
+         1 |     1,309        106 |     1,415 
+         2 |     3,729        430 |     4,159 
+         3 |     5,794      1,282 |     7,076 
+         4 |     1,411        337 |     1,748 
+-----------+----------------------+----------
+     Total |    12,243      2,155 |    14,398 
+```
+
+También nos permite obtener estadística descriptiva de forma similar a como lo hace table. 
+```
+tabulate s_vida, summarize( esc09 )
+
+  Seguro de |       Summary of Escolaridad
+Vida [Si=1] |        Mean   Std. Dev.       Freq.
+------------+------------------------------------
+          0 |    9.122668   4.2706051      12,114
+          1 |   12.193065   3.5430814       2,134
+------------+------------------------------------
+      Total |   9.5825379   4.3111825      14,248
+```
+Del mismo modo, nos permite cruzar dos variable categóricas
+
+
+```
+tabulate s_vida sexo09   , summarize( esc09 ) 
+
+
+ Seguro de |
+      Vida |  Genero [Hombre=1]
+    [Si=1] |     mujer     hombre |     Total
+-----------+----------------------+----------
+         0 | 9.1743484  9.0668155 |  9.122668
+           | 4.2856913  4.2539029 | 4.2706051
+           |      6292       5822 |     12114
+-----------+----------------------+----------
+         1 | 12.581633  11.863085 | 12.193065
+           | 3.3754611  3.6485176 | 3.5430814
+           |       980       1154 |      2134
+-----------+----------------------+----------
+     Total | 9.6335259  9.5293865 | 9.5825379
+           | 4.3335416  4.2874155 | 4.3111825
+           |      7272       6976 |     14248
+
+```
+
+
+Pero (lamentablemente) no nos permite hacer curces de tres variables.
+
+```
+*tabulate s_vida sexo09  ctacte , summarize( esc09 ) 
+ 
+too many variables specified
+
+```
+
+
+
+### Summarize
+Summarize, al igual que lo que ta vimos nos permite caracterizar la variable en media, sd, min, max, etc...
+```
+sum sexo09 
+
+    Variable |        Obs        Mean    Std. Dev.       Min        Max
+-------------+---------------------------------------------------------
+      sexo09 |     14,463    .4893176    .4999032          0          1
+
+```
+
+
+Pero la *gran (gradísima) diferencia* con los otros comandos radica en que este genera variables locales con los momentos de la distribucion. De qué se trata todo esto? Primero accedamos a ellos escribiendo.
+
+```
+
+ret list
+
+scalars:
+                  r(N) =  14463
+              r(sum_w) =  14463
+               r(mean) =  .4893175689690936
+                r(Var) =  .2499031644589769
+                 r(sd) =  .4999031550800384
+                r(min) =  0
+                r(max) =  1
+                r(sum) =  7077
+
+```
+Se acaba de desplegar la lista de estadisticos calculados por el comando. Esto será crucial a lo largo del taller debido a que recuperaremos las medias, varianzas, minimos o máximos de las variables de interés luego de computar el comando summarize. El hecho de que se generen variabels locales presenta una utilidad crítica para la escritura de programas debido a que es una forma fácil y rápida de generar escalares. La forma más usual de recuperar estos valores es ingresarlos en una variable local computando.
+
+
+```
+local prop_hombres = `r(mean)' 
+```
+Comando que aparentemente no generó ningún cambio, ni en la base de datos ni en el la consola de resultados. Pero si ahora ejecutamos el comando *display* seguido de nuestra variable local recién generada entre las comillas *`'*, que corresponde a la forma de "llamar" a este tipo de variables.
+
+```
+display `prop_hombres'
+```
+
+Tampoco ocurrirrá nada... por lo que acá debemos deternernos un segundo para explicar la "filosofía" de una variable [local](https://www.stata.com/manuals13/pmacro.pdf).Ésta existirá mientras se esté ejecutando el programa completo, por lo que si genero la variable local como se mostró recién poniendole el nombre *prop_hombres*, y luego *SEPARADAMENTE* ejecuto el comando *display* no aparecerá nada, dado que el comando anterior ya ha finalizado, y por ende todas las variables locales generadas durante ese proceso han desaparecido! De este modo, la forma correcta para apreciar la variable local es ejercutar los siguientes comandos *TODOS DE UNA VEZ*.
+```
+sum sexo09 
+
+    Variable |        Obs        Mean    Std. Dev.       Min        Max
+-------------+---------------------------------------------------------
+      sexo09 |     14,463    .4893176    .4999032          0          1
+
+local prop_hombres = `r(mean)' 
+
+display `prop_hombres'
+
+.48931757
+
+```
+Con lo que podremos observar que efectivamente se aloja el valor de la media de ingreso para los hombres en la variable local *prop_hombres*.
+
+Ahora es un buen momento para volver sobre la explicación de las variables globales. A la luz de lo recién expuesto sobre la eliminación de los locales cuando acaba de ejecutarse un proceso, se vuelve evidente la diferencia con la globales... estas permaneces a lo largo del cógido para ser utilizadas cuando "se nos de la gana", por ejemplo si hubieramos almacenado la proporción de hombres en la muestra con un global.
+```
+global prop_hombres = `r(mean)' 
+
+```
+Podemos llamarla sin problemas al ejecutar: 
+```
+. display $prop_hombres
+.48931757
+```
+
+
+##Almacenando Locales en Matrices
+
+Uno de los objetivos principales del taller es, a lo largo de las sesiones subsiguientes, la generación de tablas _a la medida_. De modo que no tengamos que depender de ninguno de los comandos recién expuestos aquí para generar alguna tabla que tengamos en mente. Para este propósito, lo que aprenderemos hoy será a generar una matriz que pueda alojar nuestras variables locales.
+
+Para generar una matriz de 2x2 recurrimos a
+```
+matrix M =J(2,2,.)
+```
+Lo que acaba de generar es una matriz de 2x2, llena de puntos (.). Para desplegarla debemos escribir:
+```
+matrix list M
+
+symmetric M[2,2]
+    c1  c2
+r1   .
+r2   .   .
+
+```
+Lo que nos mostrará justamente una matriz simetrica de 2x2 con solo puntos en su interior. Sólo para hacer el punto, si hubieramos escrito:
+```
+matrix M =J(2,2,999)
+matrix list M
+
+symmetric M[2,2]
+     c1   c2
+r1  999
+r2  999  999
+```
+Ubiéramos obtenido una matriz llena de 999.
+
+## El baúl de las matrices
+
+En Stata, una matriz está capacitada para almacenar números (sí. Sólo números, no se puede almacenar texto en ellas)
+
+Por ejemplo, siguiendo lo que pide el enunciado, guardemos la proporción de hombres de la muestra en la coordenada (1,1)
+```
+matrix M =J(2,2,.)
+sum sexo09 
+[output omitido]
+local prop_hombres = `r(mean)' 
+
+
+matrix M[1,1]=`prop_hombres'
+
+
+matrix list M
+
+symmetric M[2,2]
+           c1         c2
+r1  .48931757
+r2          .          .
+```
+Acá podemos ver que la forma de incresar a la matriz es con el nombre de la matriz, en este caso "M" y entre corchetes la coordenada a la cual queremos acceder, en este caso la (1,1), a esto le indicamos que debe ingresar la variable local __prop_hombres__.
+
+
+
+#Graficos
+##Primer gráfico.
+```
+graph bar (mean) ingreso    if inlist(region,1,2,3,4) , over(sexo) over(region) ///
+title(Promedio de Ingreso por Género) subtitle(Regiones I-IV) scheme(s1color) ytitle(Ingreso Laboral)
+```
+## Exportación.
+
+```
+graph export "$latex\graph_bar" , as(png ) replace
+```
+## Segundo Grafico
+
+```
+histogram ingreso  if ingreso < 500000 & ingreso > 100000, xtitle(Ingreso Laboral) ///
+title("Histograma del Ingreso Laboral") subtitle("Tramo entre los $100M y $500M") ///
+scheme(s1color)
+```
+## Exportación
+```
+graph export "$latex\histogram_ing" , as(png )  replace
+```
