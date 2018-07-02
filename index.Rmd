@@ -2,44 +2,13 @@
 title: 'Alvaro Gutierrez '
 ---
 
-A simple (but useful) web page to share some code. I hope you enjoy it as much as I did writing it. 
 
-<!---
-entries will follow this format:
-<article>
-<h3><a href=""> </a></h3>
-<div class="summary">
-<span><i class="fa fa-calendar"></i> _date_</span>
-<p> ...</p>
-<a class="btn btn-outline-primary btn-sm" href="">Full Post</a>
-</div>
-</article>
---->
-
-<article>
-<h3><a href="stata-intro.html">Step by step Introduction into Stata</a></h3>
-<div class="summary">
-<span><i class="fa fa-calendar"></i> _2018-06-22_</span>
-<p>
-Here you will find a step-by-step introducction into Stata usage. I will from display fast a simple exploratory summary statistics, generate your own personalized tables with matrix and loops, compilate several estimating models and finally export everything with one click into LaTeX.
-
-</p>
-<a class="btn btn-outline-primary btn-sm" href="stata-intro.html">Full Post</a>
-</div>
-</article>
+<img src="images/profile/guty_rat.jpg" style="width:35%; border:10px solid; margin-right: 5px" align="left">
 
 
 
+- I am so passionate about writing and optimize code in multiple languages such as STATA, R, Python and Matlab. This web page is just a working-progress-one so feel free to take whatever you want from here. 
 
-<article>
-<h3><a href="panel_data_matlab.html">Panel Data Programming into Matlab</a></h3>
-<div class="summary">
-<span><i class="fa fa-calendar"></i> _2018-06-22_</span>
-<p>
-Into this post, you will find a the matrix programming that supports Panel Data Estimations, such as **Pooled**, **Fixed Effects** and **Random Effects**. The aim of this post is twofold. In one side, you will get the intuition behind Panel Data Estimations, and from another side you will get how to deal with matrix and loops into Matlab.
+I graduate from the University of Chile with a Bachelor in Economics and now I am Msc (c) in Finance from same university. 
 
-</p>
-<a class="btn btn-outline-primary btn-sm" href="panel_data_matlab.html">Full Post</a>
-</div>
-</article>
 

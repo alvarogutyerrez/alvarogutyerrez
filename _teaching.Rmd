@@ -1,0 +1,18 @@
+---
+title: 'Teaching '
+---
+
+
+<article>
+<h3><a href="teaching/stata_eco_fin/main/taller_stata_intro.html">Sesion #01: Introduccion a LaTeX </a></h3>
+<div class="summary">
+<p>
+El siguiente material fue preparado como un taller de Stata y $\LaTeX$, para los alumnos del Magister de Finanzas dentro del curso de Econometría Financiera.
+</p>
+<a class="btn btn-outline-primary btn-sm" href="teaching/stata_eco_fin/S01/taller_stata_intro.html">Full Post</a>
+</div>
+</article>
+
+
+
+

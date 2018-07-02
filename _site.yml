@@ -6,17 +6,21 @@ navbar:
   left:
   - text: Home
     href: index.html
-  - text: About Me
-    href: about.html
   - text: CV
     href: CV.html
   - text: Teaching
-    href: taller_stata_intro.html
+    href: teaching.html
+  - text: Research
+    href: research.html    
   right:
   - icon: fa-github fa-lg
     href: https://github.com/alvarogutyerrez
   - icon: fa-linkedin fa-lg
     href: https://www.linkedin.com/in/alvaro-gutierrez-627b20138/
+  - icon: fa-instagram fa-lg
+    href: https://www.instagram.com/alvarogutyerrez/
+  - icon: fa-envelope fa-lg
+    href: mailto:algutierre@fen.uchile.cl    
 output:
   html_document:
     theme: journal

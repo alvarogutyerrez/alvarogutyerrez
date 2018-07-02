@@ -1,0 +1,32 @@
+---
+title: 'Taller de Stata y $\LaTeX$ '
+---
+
+
+
+
+
+<article>
+<h3><a href="../S01/taller_stata_markdown_S01.html">Sesion #01: Introduccion a LaTeX </a></h3>
+<div class="summary">
+<p>
+Este apartado contiene un breve (brevisima) introducción a LaTeX. Comenzando por su instalación, siguiendo por la explicación de su interfaz y finalmente tópicos miselaneos útiles. Como por ejemplo generar listas numeradas anidadas y tipeo de ecuaciones.
+</p>
+<a class="btn btn-outline-primary btn-sm" href="../S01/taller_stata_markdown_S01.html">Ir al artículo</a>
+</div>
+</article>
+
+
+
+<article>
+<h3><a href="../S02/taller_stata_markdown_S02.html">Sesion #02: Estadística Desctiptiva, Locales, Globales y Matrices. </a></h3>
+<div class="summary">
+<p>
+En esta sesión se explica como realizar estadística descriptiva exploratoria con Stata. En particular diferenciando los comandos _Table_, _Tabulate_ y _Summarize_. También se explica la diferencia entre variables locales y globales, así como su uso con combinación con matrices.
+</p>
+<a class="btn btn-outline-primary btn-sm" href="../S02/taller_stata_markdown_S02.html">Ir al artículo</a>
+</div>
+</article>
+
+
+

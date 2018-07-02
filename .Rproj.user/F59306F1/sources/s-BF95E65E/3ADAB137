@@ -1,0 +1,22 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1528431410828.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "3ADAB137",
+    "lastKnownWriteTime" : 1530495929,
+    "last_content_update" : 1530495929,
+    "path" : "G:/Mi unidad/Personal_web/Personal_web/alvarogutyerrez/build_site.R",
+    "project_path" : "build_site.R",
+    "properties" : {
+        "cursorPosition" : "25,24",
+        "scrollLine" : "5"
+    },
+    "relative_order" : 5,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}
