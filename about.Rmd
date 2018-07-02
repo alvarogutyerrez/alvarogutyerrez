@@ -1,4 +1,11 @@
 ---
 title: "About me"
 ---
-- I am so passionate about writing and optimize code in multiple languages such as STATA, R, Python and Matlab. 
+
+
+
+<img src="images/profile/guty_rat.jpg" style="width:25%; border:10px solid; margin-right: 20px" align="left">
+
+
+
+- I am so passionate about writing and optimize code in multiple languages such as STATA, R, Python and Matlab. This web page is just a working-progress-one so feel free to take whatever you want from here. 
