@@ -11,7 +11,7 @@ navbar:
     - text: "CV"
       href: CV.html   
     - text: "Teaching"
-      href: /_teaching/stata_eco_fin/taller_stata_intro.html   
+      href: /teaching/stata_eco_fin/taller_stata_intro.html  
   right:
     - icon: fa-github fa-lg
       href: https://github.com/alvarogutyerrez
