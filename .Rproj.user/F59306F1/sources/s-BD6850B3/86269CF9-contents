@@ -1,0 +1,27 @@
+name: "Alvaro Gutierrez"
+output_dir: "."
+job_title: Applied Statistics  
+navbar:
+  title: "Alvaro Gutierrez"
+  left:
+    - text: "Home"
+      href: index.html
+    - text: "About Me"
+      href: about.html
+    - text: "CV"
+      href: CV.html   
+    - text: "Teaching"
+      href: /_teaching/_stata_eco_fin/taller_stata_intro.html   
+  right:
+    - icon: fa-github fa-lg
+      href: https://github.com/alvarogutyerrez
+    - icon: fa-linkedin fa-lg
+      href: https://www.linkedin.com/in/alvaro-gutierrez-627b20138/
+
+
+
+output:
+  html_document:
+    theme: journal
+    css: style.css
+    

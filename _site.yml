@@ -10,8 +10,8 @@ navbar:
       href: about.html
     - text: "CV"
       href: CV.html   
-#    - text: "Blog"
-#      href: Blog.html   
+    - text: "Teaching"
+      href: /_teaching/_stata_eco_fin/taller_stata_intro.html   
   right:
     - icon: fa-github fa-lg
       href: https://github.com/alvarogutyerrez
