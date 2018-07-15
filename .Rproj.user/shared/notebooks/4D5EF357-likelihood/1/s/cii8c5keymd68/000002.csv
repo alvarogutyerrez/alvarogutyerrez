@@ -1,0 +1,7 @@
+"0","likelihood = function(data, mu, sigma) {"
+"0","  likelihood = 1"
+"0","  for(obs in data){"
+"0","    likelihood = likelihood * (1/(sqrt(2*pi)*sigma)) * exp((-1/2) * ((obs - mu)^2)/(sigma^2))"
+"0","  }"
+"0","  return(likelihood)"
+"0","}"

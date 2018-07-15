@@ -1,0 +1,7 @@
+"0","loglikelihood = function(data, mu, sigma) {"
+"0","  loglikelihood = 0"
+"0","    for(obs in data){"
+"0","      loglikelihood = loglikelihood + (-1/2)*log(2*pi*sigma*sigma) - ((obs - mu)^(2))/(2*sigma*sigma)"
+"0","    }"
+"0","    return(loglikelihood)"
+"0","}"
