@@ -205,7 +205,7 @@ file C:\tu_ruta\PREPARED DATA\merge_firms_complete.dta saved</code></pre>
 <h2>Pregunta (b)</h2>
 <article>
 <div class="summary">
-Acá pordras <a class="btn btn-outline-primary btn-sm" href="../DataSets/merge_countries">Descargar Base de Datos</a> que ocuparemos en esta parte.
+Acá pordras <a class="btn btn-outline-primary btn-sm" href="../DataSets/merge_countries.dta">Descargar Base de Datos</a> que ocuparemos en esta parte.
 </div>
 </article>
 <p>Ahora lo que debemos realizar es el pegado de una base de datos que contiene una dimesión inferior a la que tenemos cargada, tal como se puede apreciar en la figura del enunciado. Por ende, no podremos realizar un pegado 1:1. Dado que no tendremos una observacion en la base <em>using</em> para cada una de las observaciones de la base <em>master</em>. De este modo, dado que la base de datos que queremos agregar a la <em>master</em> posee una dimensión inferior, la única forma de que esta operación sea posible(manteniendo las dimensiones de la base master) es que las observaciones de la base <em>using</em> se repitan hasta alcanzar el número de filas en <em>master</em>. De esta forma, dado que queremos agregar información que representa solo al país al cual pertenece la firma. Tendremos que cada fila de <em>using</em> que se repetirá para todas las observaciones de ese país en <em>master</em>. Con lo que al correr la siguiente linea generaremos el pegado.</p>
@@ -241,7 +241,7 @@ Folders
 <h2>Pregunta (c)</h2>
 <article>
 <div class="summary">
-Acá pordras <a class="btn btn-outline-primary btn-sm" href="../DataSets/append_2013">Descargar Base de Datos</a> que ocuparemos en esta parte.
+Acá pordras <a class="btn btn-outline-primary btn-sm" href="../DataSets/append_2013.dta">Descargar Base de Datos</a> que ocuparemos en esta parte.
 </div>
 </article>
 <p>Finalmente, para realizar el pegado de la última base, cambiamos la forma de pegado, dado que ahora agregaremos más <em>filas</em> a la base de datos (lo que hicimos anteriormente fue agregar más <em>columnas</em>) Ahora lo que debemos hacer se resume en las dos lineas siguientes.</p>

@@ -94,7 +94,7 @@ Finalmente, grabamos esta nueva base consolidada con el nombre _merge_firms_comp
 
 <article>
 <div class="summary">
-Acá pordras <a class="btn btn-outline-primary btn-sm" href="../DataSets/merge_countries">Descargar Base de Datos</a>
+Acá pordras <a class="btn btn-outline-primary btn-sm" href="../DataSets/merge_countries.dta">Descargar Base de Datos</a>
 que ocuparemos en esta parte.</div>
 </article>
 
@@ -137,7 +137,7 @@ save  "$data_prepared\merge_firms_complete" ,replace
 
 <article>
 <div class="summary">
-Acá pordras <a class="btn btn-outline-primary btn-sm" href="../DataSets/append_2013">Descargar Base de Datos</a>
+Acá pordras <a class="btn btn-outline-primary btn-sm" href="../DataSets/append_2013.dta">Descargar Base de Datos</a>
 que ocuparemos en esta parte.</div>
 </article>
 
