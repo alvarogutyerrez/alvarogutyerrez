@@ -280,4 +280,33 @@ Total 119 (delta 23), reused 1 (delta 0)[0K
    00e2194..682374e  master -> master[0K
 [0K[?25h]0; [?25l
 G:\Mi unidad\Personal_web\Personal_web\alvarogutyerrez>[0K[?25hgit push origin master[0K[?25lG:\Mi unidad\Personal_web\Personal_web\alvarogutyerrez>git commit -m "Last Version"[0K[?25h[?25lG:\Mi unidad\Personal_web\Personal_web\alvarogutyerrez>git add -A[0K[?25h[?25lG:\Mi unidad\Personal_web\Personal_web\alvarogutyerrez>git commit -m "Last Version"[0K[?25h[?25lG:\Mi unidad\Personal_web\Personal_web\alvarogutyerrez>git add -A[0K[?25h]0;  - git  add -A[?25l
+[0K[?25hwarning: LF will be replaced by CRLF in .Rproj.user/F59306F1/sources/prop/42629911.[0K[?25l
+The file will have its original line endings in your working directory.[0K
+[0K[?25hwarning: LF will be replaced by CRLF in .Rproj.user/F59306F1/sources/prop/6D024B4C.[0K[?25l
+The file will have its original line endings in your working directory.[0K
+[0K[?25hwarning: LF will be replaced by CRLF in .Rproj.user/F59306F1/sources/s-B7D382C8/3ADAB137.[0K[?25l
+The file will have its original line endings in your working directory.[0K
+[0K[?25hwarning: LF will be replaced by CRLF in .Rproj.user/F59306F1/sources/s-B7D382C8/3ADAB137-contents.[0K[?25l
+The file will have its original line endings in your working directory.[0K
+[0K[?25hwarning: LF will be replaced by CRLF in .Rproj.user/F59306F1/sources/s-B7D382C8/7EFF5E49.[0K[?25l
+The file will have its original line endings in your working directory.[0K
+[0K[?25hwarning: LF will be replaced by CRLF in .Rproj.user/F59306F1/sources/s-B7D382C8/7EFF5E49-contents.[0K[?25l
+The file will have its original line endings in your working directory.[0K
+[0K[?25h]0; [?25l
+G:\Mi unidad\Personal_web\Personal_web\alvarogutyerrez>[0K[?25hgit add -A[0K[?25lG:\Mi unidad\Personal_web\Personal_web\alvarogutyerrez>git commit -m "Last Version"[0K[?25h[?25lG:\Mi unidad\Personal_web\Personal_web\alvarogutyerrez>git push origin master[0K[?25h[?25lG:\Mi unidad\Personal_web\Personal_web\alvarogutyerrez>git pull[0K[?25h[?25lG:\Mi unidad\Personal_web\Personal_web\alvarogutyerrez>git push origin master[0K[?25h[?25lG:\Mi unidad\Personal_web\Personal_web\alvarogutyerrez>git commit -m "Last Version"[0K[?25h[?25l
+[0K[?25h]0;  - git  commit -m "Last Version"]0; [master 22fe410] Last Version[0K[?25l
+ 11 files changed, 299 insertions(+), 20 deletions(-)[0K
+ create mode 100644 .Rproj.user/shared/notebooks/F1F37EB5-taller_stata_markdown_S04/1/F59306F1B7D382C8/chunks.json[0K
+[0K
+G:\Mi unidad\Personal_web\Personal_web\alvarogutyerrez>[0K[?25hgit commit -m "Last Version"[0K[?25lG:\Mi unidad\Personal_web\Personal_web\alvarogutyerrez>git add -A[0K[?25h[?25lG:\Mi unidad\Personal_web\Personal_web\alvarogutyerrez>git commit -m "Last Version"[0K[?25h[?25lG:\Mi unidad\Personal_web\Personal_web\alvarogutyerrez>git push origin master[0K[?25h[?25l
+[0K[?25h]0;  - git  push origin masterCounting objects: 25, done.[0K[?25l
+[0K[?25hDelta compression using up to 4 threads.[0K[?25l
+Compressing objects:   4% (1/22)[0K[1G[?25h[?25lCompressing objects:  22% (5/22)[0K[1G[?25h[?25lCompressing objects:  36% (8/22)[0K[1G[?25h[?25lCompressing objects:  54% (12/22)[0K[1G[?25h[?25lCompressing objects:  68% (15/22)[0K[1G[?25h[?25lCompressing objects:  81% (18/22)[0K[1G[?25hCompressing objects: 100% (22/22), done.[0K[?25l
+[0K[?25h[?25lWriting objects:  80% (20/25)[0K[1G[?25hWriting objects: 100% (25/25), 5.00 KiB | 91.00 KiB/s, done.[0K[?25l
+Total 25 (delta 13), reused 0 (delta 0)[0K
+[0K[?25h[?25lremote: Resolving deltas:  38% (5/13)[0K[1G[?25hremote: Resolving deltas: 100% (13/13), completed with 13 local objects.[0K[?25l
+[0K[?25hTo https://github.com/alvarogutyerrez/alvarogutyerrez.git[0K[?25l
+   682374e..22fe410  master -> master[0K
+[0K[?25h]0; [?25l
+G:\Mi unidad\Personal_web\Personal_web\alvarogutyerrez>[0K[?25hgit push origin master[0K[?25lG:\Mi unidad\Personal_web\Personal_web\alvarogutyerrez>git commit -m "Last Version"[0K[?25h[?25lG:\Mi unidad\Personal_web\Personal_web\alvarogutyerrez>git add -A[0K[?25h]0;  - git  add -A[?25l
 [0K[?25h
