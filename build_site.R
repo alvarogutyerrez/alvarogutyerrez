@@ -20,7 +20,7 @@ setwd("G:/Mi unidad/R_LEARNING/GitHub/alvarogutyerrez")
 #Now we push. Note the addendum to normal pushing
 #git push origin master
 
-
+#Sometimes I needed to write git pull 
 
 #render your sweet site. 
 rmarkdown::render_site()
