@@ -1,0 +1,30 @@
+name: Alvaro Gutierrez
+output_dir: '.'
+job_title: Applied Statistics
+navbar:
+  title: Alvaro Gutierrez
+  left:
+  - text: Home
+    href: index.html
+  - text: CV
+    href: CV.html
+  - text: Teaching
+    href: teaching.html
+  - text: Research
+    href: research.html
+  right:
+  - icon: fa-github fa-lg
+    href: https://github.com/alvarogutyerrez
+  - icon: fa-linkedin fa-lg
+    href: https://www.linkedin.com/in/alvaro-gutierrez-627b20138/
+  - icon: fa-envelope fa-lg
+    href: mailto:algutierre@fen.uchile.cl
+  - icon: fa-flickr fa-lg
+    href: https://www.flickr.com/photos/alvaro_gutierrez/
+output:
+  html_document:
+    theme: journal
+    css: style.css
+    lib_dir: site_libs
+    self_contained: no
+
