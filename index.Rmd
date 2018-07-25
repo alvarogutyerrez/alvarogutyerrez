@@ -9,6 +9,10 @@ title: 'Alvaro Gutierrez '
 
 - I'm currently working to obtain my Msc(c) in Finance in the University of Chile. Previously, I obtained a bachelor's degree in Economics from the same university.
 
-I'm passionate about writing and optimizing code in multiple programming languages such as Stata, R, Python and Matlab. This web page is just work in progress, so feel free to take whatever you want from here. 
+
+
+ I really like to writte code in multiple programming languages such as Stata, R, Python and Matlab. This web page was 100% programmed using R, and it's _just work-in-progress_, so feel free to take whatever you want from here, everything that you will find here is ready to be downloaded from my [Github](https://github.com/alvarogutyerrez)
+
+
 
 Currently, I am working with professor [David Diaz](http://negocios.uchile.cl/academico_detalle.php?id=51) into a Consulting with the HSBC Bank developing predictive models for financial assets using Machine Learning Algorithms with Python. 
