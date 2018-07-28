@@ -1,0 +1,19 @@
+---
+title: 'Python'
+---
+
+
+
+
+
+<article>
+<h3><a href="../automatic_trading/Trading.html">Automatic Strategy Backtesting </a></h3>
+<div class="summary">
+<p>
+Here you will find a function that allows you to evaluate the performance of a trading strategy over some financial asset (Short positions are allowed). The function requires just three inputs (1) Strategy Vector, indicating your action (_buy_, _sell_ or _hold_) (2) Price Vector, where the movement of your financial asset is locates and finally the amount of money that you are able to gamble. With this inputs, you will get the performance of your strategy over the financial asset and also the historical actions taken by the trader.
+</p>
+<a class="btn btn-outline-primary btn-sm" href="../automatic_trading/Trading.html">Ir al artículo</a>
+</div>
+</article>
+
+
