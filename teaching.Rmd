@@ -22,7 +22,7 @@ El siguiente material fue preparado como parte de un taller sobre el uso conjunt
 <h3><a href="_teaching/python/main/python_main.html"> Python Resources  </a></h3>
 <div class="summary">
 <p>
-Here you can find some random, but usefull function that you can implement easily on your scripts.
+Here you can find some random (but I hope usefull) function that you can implement easily on your scripts for your own purposes.
 </p>
 <a class="btn btn-outline-primary btn-sm" href="_teaching/python/main/python_main">Ir al Post</a>
 </div>

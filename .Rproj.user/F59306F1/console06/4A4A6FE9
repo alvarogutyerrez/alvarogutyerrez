@@ -190,4 +190,30 @@ Total 51 (delta 15), reused 0 (delta 0)[0K
    9cda056..8ca0ca0  master -> master[0K
 [0K[?25h]0; [?25l
 G:\Mi unidad\Personal_web\Personal_web\alvarogutyerrez>[0K[?25hgit push origin master[0K[?25lG:\Mi unidad\Personal_web\Personal_web\alvarogutyerrez>git commit -m "Python"[0K[?25h[?25lG:\Mi unidad\Personal_web\Personal_web\alvarogutyerrez>git add -A[0K[?25h]0;  - git  add -A[?25l
-[0K[?25h
+[0K[?25hwarning: LF will be replaced by CRLF in .Rproj.user/F59306F1/sources/prop/INDEX.[0K[?25l
+The file will have its original line endings in your working directory.[0K
+[0K[?25hwarning: LF will be replaced by CRLF in .Rproj.user/shared/notebooks/paths.[0K[?25l
+The file will have its original line endings in your working directory.[0K
+[0K[?25hwarning: LF will be replaced by CRLF in .Rproj.user/F59306F1/sources/prop/50F9287E.[0K[?25l
+The file will have its original line endings in your working directory.[0K
+[0K[?25hwarning: LF will be replaced by CRLF in .Rproj.user/F59306F1/sources/s-EDCC2F76/41CE515-contents.[0K[?25l
+The file will have its original line endings in your working directory.[0K
+[0K[?25h]0; [?25l
+G:\Mi unidad\Personal_web\Personal_web\alvarogutyerrez>[0K[?25hgit commit -m "Python"[0K[?25lG:\Mi unidad\Personal_web\Personal_web\alvarogutyerrez>git push origin master[0K[?25h[?25lG:\Mi unidad\Personal_web\Personal_web\alvarogutyerrez>git commit -m "Python"[0K[?25h]0;  - git  commit -m "Python"[?25l
+[0K[?25h[master 6e9871e] Python[0K[?25l
+ 6 files changed, 12669 insertions(+), 3 deletions(-)[0K
+ create mode 100644 .Rproj.user/F59306F1/sources/prop/50F9287E[0K
+ create mode 100644 .Rproj.user/F59306F1/sources/s-EDCC2F76/41CE515-contents[0K
+[0K[?25h]0; [?25l
+G:\Mi unidad\Personal_web\Personal_web\alvarogutyerrez>git add -A[0K[?25h[?25lG:\Mi unidad\Personal_web\Personal_web\alvarogutyerrez>git push origin master[0K[?25h[?25lG:\Mi unidad\Personal_web\Personal_web\alvarogutyerrez>git add -A[0K[?25h[?25lG:\Mi unidad\Personal_web\Personal_web\alvarogutyerrez>git commit -m "Python"[0K[?25h[?25lG:\Mi unidad\Personal_web\Personal_web\alvarogutyerrez>git add -A[0K[?25h[?25lG:\Mi unidad\Personal_web\Personal_web\alvarogutyerrez>git push origin master[0K[?25h]0;  - git  push origin master[?25l
+[0K[?25h[?25lCounting objects: 1[0K[1G[?25hCounting objects: 18, done.[0K[?25l
+[0K[?25hDelta compression using up to 4 threads.[0K[?25l
+Compressing objects:  31% (5/16)[0K[1G[?25h[?25lCompressing objects:  56% (9/16)[0K[1G[?25h[?25lCompressing objects:  62% (10/16)[0K[1G[?25h[?25lCompressing objects:  87% (14/16)[0K[1G[?25hCompressing objects: 100% (16/16), done.[0K[?25l
+[0K[?25h[?25lWriting objects:  27% (5/18)[0K[1G[?25h[?25lWriting objects:  66% (12/18)[0K[2G[?25h[?25lWriting objects: 100% (18/18), 50.93 KiB | 543.00 KiB/s, done.[0K
+Total 18 (delta 7), reused 0 (delta 0)[0K
+[0K[?25h[?25lremote: Resolving deltas:  85% (6/7)[0K[1G[?25hremote: Resolving deltas: 100% (7/7), completed with 7 local objects.[0K[?25l
+[0K[?25hTo https://github.com/alvarogutyerrez/alvarogutyerrez.git[0K[?25l
+   8ca0ca0..6e9871e  master -> master[0K
+[0K[?25h]0; [?25l
+G:\Mi unidad\Personal_web\Personal_web\alvarogutyerrez>[0K[?25hgit push origin master[0K[?25lG:\Mi unidad\Personal_web\Personal_web\alvarogutyerrez>git commit -m "Python"[0K[?25h[?25lG:\Mi unidad\Personal_web\Personal_web\alvarogutyerrez>git add -A[0K[?25h[?25lG:\Mi unidad\Personal_web\Personal_web\alvarogutyerrez>git commit -m "Python"[0K[?25h[?25lG:\Mi unidad\Personal_web\Personal_web\alvarogutyerrez>git add -A[0K[?25h[?25lG:\Mi unidad\Personal_web\Personal_web\alvarogutyerrez>git commit -m "Python"[0K[?25h[?25lG:\Mi unidad\Personal_web\Personal_web\alvarogutyerrez>git push origin master[0K[?25h[?25lG:\Mi unidad\Personal_web\Personal_web\alvarogutyerrez>git commit -m "Python"[0K[?25h[?25lG:\Mi unidad\Personal_web\Personal_web\alvarogutyerrez>git add -A[0K[?25h[?25lG:\Mi unidad\Personal_web\Personal_web\alvarogutyerrez>git commit -m "Python"[0K[?25h[?25lG:\Mi unidad\Personal_web\Personal_web\alvarogutyerrez>git push origin master[0K[?25h[?25lG:\Mi unidad\Personal_web\Personal_web\alvarogutyerrez>git add -A[0K[?25h[?25lG:\Mi unidad\Personal_web\Personal_web\alvarogutyerrez>git commit -m "Python"[0K[?25h[?25lG:\Mi unidad\Personal_web\Personal_web\alvarogutyerrez>git add -A[0K[?25h[?25lG:\Mi unidad\Personal_web\Personal_web\alvarogutyerrez>git push origin master[0K[?25h[?25lG:\Mi unidad\Personal_web\Personal_web\alvarogutyerrez>git add -A[0K[?25h[?25l
+[0K[?25h]0;  - git  add -A
