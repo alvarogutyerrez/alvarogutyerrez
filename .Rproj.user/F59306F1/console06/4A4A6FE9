@@ -216,4 +216,95 @@ Total 18 (delta 7), reused 0 (delta 0)[0K
    8ca0ca0..6e9871e  master -> master[0K
 [0K[?25h]0; [?25l
 G:\Mi unidad\Personal_web\Personal_web\alvarogutyerrez>[0K[?25hgit push origin master[0K[?25lG:\Mi unidad\Personal_web\Personal_web\alvarogutyerrez>git commit -m "Python"[0K[?25h[?25lG:\Mi unidad\Personal_web\Personal_web\alvarogutyerrez>git add -A[0K[?25h[?25lG:\Mi unidad\Personal_web\Personal_web\alvarogutyerrez>git commit -m "Python"[0K[?25h[?25lG:\Mi unidad\Personal_web\Personal_web\alvarogutyerrez>git add -A[0K[?25h[?25lG:\Mi unidad\Personal_web\Personal_web\alvarogutyerrez>git commit -m "Python"[0K[?25h[?25lG:\Mi unidad\Personal_web\Personal_web\alvarogutyerrez>git push origin master[0K[?25h[?25lG:\Mi unidad\Personal_web\Personal_web\alvarogutyerrez>git commit -m "Python"[0K[?25h[?25lG:\Mi unidad\Personal_web\Personal_web\alvarogutyerrez>git add -A[0K[?25h[?25lG:\Mi unidad\Personal_web\Personal_web\alvarogutyerrez>git commit -m "Python"[0K[?25h[?25lG:\Mi unidad\Personal_web\Personal_web\alvarogutyerrez>git push origin master[0K[?25h[?25lG:\Mi unidad\Personal_web\Personal_web\alvarogutyerrez>git add -A[0K[?25h[?25lG:\Mi unidad\Personal_web\Personal_web\alvarogutyerrez>git commit -m "Python"[0K[?25h[?25lG:\Mi unidad\Personal_web\Personal_web\alvarogutyerrez>git add -A[0K[?25h[?25lG:\Mi unidad\Personal_web\Personal_web\alvarogutyerrez>git push origin master[0K[?25h[?25lG:\Mi unidad\Personal_web\Personal_web\alvarogutyerrez>git add -A[0K[?25h[?25l
+[0K[?25h]0;  - git  add -Awarning: LF will be replaced by CRLF in .Rproj.user/F59306F1/sources/prop/361C827.[0K[?25l
+The file will have its original line endings in your working directory.[0K
+[0K[?25hwarning: LF will be replaced by CRLF in .Rproj.user/F59306F1/sources/prop/6F8ED431.[0K[?25l
+The file will have its original line endings in your working directory.[0K
+[0K[?25hwarning: LF will be replaced by CRLF in .Rproj.user/F59306F1/sources/s-EDCC2F76/765491FF.[0K[?25l
+The file will have its original line endings in your working directory.[0K
+[0K[?25hwarning: LF will be replaced by CRLF in .Rproj.user/F59306F1/sources/s-EDCC2F76/765491FF-contents.[0K[?25l
+The file will have its original line endings in your working directory.[0K
+[0K[?25hwarning: LF will be replaced by CRLF in .Rproj.user/F59306F1/sources/s-EDCC2F76/B56117D.[0K[?25l
+The file will have its original line endings in your working directory.[0K
+[0K[?25hwarning: LF will be replaced by CRLF in .Rproj.user/F59306F1/sources/s-EDCC2F76/B56117D-contents.[0K[?25l
+The file will have its original line endings in your working directory.[0K
+[0K[?25hwarning: LF will be replaced by CRLF in site_libs/bootstrap-3.3.5/css/bootstrap-theme.css.[0K[?25l
+The file will have its original line endings in your working directory.[0K
+[0K[?25hwarning: LF will be replaced by CRLF in site_libs/bootstrap-3.3.5/css/bootstrap-theme.min.css.[0K[?25l
+The file will have its original line endings in your working directory.[0K
+[0K[?25hwarning: LF will be replaced by CRLF in site_libs/bootstrap-3.3.5/css/bootstrap.css.[0K[?25l
+The file will have its original line endings in your working directory.[0K
+[0K[?25hwarning: LF will be replaced by CRLF in site_libs/bootstrap-3.3.5/css/bootstrap.min.css.[0K[?25l
+The file will have its original line endings in your working directory.[0K
+[0K[?25hwarning: LF will be replaced by CRLF in site_libs/bootstrap-3.3.5/css/cerulean.min.css.[0K[?25l
+The file will have its original line endings in your working directory.[0K
+warning: LF will be replaced by CRLF in site_libs/bootstrap-3.3.5/css/cosmo.min.css.[0K[1G[?25h[?25l
+The file will have its original line endings in your working directory.[0K
+warning: LF will be replaced by CRLF in site_libs/bootstrap-3.3.5/css/flatly.min.css.[0K
+The file will have its original line endings in your working directory.[0K
+[0K[?25hwarning: LF will be replaced by CRLF in site_libs/bootstrap-3.3.5/css/journal.min.css.[0K[?25l
+The file will have its original line endings in your working directory.[0K
+warning: LF will be replaced by CRLF in site_libs/bootstrap-3.3.5/css/lumen.min.css.[0K
+The file will have its original line endings in your working directory.[0K
+warning: LF will be replaced by CRLF in site_libs/bootstrap-3.3.5/css/paper.min.css.[0K
+The file will have its original line endings in your working directory.[0K
+warning: LF will be replaced by CRLF in site_libs/bootstrap-3.3.5/css/readable.min.css.[0K
+The file will have its original line endings in your working directory.[0K
+[0K[?25hwarning: LF will be replaced by CRLF in site_libs/bootstrap-3.3.5/css/sandstone.min.css.[0K[?25l
+The file will have its original line endings in your working directory.[0K
+warning: LF will be replaced by CRLF in site_libs/bootstrap-3.3.5/css/simplex.min.css.[0K
+The file will have its original line endings in your working directory.[0K
+[0K[?25hwarning: LF will be replaced by CRLF in site_libs/bootstrap-3.3.5/css/spacelab.min.css.[0K[?25l
+The file will have its original line endings in your working directory.[0K
+warning: LF will be replaced by CRLF in site_libs/bootstrap-3.3.5/css/united.min.css.[0K
+The file will have its original line endings in your working directory.[0K
+warning: LF will be replaced by CRLF in site_libs/bootstrap-3.3.5/css/yeti.min.css.[0K
+The file will have its original line endings in your working directory.[0K
+[0K[?25hwarning: LF will be replaced by CRLF in site_libs/bootstrap-3.3.5/fonts/glyphicons-halflings-regular.s[0Kv[?25l
+g.[0K
+The file will have its original line endings in your working directory.[0K
+[0K[?25hwarning: LF will be replaced by CRLF in site_libs/bootstrap-3.3.5/js/bootstrap.js.[0K[?25l
+The file will have its original line endings in your working directory.[0K
+[0K[?25hwarning: LF will be replaced by CRLF in site_libs/bootstrap-3.3.5/js/bootstrap.min.js.[0K[?25l
+The file will have its original line endings in your working directory.[0K
+warning: LF will be replaced by CRLF in site_libs/bootstrap-3.3.5/js/npm.js.[0K
+The file will have its original line endings in your working directory.[0K
+warning: LF will be replaced by CRLF in site_libs/bootstrap-3.3.5/shim/html5shiv.min.js.[0K
+The file will have its original line endings in your working directory.[0K
+[0K[?25hwarning: LF will be replaced by CRLF in site_libs/bootstrap-3.3.5/shim/respond.min.js.[0K[?25l
+The file will have its original line endings in your working directory.[0K
+warning: LF will be replaced by CRLF in site_libs/font-awesome-4.5.0/css/font-awesome.css.[0K
+The file will have its original line endings in your working directory.[0K
+warning: LF will be replaced by CRLF in site_libs/font-awesome-4.5.0/css/font-awesome.min.css.[0K[1G[?25h[?25l
+The file will have its original line endings in your working directory.[0K
+[0K[?25hwarning: LF will be replaced by CRLF in site_libs/highlightjs-9.12.0/default.css.[0K[?25l
+The file will have its original line endings in your working directory.[0K
+warning: LF will be replaced by CRLF in site_libs/highlightjs-9.12.0/highlight.js.[0K
+The file will have its original line endings in your working directory.[0K
+warning: LF will be replaced by CRLF in site_libs/highlightjs-9.12.0/textmate.css.[0K
+The file will have its original line endings in your working directory.[0K
+[0K[?25hwarning: LF will be replaced by CRLF in site_libs/jquery-1.11.3/jquery.min.js.[0K[?25l
+The file will have its original line endings in your working directory.[0K
+[0K[?25hwarning: LF will be replaced by CRLF in site_libs/navigation-1.1/codefolding.js.[0K[?25l
+The file will have its original line endings in your working directory.[0K
+warning: LF will be replaced by CRLF in site_libs/navigation-1.1/sourceembed.js.[0K
+The file will have its original line endings in your working directory.[0K
+warning: LF will be replaced by CRLF in site_libs/navigation-1.1/tabsets.js.[0K
+The file will have its original line endings in your working directory.[0K
+[0K[?25h]0; [?25l
+G:\Mi unidad\Personal_web\Personal_web\alvarogutyerrez>git add -A[0K[?25h[?25lG:\Mi unidad\Personal_web\Personal_web\alvarogutyerrez>git push origin master[0K[?25h[?25lG:\Mi unidad\Personal_web\Personal_web\alvarogutyerrez>git add -A[0K[?25h[?25lG:\Mi unidad\Personal_web\Personal_web\alvarogutyerrez>git commit -m "Python"[0K[?25h]0;  - git  commit -m "Python"[?25l
+[0K[?25h[master f146a30] Python[0K[?25l
+ 11 files changed, 43 insertions(+), 17 deletions(-)[0K
+[0K[?25h]0; [?25l
+G:\Mi unidad\Personal_web\Personal_web\alvarogutyerrez>git add -A[0K[?25h[?25lG:\Mi unidad\Personal_web\Personal_web\alvarogutyerrez>git commit -m "Python"[0K[?25h[?25lG:\Mi unidad\Personal_web\Personal_web\alvarogutyerrez>git add -A[0K[?25h[?25lG:\Mi unidad\Personal_web\Personal_web\alvarogutyerrez>git push origin master[0K[?25h[?25l
+[0K[?25h]0;  - git  push origin masterCounting objects: 20, done.[0K[?25l
+[0K[?25hDelta compression using up to 4 threads.[0K[?25l
+Compressing objects:  10% (2/20)[0K[1G[?25h[?25lCompressing objects:  15% (3/20)[0K[1G[?25h[?25lCompressing objects:  30% (6/20)[0K[1G[?25h[?25lCompressing objects:  35% (7/20)[0K[1G[?25h[?25lCompressing objects:  55% (11/20)[0K[1G[?25h[?25lCompressing objects:  70% (14/20)[0K[1G[?25h[?25lCompressing objects:  85% (17/20)[0K[1G[?25h[?25lCompressing objects:  95% (19/20)[0K[1G[?25hCompressing objects: 100% (20/20), done.[0K[?25l
+[0K[?25h[?25lWriting objects:  80% (16/20)[0K[1G[?25hWriting objects: 100% (20/20), 2.29 KiB | 28.00 KiB/s, done.[0K[?25l
+Total 20 (delta 11), reused 0 (delta 0)[0K
+[0K[?25h[?25lremote: Resolving deltas:   0% (0/11)[0K[1G[?25hremote: Resolving deltas: 100% (11/11), completed with 11 local objects.[0K[?25l
+[0K[?25hTo https://github.com/alvarogutyerrez/alvarogutyerrez.git[0K[?25l
+   6e9871e..f146a30  master -> master[0K
+[0K[?25h]0; [?25l
+G:\Mi unidad\Personal_web\Personal_web\alvarogutyerrez>[0K[?25hgit add -A[0K[?25lG:\Mi unidad\Personal_web\Personal_web\alvarogutyerrez>git commit -m "Python"[0K[?25h[?25lG:\Mi unidad\Personal_web\Personal_web\alvarogutyerrez>git add -A[0K[?25h[?25l
 [0K[?25h]0;  - git  add -A
