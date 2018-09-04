@@ -53,6 +53,32 @@ En esta sesión aprenderemos a manejar multiples bases de datos haciendo uso de 
 
 
 
+<article>
+<h3><a href="https://github.com/alvarogutyerrez/alvarogutyerrez/blob/master/S04_aplicaciones.ipynb">Sesión #4: Aplicaciones Miscelaneas  </a></h3>
+<div class="summary">
+<p>
+En esta sesión veremos un par de aplicaciones haciendo uso de lo aprendido en las sesiones anteriores. Partiremos con cálculos de _complejidad computacional_, recuperando el tiempo que le toma a nuestro computador realizar ciertas operaciones recursivas. Luego veremos una aplicación financiera usando el comando shift. Finalmente reclasificaremos una variable continua utilizando **bins** y la función **pd_cut**.
+</p>
+<a class="btn btn-outline-primary btn-sm" href="https://github.com/alvarogutyerrez/alvarogutyerrez/blob/master/S04_aplicaciones.ipynb">Ir al artículo</a>
+</div>
+</article>
+
+
+
+
+<article>
+<h3><a href="Tareas/T1/T1_python.html">Tarea #1: Complejidad Computacional  </a></h3>
+<div class="summary">
+<p>
+Tarea # 1 del curso
+</p>
+<a class="btn btn-outline-primary btn-sm" href="Tareas/T1/T1_python.html">Ir al artículo</a>
+</div>
+</article>
+
+
+
+
 
 
 
