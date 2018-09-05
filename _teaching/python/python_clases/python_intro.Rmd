@@ -57,7 +57,7 @@ En esta sesión aprenderemos a manejar multiples bases de datos haciendo uso de 
 <h3><a href="https://github.com/alvarogutyerrez/alvarogutyerrez/blob/master/S04_aplicaciones.ipynb">Sesión #4: Aplicaciones Miscelaneas  </a></h3>
 <div class="summary">
 <p>
-En esta sesión veremos un par de aplicaciones haciendo uso de lo aprendido en las sesiones anteriores. Partiremos con cálculos de _complejidad computacional_, recuperando el tiempo que le toma a nuestro computador realizar ciertas operaciones recursivas. Luego veremos una aplicación financiera usando el comando shift. Finalmente reclasificaremos una variable continua utilizando **bins** y la función **pd_cut**.
+En esta sesión veremos un par de aplicaciones haciendo uso de lo aprendido en las sesiones anteriores. Partiremos con cálculos de _complejidad computacional_, recuperando el tiempo que le toma a nuestro computador realizar ciertas operaciones recursivas. Luego veremos una aplicación financiera usando el comando shift. Finalmente reclasificaremos una variable continua utilizando _bins_ y la función _pd_cut_.
 </p>
 <a class="btn btn-outline-primary btn-sm" href="https://github.com/alvarogutyerrez/alvarogutyerrez/blob/master/S04_aplicaciones.ipynb">Ir al artículo</a>
 </div>
@@ -67,7 +67,7 @@ En esta sesión veremos un par de aplicaciones haciendo uso de lo aprendido en l
 
 
 <article>
-<h3><a href="Tareas/T1/T1_python.html">Tarea #1: Complejidad Computacional  </a></h3>
+<h3><a href="Tareas/T1/T1_python.html"> <font color="#ff9900">Tarea #1: Complejidad Computacional </font> </a></h3>
 <div class="summary">
 <p>
 Tarea # 1 del curso
@@ -77,6 +77,15 @@ Tarea # 1 del curso
 </article>
 
 
+<article>
+<h3><a href="https://github.com/alvarogutyerrez/alvarogutyerrez/blob/master/Sesion_5_Gradiente_Decendiente.ipynb">Sesión #5: Gradiente Descendiente  </a></h3>
+<div class="summary">
+<p>
+En este apartado, se discutirán tres sabores distintos del algoritmo de *Gradiente Descendiente*. Los cuales, desde el más complejo al más simple, en términos computacionales, van en el siguiente orden: _Batch Gradient Descent_, _Mini-Batch Gradient Descent_ y _Stochastic Gradient Descent_. Veremos ventajas y desventajas de cada uno de estos y también veremos la implementación de estos en la librería _sklearn_. 
+</p>
+<a class="btn btn-outline-primary btn-sm" href="https://github.com/alvarogutyerrez/alvarogutyerrez/blob/master/Sesion_5_Gradiente_Decendiente.ipynb">Ir al artículo</a>
+</div>
+</article>
 
 
 
