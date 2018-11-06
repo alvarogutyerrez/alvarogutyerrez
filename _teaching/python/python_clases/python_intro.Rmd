@@ -139,7 +139,7 @@ En esta sesión, utilizaremos Support Vector Machine, como clasificador y como p
 
 
 <article>
-<h3><a href="https://github.com/alvarogutyerrez/alvarogutyerrez/blob/master/S10ANN.ipynb">Sesión #10: Support Vector Machine  </a></h3>
+<h3><a href="https://github.com/alvarogutyerrez/alvarogutyerrez/blob/master/S10ANN.ipynb">Sesión #10: Artificial Neural Network (_ANN_ para los amigos)  </a></h3>
 <div class="summary">
 <p>
 En esta sesión tiene por propósito mostrar como se construye una red neuronal y luego cómo se implementa en Sklearn.
