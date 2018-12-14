@@ -1,0 +1,30 @@
+
+ui <- fluidPage(
+  sidebarLayout(
+    sidebarPanel(
+      sliderInput("nrand", "Simulaciones",
+                  min = 50, max = 100, value = 70),
+      sliderInput("mean", "Media",
+                  min = 50, max = 100, value = 70),
+      sliderInput("sd", "SD",
+                  min = 0, max = 100, value = 70),
+      selectInput("col", "Color", c("red", "blue", "black")),
+      checkboxInput("punto", "Puntos:", value = FALSE)
+    ),
+    mainPanel(plotOutput("outplot"))
+  )
+)
+server <- function(input, output) {
+  output$outplot <- renderPlot({
+    #set.seed(123)
+    x <- rnorm(input$nrand, mean =input$mean , sd =input$sd)
+    t <- ifelse(input$punto, "b", "l")
+    plot(x, type = t, col = input$col)
+  })
+}
+runApp(list(ui = ui, server = server))
+
+
+
+
+
