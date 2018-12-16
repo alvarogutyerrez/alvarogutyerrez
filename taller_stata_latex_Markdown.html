@@ -11,7 +11,7 @@
 
 
 
-<title>SesiÃ³n #1: IntroducciÃ³n a \LaTeX</title>
+<title>Sesión #1: Introducción a \LaTeX</title>
 
 <script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -22,7 +22,8 @@
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
 <link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
 <script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
-<link href="site_libs/font-awesome-4.5.0/css/font-awesome.min.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet" />
 
 <style type="text/css">code{white-space: pre;}</style>
 <style type="text/css">
@@ -92,8 +93,14 @@ img {
 .tabbed-pane {
   padding-top: 12px;
 }
+.html-widget {
+  margin-bottom: 20px;
+}
 button.code-folding-btn:focus {
   outline: none;
+}
+summary {
+  display: list-item;
 }
 </style>
 
@@ -109,7 +116,6 @@ body {
   padding-top: 66px;
   margin-top: -66px;
 }
-
 .section h2 {
   padding-top: 66px;
   margin-top: -66px;
@@ -129,6 +135,43 @@ body {
 .section h6 {
   padding-top: 66px;
   margin-top: -66px;
+}
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #ffffff;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
 }
 </style>
 
@@ -150,18 +193,77 @@ $(document).ready(function () {
 });
 </script>
 
-
 <div class="container-fluid main-container">
 
 <!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "&#xe258;";
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
 <script>
 $(document).ready(function () {
   window.buildTabsets("TOC");
 });
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open')
+  });
+});
 </script>
 
 <!-- code folding -->
-
 
 
 
@@ -206,14 +308,14 @@ $(document).ready(function () {
   </a>
 </li>
 <li>
-  <a href="https://www.instagram.com/alvarogutyerrez/">
-    <span class="fa fa-instagram fa-lg"></span>
+  <a href="mailto:algutierre@fen.uchile.cl">
+    <span class="fa fa-envelope fa-lg"></span>
      
   </a>
 </li>
 <li>
-  <a href="mailto:algutierre@fen.uchile.cl">
-    <span class="fa fa-envelope fa-lg"></span>
+  <a href="https://www.flickr.com/photos/alvaro_gutierrez/">
+    <span class="fa fa-flickr fa-lg"></span>
      
   </a>
 </li>
@@ -226,15 +328,15 @@ $(document).ready(function () {
 
 
 
-<h1 class="title toc-ignore">SesiÃ³n #1: IntroducciÃ³n a <span class="math inline">\(\LaTeX\)</span></h1>
+<h1 class="title toc-ignore">Sesión #1: Introducción a <span class="math inline">\(\LaTeX\)</span></h1>
 
 </div>
 
 
-<div id="instalacian" class="section level1">
-<h1>InstalaciÃ³n</h1>
-<p>Lo primero que se debe realizar es la instalaciÃ³n del distribuidor de <span class="math inline">\(\TeX\)</span>. El cual en nuestro caso serÃ¡ MiKTeX. Para eso debemos ingresar en el siguiente <a href="https://miktex.org/download">link</a> para descargar el distribuidor <span class="math inline">\(\TeX\)</span> que se ajuste a nuestro sistema operativo (Win, IOS, Linux…). Hasta este punto lo Ãºnico que hemos instalado es el “alma”&quot; del programa, es decir que solamente con esto no podremos producir ningÃºn pdf.</p>
-<p>Por lo tanto, lo que necesitaremos ahora es un compilador <span class="math inline">\(\TeX\)</span>, que serÃ¡ el “cuerpo” que nos permitirÃ¡ poder ocupar nuestro distribuidor de <span class="math inline">\(\TeX\)</span> para producir documentos pdf. En nuestro, caso instalaremos el compilador TexStudio el cual se puede descargar desde el siguiente <a href="https://www.texstudio.org/">link</a>.</p>
+<div id="instalacion" class="section level1">
+<h1>Instalación</h1>
+<p>Lo primero que se debe realizar es la instalación del distribuidor de <span class="math inline">\(\TeX\)</span>. El cual en nuestro caso será MiKTeX. Para eso debemos ingresar en el siguiente <a href="https://miktex.org/download">link</a> para descargar el distribuidor <span class="math inline">\(\TeX\)</span> que se ajuste a nuestro sistema operativo (Win, IOS, Linux…). Hasta este punto lo único que hemos instalado es el “alma”&quot; del programa, es decir que solamente con esto no podremos producir ningún pdf.</p>
+<p>Por lo tanto, lo que necesitaremos ahora es un compilador <span class="math inline">\(\TeX\)</span>, que será el “cuerpo” que nos permitirá poder ocupar nuestro distribuidor de <span class="math inline">\(\TeX\)</span> para producir documentos pdf. En nuestro, caso instalaremos el compilador TexStudio el cual se puede descargar desde el siguiente <a href="https://www.texstudio.org/">link</a>.</p>
 <p>Una vez con ambos programas instalados podemos empezar a trabajar con nuestro primer archivo <span class="math inline">\(\LaTeX\)</span>.</p>
 </div>
 <div id="interfaz" class="section level1">
@@ -245,9 +347,9 @@ $(document).ready(function () {
 Interfaz
 </p>
 </div>
-<p>Lo primero en que debemos preocuparnos, antes de producir un documento en <span class="math inline">\(\LaTeX\)</span>, es de nuestro “PreÃ¡mbulo”, lo que en la Figura  corresponde a los “usepackage”. A diferencia de un editor de texto tradicional (e.g: Word), antes de empezar a escribir nuestro documento debemos pedirle que “cargue” los paquetes necesarios para lo que deseemos realizar. Por ejemplo, el primer paquete cargado corresponde a “babel, con la opciÃ³n [que van entre corchetes]”spanish“. Esto nos estÃ¡ diciendo que cargamos el paquete”babel“, con la opciÃ³n”spanish&quot; que justamente es para que soporte los acentos y las Ã± del idioma espaÃ±ol.</p>
-<p>AsÃ­, consecutivamente se fueron agregando mÃ¡s paquetes necesarios para la compilaciÃ³n de este documento, sobres estos no entraremos en detalle por ahora, ya que a medida que se empieza a utilizar esta herramienta, y se amplÃ­a la imaginaciÃ³n, se van necesitando mÃ¡s paquetes para realizar las rutinas, pero por ahora, solo nos quedaremos con lo elemental.</p>
-<p>Algo que vale la pena mencionar es que, a la hora de ir cargando paquetes a nuestro documento estos deberÃ¡n ser instalados por el distribuidor <span class="math inline">\(\TeX\)</span>, por lo que se generarÃ¡ una ventana emergente que nos dirÃ¡ que MikTeX, estÃ¡ tratando de acceder a internet para instalar algo, ante esto debemos darle aceptar y esperar a que se descargue el paquete. De todos modos, esto solo ocurre la primera vez que se carga el nuevo paquete debido a que luego queda almacenado en el computador.</p>
+<p>Lo primero en que debemos preocuparnos, antes de producir un documento en <span class="math inline">\(\LaTeX\)</span>, es de nuestro “Preámbulo”, lo que en la Figura  corresponde a los “usepackage”. A diferencia de un editor de texto tradicional (e.g: Word), antes de empezar a escribir nuestro documento debemos pedirle que “cargue” los paquetes necesarios para lo que deseemos realizar. Por ejemplo, el primer paquete cargado corresponde a “babel, con la opción [que van entre corchetes]”spanish“. Esto nos está diciendo que cargamos el paquete”babel“, con la opción”spanish&quot; que justamente es para que soporte los acentos y las ñ del idioma español.</p>
+<p>Así, consecutivamente se fueron agregando más paquetes necesarios para la compilación de este documento, sobres estos no entraremos en detalle por ahora, ya que a medida que se empieza a utilizar esta herramienta, y se amplía la imaginación, se van necesitando más paquetes para realizar las rutinas, pero por ahora, solo nos quedaremos con lo elemental.</p>
+<p>Algo que vale la pena mencionar es que, a la hora de ir cargando paquetes a nuestro documento estos deberán ser instalados por el distribuidor <span class="math inline">\(\TeX\)</span>, por lo que se generará una ventana emergente que nos dirá que MikTeX, está tratando de acceder a internet para instalar algo, ante esto debemos darle aceptar y esperar a que se descargue el paquete. De todos modos, esto solo ocurre la primera vez que se carga el nuevo paquete debido a que luego queda almacenado en el computador.</p>
 </div>
 <div id="formato-del-documento" class="section level1">
 <h1>Formato del Documento</h1>
@@ -257,13 +359,13 @@ Interfaz
 formato
 </p>
 </div>
-<p>Luego de definir los paquetes a utilizar, debemos preocuparnos en el formato que queremos darle a la pÃ¡gina. En este caso, el documento cuenta con un encabezado, que posee el logo de la Universidad de Chile en la primera hoja y otro para las hojas consecutivas, asÃ­ como una linea en el encabezado y en el pie de pÃ¡gina. Todo esto de logra con lo que aparece en como punto “2. Estilo de la PÃ¡gina”&quot; en la Figura (). Sobre este punto podrÃ­amos discutir extensivamente, pero queda a criterio del usuario darle el formato que mÃ¡s le parezca a su documento, en particular creo que una pÃ¡gina iluminadora sobre peste punto se encuentra en este <a href="https://www.sharelatex.com/learn/Headers_and_footers">foro</a>.</p>
+<p>Luego de definir los paquetes a utilizar, debemos preocuparnos en el formato que queremos darle a la página. En este caso, el documento cuenta con un encabezado, que posee el logo de la Universidad de Chile en la primera hoja y otro para las hojas consecutivas, así como una linea en el encabezado y en el pie de página. Todo esto de logra con lo que aparece en como punto “2. Estilo de la Página”&quot; en la Figura (). Sobre este punto podríamos discutir extensivamente, pero queda a criterio del usuario darle el formato que más le parezca a su documento, en particular creo que una página iluminadora sobre peste punto se encuentra en este <a href="https://www.sharelatex.com/learn/Headers_and_footers">foro</a>.</p>
 </div>
-<div id="delimitacian-del-espacio-de-trabajo" class="section level1">
-<h1>DelimitaciÃ³n del Espacio de Trabajo</h1>
-<div id="definician-de-un-ambiente" class="section level2">
-<h2>DefiniciÃ³n de un Ambiente</h2>
-<p>Para iniciar, debemos entender el concepto de ambiente (environment), el cual se define un espacio dentor del cual podremos realizar acciones que no estÃ¡n definidas fuera de este. Un ejemplo claro, en el que se profundizarÃ¡ mÃ¡s adelante, es el ambiente “equation”“, el cual al ser invocado nos permitirÃ¡ escribir ecuaciones dentro de este. Este funciona escribiendo lo siguiente, es invocamos el ambiente,”equation“” y escribimos en el lenguaje matemÃ¡tico dentro de Ã©l, para luego cerrar el ambiente cuando no lo necesitemos mÃ¡s.</p>
+<div id="delimitacion-del-espacio-de-trabajo" class="section level1">
+<h1>Delimitación del Espacio de Trabajo</h1>
+<div id="definicion-de-un-ambiente" class="section level2">
+<h2>Definición de un Ambiente</h2>
+<p>Para iniciar, debemos entender el concepto de ambiente (environment), el cual se define un espacio dentor del cual podremos realizar acciones que no están definidas fuera de este. Un ejemplo claro, en el que se profundizará más adelante, es el ambiente “equation”“, el cual al ser invocado nos permitirá escribir ecuaciones dentro de este. Este funciona escribiendo lo siguiente, es invocamos el ambiente,”equation“” y escribimos en el lenguaje matemático dentro de él, para luego cerrar el ambiente cuando no lo necesitemos más.</p>
 <p>Como ejemplo. Si escribimos:</p>
 <pre><code>\begin{equation}
 \sum_{i=0}^{\infty} \alpha^{i} = \frac{1}{1-\alpha}
@@ -279,7 +381,7 @@ formato
 <pre><code>\begin{document}
 contenidos...
 \end{document}</code></pre>
-<p>Como se puede apreciar en la Figura () en donde luego del inicio del ``begin document’’, podemos escribir el titulo de la pÃ¡gina, con el nombre del curso, el profesor, etc. Para luego iniciar nuestra primera  (SecciÃ³n), lo que irÃ¡ delimitando el espacio las secciones del documento.</p>
+<p>Como se puede apreciar en la Figura () en donde luego del inicio del ``begin document’’, podemos escribir el titulo de la página, con el nombre del curso, el profesor, etc. Para luego iniciar nuestra primera  (Sección), lo que irá delimitando el espacio las secciones del documento.</p>
 <div class="figure">
 <img src="images/taller_stata/seccion.jpg" alt="seccion" width="550%" />
 <p class="caption">
@@ -287,16 +389,16 @@ seccion
 </p>
 </div>
 </div>
-<div id="generacian-de-listas" class="section level2">
-<h2>GeneraciÃ³n de listas</h2>
+<div id="generacion-de-listas" class="section level2">
+<h2>Generación de listas</h2>
 <p>Algo, que vale la pena mencionar, es la forma en que se pueden generar listas anidadas para nombrar elementos, por ejemplo:</p>
 <div class="figure">
-<img src="images/taller_stata/list.JPG" alt="list" width="550%" />
+<img src="images/taller_stata/list.jpg" alt="list" width="550%" />
 <p class="caption">
 list
 </p>
 </div>
-<p>Se genera al escribir el cÃ³digo:</p>
+<p>Se genera al escribir el código:</p>
 <pre><code> \begin{enumerate}
     \item First level item
     \item First level item
@@ -315,19 +417,19 @@ list
 \end{enumerate}</code></pre>
 </div>
 </div>
-<div id="importacian-de-tablas-y-graficos" class="section level1">
-<h1>ImportaciÃ³n de Tablas y GrÃ¡ficos</h1>
-<p>Este serÃ¡ una de las actividades que mÃ¡s ocuparemos a lo largo de este taller, debido a que los insumos del documento serÃ¡n generados desde STATA, por lo que solo tendremos que llamarlos con nuestro documento <span class="math inline">\(\LaTeX\)</span>.</p>
+<div id="importacion-de-tablas-y-graficos" class="section level1">
+<h1>Importación de Tablas y Gráficos</h1>
+<p>Este será una de las actividades que más ocuparemos a lo largo de este taller, debido a que los insumos del documento serán generados desde STATA, por lo que solo tendremos que llamarlos con nuestro documento <span class="math inline">\(\LaTeX\)</span>.</p>
 <div id="tablas" class="section level2">
 <h2>Tablas</h2>
-<p>En el caso de las Tablas, lo mÃ¡s comÃºn, serÃ¡ utilizar el comando “input”, para llamar directamente a la tabla que deberemos tener almacenada en la misma carpeta donde tenemos guardado el tex principal.</p>
-<p>De este modo, al tener guardado el cÃ³digo de nuestra tabla con el nombre “tabla_ejemplo.tex”, podremos invocarla con la siguiente linea de comandos.</p>
+<p>En el caso de las Tablas, lo más común, será utilizar el comando “input”, para llamar directamente a la tabla que deberemos tener almacenada en la misma carpeta donde tenemos guardado el tex principal.</p>
+<p>De este modo, al tener guardado el código de nuestra tabla con el nombre “tabla_ejemplo.tex”, podremos invocarla con la siguiente linea de comandos.</p>
 <pre><code>\begin{table}
 \centering
 \caption{Price cars \label{cars}}
 \input{tabla_ejemplo}
 \end{table}</code></pre>
-<p>En donde lo que estÃ¡ almacenado en tabla_ejemplo es:</p>
+<p>En donde lo que está almacenado en tabla_ejemplo es:</p>
 <pre><code>\begin{tabular}{lccc} \hline
     &amp; (1) &amp; (2) &amp; (3) \\
     &amp; model1 &amp; model2 &amp; model3 \\
@@ -347,7 +449,7 @@ list
     \multicolumn{4}{c}{ Standard errors in parentheses} \\
     \multicolumn{4}{c}{ *** p$&lt;$0.01, ** p$&lt;$0.05, * p$&lt;$0.1} \\
 \end{tabular}</code></pre>
-<p>Lo que finalmentre producirÃ¡ la Tabla serÃ¡:</p>
+<p>Lo que finalmentre producirá la Tabla será:</p>
 <pre><code>\begin{table}[h!]
     \centering
     \caption{Price cars \label{cars}}
@@ -364,7 +466,7 @@ seccion
 </div>
 <div id="graficos" class="section level2">
 <h2>Graficos</h2>
-<p>Para importar grÃ¡ficos es bastante similar, solamente debemos cambiar el ambiente. Por ejemplo, para importar la primera imagen de este documento en la que se muestra la interfaz , se utilizÃ³ el ambiente “figure” para llamar al archivo “interfaz.jpg” de la siguiente forma:</p>
+<p>Para importar gráficos es bastante similar, solamente debemos cambiar el ambiente. Por ejemplo, para importar la primera imagen de este documento en la que se muestra la interfaz , se utilizó el ambiente “figure” para llamar al archivo “interfaz.jpg” de la siguiente forma:</p>
 <pre><code>\begin{figure}[h!]
     \centering
     \includegraphics[width=0.9\linewidth]{interfaz}
@@ -375,10 +477,10 @@ seccion
 </div>
 <div id="editor-de-ecuaciones" class="section level1">
 <h1>Editor de Ecuaciones</h1>
-<p>Dentro de esto existe una infinidad de ambientes diferentes, acÃ¡ harÃ© un listado meramente ejemplificador sin Ã¡nimos de abarcar la inmensa cantidad de paquetes disponibles.</p>
+<p>Dentro de esto existe una infinidad de ambientes diferentes, acá haré un listado meramente ejemplificador sin ánimos de abarcar la inmensa cantidad de paquetes disponibles.</p>
 <div id="equation" class="section level2">
 <h2>equation</h2>
-<p>Es el mÃ¡s tradicional de los formatos y consiste en:</p>
+<p>Es el más tradicional de los formatos y consiste en:</p>
 <pre><code>\begin{equation}
 p(x) = 3x^6 + 14x^5y + 590x^4y^2 + 19x^3y^3- 12x^2y^4 - 12xy^5 + 2y^6 - a^3b^3
 \end{equation}</code></pre>
@@ -444,7 +546,7 @@ L(\theta_1,\theta_2) = \left\lbrace
 <span class="math display">\[\begin{equation}\label{asintotica_mco}
  \hat{\beta}_{MCO}  \xrightarrow[]{d} N \left(\;\;\;  \beta \;\;\; , \frac{\sigma^{2}}{N}   Q^{-1} \left(  Plim \left(  \frac{X&#39;\Omega X}{N}  \right)   \right)   Q^{-1}   \right)
 \end{equation}\]</span>
-<p>Para mayor discusiÃ³n sobre el tema, les dejo acÃ¡ un <a href="https://www.sharelatex.com/learn/Mathematical_expressions">link</a> que contiene mucho material sobre ecuaciones de latex.</p>
+<p>Para mayor discusión sobre el tema, les dejo acá un <a href="https://www.sharelatex.com/learn/Mathematical_expressions">link</a> que contiene mucho material sobre ecuaciones de latex.</p>
 </div>
 </div>
 

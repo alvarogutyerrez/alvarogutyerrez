@@ -1,3 +1,0 @@
-"0","quintil_income <- factor(base$quintil_muestra,"
-"0","                 levels = c(1,2,3,4,5),"
-"0","                 labels = c(""1st quintile"", ""2nd quintile"", ""3th quintile"" , ""4th quintile"" ,""5th quintile""))"

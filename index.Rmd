@@ -6,13 +6,16 @@ title: 'Alvaro Gutierrez '
 <img src="images/profile/guty_rat.jpg" style="width:35%; border:10px solid; margin-right: 2px" align="left">
 
 
-
-- I'm currently working to obtain my Msc(c) in Finance in the University of Chile. Previously, I obtained a bachelor's degree in Economics from the same university.
-
+Welcome!
 
 
- I really like to writte code in multiple programming languages such as Stata, R, Python and Matlab. This web page was 100% programmed using R, and it's _just work-in-progress_, so feel free to take whatever you want from here, everything that you will find here is ready to be downloaded from my [Github](https://github.com/alvarogutyerrez)
+Despite de fact that I hold an B.A in Econ and a MSc. in Finance, the topic that I feel more confortable with is Statistics and it is where I spend most of the time learning and discovering new and interesting things. In fact, I will be a lecturer at the [Faculty of Economics and Business](http://www.fen.uchile.cl/en) of the University of Chile.
 
 
 
-Currently, I am working with professor [David Diaz](http://negocios.uchile.cl/academico_detalle.php?id=51) into a Consulting with the HSBC Bank developing predictive models for financial assets using Machine Learning Algorithms with Python. 
+I enjoy spending my time writting code or re-writting it more efficiently. Actually, this web page was 100% programmed using R, and it's _just work-in-progress_, so feel free to take whatever you want from here, everything that you will find here is ready to be downloaded from my [Github](https://github.com/alvarogutyerrez).
+
+
+Currently, I am working with professor [David Diaz](http://negocios.uchile.cl/academico_detalle.php?id=51) developing predictive models for financial assets with Machine Learning Algorithms using Python (mostly [Pandas](http://pandas.pydata.org/pandas-docs/version/0.15/tutorials.html) and [Scikit-Learn](https://scikit-learn.org/stable/)). 
+
+ 

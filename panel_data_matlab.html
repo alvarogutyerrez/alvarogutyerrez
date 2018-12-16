@@ -22,7 +22,8 @@
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
 <link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
 <script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
-<link href="site_libs/font-awesome-4.5.0/css/font-awesome.min.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet" />
 
 <style type="text/css">code{white-space: pre;}</style>
 <style type="text/css">
@@ -92,8 +93,14 @@ img {
 .tabbed-pane {
   padding-top: 12px;
 }
+.html-widget {
+  margin-bottom: 20px;
+}
 button.code-folding-btn:focus {
   outline: none;
+}
+summary {
+  display: list-item;
 }
 </style>
 
@@ -109,7 +116,6 @@ body {
   padding-top: 66px;
   margin-top: -66px;
 }
-
 .section h2 {
   padding-top: 66px;
   margin-top: -66px;
@@ -129,6 +135,43 @@ body {
 .section h6 {
   padding-top: 66px;
   margin-top: -66px;
+}
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #ffffff;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
 }
 </style>
 
@@ -150,18 +193,77 @@ $(document).ready(function () {
 });
 </script>
 
-
 <div class="container-fluid main-container">
 
 <!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "&#xe258;";
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
 <script>
 $(document).ready(function () {
   window.buildTabsets("TOC");
 });
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open')
+  });
+});
 </script>
 
 <!-- code folding -->
-
 
 
 
@@ -206,14 +308,14 @@ $(document).ready(function () {
   </a>
 </li>
 <li>
-  <a href="https://www.instagram.com/alvarogutyerrez/">
-    <span class="fa fa-instagram fa-lg"></span>
+  <a href="mailto:algutierre@fen.uchile.cl">
+    <span class="fa fa-envelope fa-lg"></span>
      
   </a>
 </li>
 <li>
-  <a href="mailto:algutierre@fen.uchile.cl">
-    <span class="fa fa-envelope fa-lg"></span>
+  <a href="https://www.flickr.com/photos/alvaro_gutierrez/">
+    <span class="fa fa-flickr fa-lg"></span>
      
   </a>
 </li>
@@ -268,8 +370,8 @@ V_a=s2*(X_a&#39;*X_a)^(-1);
 se_a=diag(sqrt(V_a));
 
 
-% La matriz a construit tendrÃ¡  dimensiÃ³n 4165, que corresponde a (N*T)x(N*T)
-J=7:7:(7*595); %tamaÃ±os de los clusters
+% La matriz a construit tendrá  dimensión 4165, que corresponde a (N*T)x(N*T)
+J=7:7:(7*595); %tamaños de los clusters
 diagonal=zeros(individuos*T,individuos*T)*99999; 
 resid2_matrix=resid_a*resid_a&#39;; %matriz residuos traspuestos
 
@@ -354,7 +456,7 @@ end
 XY_c  = X_b_long(:,1:5)-Medias_Regresores; %Variable en desviaciones
 %Sospechando que la variable esc pudo haber quedado sin poder ser
 %indentificada debido a que las observaciones pueden estar alojadas en el
-%mismo aÃ±o, revisamos esto con la media de la variable en diferencia:
+%mismo año, revisamos esto con la media de la variable en diferencia:
 
 mean_esc = mean(XY_c(:,5));
 
@@ -362,8 +464,8 @@ mean_esc = mean(XY_c(:,5));
 Y_c = XY_c(:,1);
 X_c = [ XY_c(:,2:4)] ;  %%Dejando fuera ESC
 
-%Comprobamos que esta dejo de estar identificada, ya que nadie cambiÃ³ de
-%edad durante la generaciÃ³n del panel.
+%Comprobamos que esta dejo de estar identificada, ya que nadie cambió de
+%edad durante la generación del panel.
 beta_c = (X_c&#39;*X_c)\(X_c&#39;*Y_c);
 resid_c = Y_c - X_c*beta_c ;
 [N_c,K_c] = size(X_c);
@@ -389,7 +491,7 @@ clear table_to_drop
 
 
 %% (D) Estimador Primeras Diferencias
-J = 1:7:4165; %Distancia entre individuos (en aÃ±os [7] )
+J = 1:7:4165; %Distancia entre individuos (en años [7] )
 for j = 1:595; % Recorre en filas (para cada individuo)
 for i = J(:,j):(J(:,j)+5);
 Primeras_diferencias(i,:) = X_b_long(i+1,:)-X_b_long(i,:);
@@ -433,7 +535,7 @@ clear table_to_drop
 
 %% (E) Estimador Efectos Aleatorios
 % Para esta parte seguimos la pagina 734 del Cameron&amp;Trivedi. Recurriendo a
-% la estimaciÃ³n mediante MCGF.
+% la estimación mediante MCGF.
 N_e = 595;
 T_e = 7;
 K_e = 4;
@@ -466,7 +568,7 @@ V_e_Robust=N_e/(N_e-K_e)*(X_e&#39;*X_e)^(-1)*(resid_e&#39;*resid_e)*(X_e&#39;*X_
 se_e_robust=diag(sqrt(V_e_Robust));
 
 %Cluster
-J_e=7:7:(7*595); %tamaÃ±os de los clusters
+J_e=7:7:(7*595); %tamaños de los clusters
 diagonal_random=zeros(N_e*T_e,N_e*T_e); 
 resid_e_2=resid_e*resid_e&#39;; %matriz residuos traspuestos
 for i=1:individuos
@@ -517,7 +619,7 @@ se_e=diag(sqrt(V_aleatorio));
 
 
 beta_Fijos = beta_c; %Whitin
-%todo esto ya fue declarado, por lo que solo se harÃ¡ uso de esto.
+%todo esto ya fue declarado, por lo que solo se hará uso de esto.
 
 %Test
 H = (beta_Aleatorios - beta_Fijos)&#39;*(V_aleatorio - V_c)^(-1)*(beta_Aleatorios - beta_Fijos);
@@ -535,7 +637,7 @@ end
 %Generando Diferencias
 
 %Primer Rezago de la variable Y
-J = 1:7:4165; %Distancia entre individuos (en aÃ±os [7] )
+J = 1:7:4165; %Distancia entre individuos (en años [7] )
 for j = 1:595; % Recorre en filas (para cada individuo)
     
 for i = J(:,j)+1:(J(:,j)+6);
@@ -543,7 +645,7 @@ lwage_1(i,:) = lwage(i-1,:);
 end
 end
 %Segundo REzago d ela variable Y
-J = 1:7:4165; %Distancia entre individuos (en aÃ±os [7] )
+J = 1:7:4165; %Distancia entre individuos (en años [7] )
 for j = 1:595; % Recorre en filas (para cada individuo)
 for i = J(:,j)+2:(J(:,j)+6);
 lwage_2(i,:) = lwage(i-2,:);
@@ -582,8 +684,8 @@ se_a=diag(sqrt(V_a));
 T = 5; %Perdimos dos periodos :(
 % O SI NO NO CALZAN LAS MATRIXXXXXSSSS
 %====MUY IMPORTANTE=======%
-% La matriz a construir tendrÃ¡  dimensiÃ³n 4165, que corresponde a (N*T)x(N*T)
-J=5:5:(5*595); %tamaÃ±os de los clusters
+% La matriz a construir tendrá  dimensión 4165, que corresponde a (N*T)x(N*T)
+J=5:5:(5*595); %tamaños de los clusters
 diagonal=zeros(individuos*T,individuos*T)*99999; 
 resid2_matrix=resid_a*resid_a&#39;; %matriz residuos traspuestos
 
@@ -670,15 +772,15 @@ Medias_Regresores= Medias_Regresores(1:2975,:);
 XY_c  = X_b_long(:,1:7)-Medias_Regresores; %Variable en desviaciones
 %Sospechando que la variable esc pudo haber quedado sin poder ser
 %indentificada debido a que las observaciones pueden estar alojadas en el
-%mismo aÃ±o, revisamos esto con la media de la variable en diferencia:
+%mismo año, revisamos esto con la media de la variable en diferencia:
 
 
 %Generando dependiente e independiente
 Y_c = XY_c(:,1);
 X_c = [ XY_c(:,2:6)] ;  %%Dejando fuera ESC
 
-%Comprobamos que esta dejo de estar identificada, ya que nadie cambiÃ³ de
-%edad durante la generaciÃ³n del panel.
+%Comprobamos que esta dejo de estar identificada, ya que nadie cambió de
+%edad durante la generación del panel.
 beta_c = (X_c&#39;*X_c)\(X_c&#39;*Y_c);
 resid_c = Y_c - X_c*beta_c ;
 [N_c,K_c] = size(X_c);
@@ -703,7 +805,7 @@ clear table_to_drop
 
 
 %% (D) Estimador Primeras Diferencias
-J = 1:5:2975; %Distancia entre individuos (en aÃ±os [7] )
+J = 1:5:2975; %Distancia entre individuos (en años [7] )
 for j = 1:595; % Recorre en filas (para cada individuo)
 for i = J(:,j):(J(:,j)+3);
 Primeras_diferencias_1(i,:) = X_b_long(i+1,:)-X_b_long(i,:);
@@ -748,7 +850,7 @@ clear table_to_drop
 
 %% (E) Estimador Efectos Aleatorios
 % Para esta parte seguimos la pagina 734 del Cameron&amp;Trivedi. Recurriendo a
-% la estimaciÃ³n mediante MCGF.
+% la estimación mediante MCGF.
 N_e = 595;
 T_e = 5;
 K_e = 7;
@@ -781,7 +883,7 @@ V_e_Robust=N_e/(N_e-K_e)*(X_e&#39;*X_e)^(-1)*(resid_e&#39;*resid_e)*(X_e&#39;*X_
 se_e_robust=diag(sqrt(V_e_Robust));
 
 %Cluster
-J_e=5:5:(5*595); %tamaÃ±os de los clusters
+J_e=5:5:(5*595); %tamaños de los clusters
 diagonal_random=zeros(N_e*T_e,N_e*T_e); 
 resid_e_2=resid_e*resid_e&#39;; %matriz residuos traspuestos
 for i=1:individuos
