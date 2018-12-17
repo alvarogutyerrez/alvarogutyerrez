@@ -8,7 +8,7 @@ title: 'Teaching '
 <h3><a href="_teaching/intro_stats/Logo/R.pdf"> Introducción a la Estadística  </a></h3>
 <div class="summary">
 <p>
-(Spanish written) El siguiente material de clases tiene por objetivo entregar herramienta de visualización de los distintos tópicos cubiertos por el curso, pero por ningún motivo intenta reemplazar el estudio riguroso y constante de la bibliografía del curso.
+(Spanish written) El siguiente material de clases tiene por objetivo entregar herramienta de visualización de los distintos tópicos cubiertos por el curso, pero por ningún motivo intenta reemplazar el estudio riguroso y constante de la bibliografía del mismo.
 </p>
 <a class="btn btn-outline-primary btn-sm" href="_teaching/intro_stats/Logo/R.pdf">Revisar los Contenidos</a>
 </div>
