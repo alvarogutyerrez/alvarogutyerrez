@@ -5,6 +5,18 @@ title: 'Teaching '
 
 <article>
 <meta charset="utf-8">
+<h3><a href="_teaching/intro_stats/Logo/R.pdf"> Introducción a la Estadística  </a></h3>
+<div class="summary">
+<p>
+(Spanish written) El siguiente material de clases tiene por objetivo entregar herramienta de visualización de los distintos tópicos cubiertos por el curso, pero por ningún motivo intenta reemplazar el estudio riguroso y constante de la bibliografía del curso.
+</p>
+<a class="btn btn-outline-primary btn-sm" href="_teaching/intro_stats/Logo/R.pdf">Revisar los Contenidos</a>
+</div>
+</article>
+
+
+<article>
+<meta charset="utf-8">
 <h3><a href="_teaching/stata_eco_fin/main/taller_stata_intro.html"> Stata-$\LaTeX$  Combo  </a></h3>
 <div class="summary">
 <p>

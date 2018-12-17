@@ -7,7 +7,7 @@ setwd("G:/Mi unidad/R_LEARNING/GitHub/alvarogutyerrez")
 
 #type on the following two lines on  the Terminal
 #git clone https://github.com/AlvaroGutyerrez/alvaro.gutyerrez.github.io.git
-#cd alvaro.gutyerrez.github.io
+#cd cd alvarogutyerrez
 
 
 
