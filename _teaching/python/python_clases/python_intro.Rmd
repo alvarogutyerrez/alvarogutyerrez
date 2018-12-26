@@ -1,10 +1,24 @@
 ---
-title: 'Python: Tópicos Miscelaneos  '
+title: 'Sesiones Computacionales Business Intelligence para las Finanzas'
 ---
 
 
 
+
+
 <u><a href="https://alvarogutyerrez.github.io/alvarogutyerrez/teaching.html"><font color="#ff9900">Back to Teaching</font></a></u>
+
+
+<img src="python_logo.png" style="width:50%; border:5px solid; margin-right: 2px" align="right">
+
+
+<article>
+<h3><a>Descripción del Curso </a></h3>
+<p>
+Acá podrás encontrar las ayudantías computacionales del curso Business Intelligence para las Finanzas dictado al programa de Magister en Finanzas en la Universidad de Chile. Las clases van desde tópicos sencillos, como manejo de bases de datos mediante [Pandas](http://pandas.pydata.org/pandas-docs/version/0.15/tutorials.html), hasta desarrollo de algotirmos complejos como Redes Neuronales con [Scikit-Learn](https://scikit-learn.org/stable/). 
+</p>
+</article>
+
 
 
 

@@ -4,6 +4,16 @@ title: 'Stata-$\LaTeX$  Combo'
 
 
 
+<img src="stata_latex_logo.jpg" style="width:35%; border:5px solid; margin-right: 2px" align="right">
+
+<article>
+<h3><a>Descripción del Curso </a></h3>
+<p>
+Acá podrás encontrar las ayudantías computacionales del curso Econometría Financiera dictado al Magister en Finanzas de la Universidad de Chile. En este aprenderas como manejar, simultáneamente e integradamente, los programas STATA y $\LaTeX$, para generar documentos en pdf de forma automatizada. (En progreso)
+</p>
+</article>
+
+
 
 
 <article>
