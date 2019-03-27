@@ -21,6 +21,9 @@ navbar:
     href: mailto:algutierre@fen.uchile.cl
   - icon: fa-flickr fa-lg
     href: https://www.flickr.com/photos/alvaro_gutierrez/
+  - icon: fa-twitter fa-lg
+    href: https://twitter.com/alvarogutyerrez
+    
 output:
   html_document:
     theme: journal

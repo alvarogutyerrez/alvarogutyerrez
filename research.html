@@ -22,8 +22,7 @@
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
 <link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
 <script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
-<link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet" />
-<link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-4.5.0/css/font-awesome.min.css" rel="stylesheet" />
 
 <style type="text/css">code{white-space: pre;}</style>
 <style type="text/css">
@@ -93,14 +92,8 @@ img {
 .tabbed-pane {
   padding-top: 12px;
 }
-.html-widget {
-  margin-bottom: 20px;
-}
 button.code-folding-btn:focus {
   outline: none;
-}
-summary {
-  display: list-item;
 }
 </style>
 
@@ -116,6 +109,7 @@ body {
   padding-top: 66px;
   margin-top: -66px;
 }
+
 .section h2 {
   padding-top: 66px;
   margin-top: -66px;
@@ -135,43 +129,6 @@ body {
 .section h6 {
   padding-top: 66px;
   margin-top: -66px;
-}
-.dropdown-submenu {
-  position: relative;
-}
-.dropdown-submenu>.dropdown-menu {
-  top: 0;
-  left: 100%;
-  margin-top: -6px;
-  margin-left: -1px;
-  border-radius: 0 6px 6px 6px;
-}
-.dropdown-submenu:hover>.dropdown-menu {
-  display: block;
-}
-.dropdown-submenu>a:after {
-  display: block;
-  content: " ";
-  float: right;
-  width: 0;
-  height: 0;
-  border-color: transparent;
-  border-style: solid;
-  border-width: 5px 0 5px 5px;
-  border-left-color: #cccccc;
-  margin-top: 5px;
-  margin-right: -10px;
-}
-.dropdown-submenu:hover>a:after {
-  border-left-color: #ffffff;
-}
-.dropdown-submenu.pull-left {
-  float: none;
-}
-.dropdown-submenu.pull-left>.dropdown-menu {
-  left: -100%;
-  margin-left: 10px;
-  border-radius: 6px 0 6px 6px;
 }
 </style>
 
@@ -193,77 +150,18 @@ $(document).ready(function () {
 });
 </script>
 
+
 <div class="container-fluid main-container">
 
 <!-- tabsets -->
-
-<style type="text/css">
-.tabset-dropdown > .nav-tabs {
-  display: inline-table;
-  max-height: 500px;
-  min-height: 44px;
-  overflow-y: auto;
-  background: white;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-}
-
-.tabset-dropdown > .nav-tabs > li.active:before {
-  content: "";
-  font-family: 'Glyphicons Halflings';
-  display: inline-block;
-  padding: 10px;
-  border-right: 1px solid #ddd;
-}
-
-.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
-  content: "&#xe258;";
-  border: none;
-}
-
-.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
-  content: "";
-  font-family: 'Glyphicons Halflings';
-  display: inline-block;
-  padding: 10px;
-  border-right: 1px solid #ddd;
-}
-
-.tabset-dropdown > .nav-tabs > li.active {
-  display: block;
-}
-
-.tabset-dropdown > .nav-tabs > li > a,
-.tabset-dropdown > .nav-tabs > li > a:focus,
-.tabset-dropdown > .nav-tabs > li > a:hover {
-  border: none;
-  display: inline-block;
-  border-radius: 4px;
-}
-
-.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
-  display: block;
-  float: none;
-}
-
-.tabset-dropdown > .nav-tabs > li {
-  display: none;
-}
-</style>
-
 <script>
 $(document).ready(function () {
   window.buildTabsets("TOC");
 });
-
-$(document).ready(function () {
-  $('.tabset-dropdown > .nav-tabs > li').click(function () {
-    $(this).parent().toggleClass('nav-tabs-open')
-  });
-});
 </script>
 
 <!-- code folding -->
+
 
 
 
@@ -319,6 +217,12 @@ $(document).ready(function () {
      
   </a>
 </li>
+<li>
+  <a href="https://twitter.com/alvarogutyerrez">
+    <span class="fa fa-twitter fa-lg"></span>
+     
+  </a>
+</li>
       </ul>
     </div><!--/.nav-collapse -->
   </div><!--/.container -->
@@ -336,7 +240,7 @@ $(document).ready(function () {
 <div id="articles" class="section level3">
 <h3>Articles</h3>
 <ol style="list-style-type: decimal">
-<li><p>Accepted Article in Annual Conference of Chilean Economist (SECHI) <em>Responsabilidad, Extroversión y Desempeño Académico frente</em> Evaluaciones con Distinta Modalidad (with Pablo Tapia) <a href="https://editorialexpress.com/cgi-bin/conference/download.cgi?db_name=SECHI2017&amp;paper_id=99">Link Here</a></p></li>
+<li><p>Accepted Article in Annual Conference of Chilean Economist (SECHI) <em>Responsabilidad, ExtroversiÃ³n y DesempeÃ±o AcadÃ©mico frente</em> Evaluaciones con Distinta Modalidad (with Pablo Tapia) <a href="https://editorialexpress.com/cgi-bin/conference/download.cgi?db_name=SECHI2017&amp;paper_id=99">Link Here</a></p></li>
 <li><article>
 <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
 <div class="summary">
@@ -350,7 +254,7 @@ $(document).ready(function () {
 <ol style="list-style-type: decimal">
 <li><article>
 <div class="summary">
-<p>Beta-Convergencia en el Gran Santiago Una aproximación desde la Econometría Espacial <a class="btn btn-outline-primary btn-sm" href="_research/spatial_segregation.pdf"> Manuscript</a></p>
+<p>Beta-Convergencia en el Gran Santiago Una aproximaciÃ³n desde la EconometrÃ­a Espacial <a class="btn btn-outline-primary btn-sm" href="_research/spatial_segregation.pdf"> Manuscript</a></p>
 </div>
 </article></li>
 <li><article>

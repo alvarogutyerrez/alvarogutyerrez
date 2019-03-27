@@ -1,6 +1,5 @@
 ---
 title: 'Sesión #1: Introducción a $\LaTeX$'
-
 ---
 
 
