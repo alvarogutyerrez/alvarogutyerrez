@@ -51,7 +51,7 @@ En esta sesión aprenderemos como ejecutar operaciones básicas de Pandas, y su 
 
 
 
-<!--
+
 <article>
 <h3><a href="https://github.com/alvarogutyerrez/alvarogutyerrez/blob/master/S03_data_handle.ipynb">Sesión #3: Pandas - Multibase de Datos  </a></h3>
 <div class="summary">
@@ -61,7 +61,7 @@ En esta sesión aprenderemos a manejar multiples bases de datos haciendo uso de 
 <a class="btn btn-outline-primary btn-sm" href="https://github.com/alvarogutyerrez/alvarogutyerrez/blob/master/S03_data_handle.ipynb">Ir al artículo</a>
 </div>
 </article>
-
+<!--
 
 
 
