@@ -61,7 +61,7 @@ En esta sesión aprenderemos a manejar multiples bases de datos haciendo uso de 
 <a class="btn btn-outline-primary btn-sm" href="https://github.com/alvarogutyerrez/alvarogutyerrez/blob/master/S03_data_handle.ipynb">Ir al artículo</a>
 </div>
 </article>
-<!--
+
 
 
 
@@ -78,7 +78,7 @@ En esta sesión veremos un par de aplicaciones haciendo uso de lo aprendido en l
 </article>
 
 
-
+<!--
 
 <article>
 <h3><a href="Tareas/T1/T1_python.html"> <font color="#ff9900">Tarea #1: Complejidad Computacional </font> </a></h3>
