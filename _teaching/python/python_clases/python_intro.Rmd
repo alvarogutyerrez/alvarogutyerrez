@@ -90,6 +90,8 @@ Tarea # 1 del curso
 </div>
 </article>
 
+-->
+
 
 <article>
 <h3><a href="https://github.com/alvarogutyerrez/alvarogutyerrez/blob/master/Sesion_5_Gradiente_Decendiente.ipynb">Sesión #5: Gradiente Descendiente  </a></h3>
@@ -101,6 +103,7 @@ En este apartado, se discutirán tres sabores distintos del algoritmo de *Gradie
 </div>
 </article>
 
+<!--
 
 
 <article>
@@ -162,8 +165,8 @@ En esta sesión tiene por propósito mostrar como se construye una red neuronal 
 </div>
 </article>
 
--->
 
+-->
 
 
 
