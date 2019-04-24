@@ -103,7 +103,6 @@ En este apartado, se discutirán tres sabores distintos del algoritmo de *Gradie
 </div>
 </article>
 
-<!--
 
 
 <article>
@@ -116,6 +115,8 @@ En este apartado, se discuten las principales métricas de acierto para los mode
 </div>
 </article>
 
+
+<!--
 
 <article>
 <h3><a href="https://github.com/alvarogutyerrez/alvarogutyerrez/blob/master/S07_Modelos_Lineales_Regularizados.ipynb">Sesión #7: Modelos Lineales Regularizados  </a></h3>
