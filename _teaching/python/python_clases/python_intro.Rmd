@@ -116,8 +116,6 @@ En este apartado, se discuten las principales métricas de acierto para los mode
 </article>
 
 
-<!--
-
 <article>
 <h3><a href="https://github.com/alvarogutyerrez/alvarogutyerrez/blob/master/S07_Modelos_Lineales_Regularizados.ipynb">Sesión #7: Modelos Lineales Regularizados  </a></h3>
 <div class="summary">
@@ -129,6 +127,8 @@ En esta sesión, aprenderemos como, haciendo uso de sklearn, estimar modelos de 
 </article>
 
 
+
+<!--
 
 <article>
 <h3><a href="https://github.com/alvarogutyerrez/alvarogutyerrez/blob/master/S08_Modelos_Multinomiales.ipynb">Sesión #8: Modelos Multinomiales  </a></h3>
