@@ -128,7 +128,7 @@ En esta sesión, aprenderemos como, haciendo uso de sklearn, estimar modelos de 
 
 
 
-<!--
+
 
 <article>
 <h3><a href="https://github.com/alvarogutyerrez/alvarogutyerrez/blob/master/S08_Modelos_Multinomiales.ipynb">Sesión #8: Modelos Multinomiales  </a></h3>
@@ -140,7 +140,7 @@ En esta sesión, veremos como aplicar modelos de clasificación multinomiales us
 </div>
 </article>
 
-
+<!--
 
 
 <article>
