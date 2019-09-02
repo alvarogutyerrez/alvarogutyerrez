@@ -140,7 +140,6 @@ En esta sesión, veremos como aplicar modelos de clasificación multinomiales us
 </div>
 </article>
 
-<!--
 
 
 <article>
@@ -167,7 +166,9 @@ En esta sesión tiene por propósito mostrar como se construye una red neuronal 
 </article>
 
 
--->
+<!--
+ 
+ -->
 
 
 
