@@ -9,7 +9,7 @@ title: 'Alvaro Gutierrez '
 #Welcome!
 
 
-My name is Alvaro Gutierrez, and despite de fact that I hold an B.A in Econ and a MSc. in Finance, the topic that I feel more confortable with is Statistics and it is where I spend most of the time learning and discovering new and interesting things. In fact, I am  lecturer of Introductory Statistics at the [Faculty of Economics and Business](http://www.fen.uchile.cl/en) of the University of Chile.
+My name is Alvaro Gutierrez, and despite the fact that I hold an B.A in Econ and a MSc. in Finance, the topic that I feel more confortable with is Statistics and it is where I spend most of the time learning and discovering new and interesting things. In fact, I am  lecturer of Introductory Statistics at the [Faculty of Economics and Business](http://www.fen.uchile.cl/en) of the University of Chile.
 
 
 I enjoy spending my time writting code or re-writting it more efficiently. Actually, this web page was 100% programmed using R, and it's _just work-in-progress_, so feel free to take whatever you want from here, everything that you will find here is ready to be downloaded from my [Github](https://github.com/alvarogutyerrez).
